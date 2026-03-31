@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Beyond OCR — Reframing a Process Problem as a Revenue Problem — Jozu Consulting Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #032042;
+      --navy-mid:    #0A2D52;
+      --navy-light:  #0F3D6E;
+      --red:         #C84B22;
+      --red-dark:    #9E3918;
+      --red-light:   #E05630;
+      --orange:      #F07830;
+      --orange-light: #F5A060;
+      --gold:        #F6B720;
+      --gold-light:  #FFCF3A;
+      --white:       #FFFFFF;
+      --off-white:   #F8F9FA;
+      --gray-100:    #E2E8F0;
+      --gray-400:    #94A3B8;
+      --gray-600:    #475569;
+      --text-dark:   #0A1628;
+      --font-head:   'Sora', sans-serif;
+      --font-body:   'DM Sans', sans-serif;
+      --max-w:       1200px;
+      --radius:      8px;
+      --transition:  0.25s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-head);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red) 0%, var(--orange) 100%);
+      color: var(--white);
+      border-color: var(--red);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%);
+      border-color: var(--red-dark);
+      box-shadow: 0 0 28px rgba(200,75,34,0.4);
+      transform: translateY(-1px);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--red);
+      border-color: var(--red);
+    }
+    .btn-outline-dark:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    /* ─── NAV ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(3, 32, 66, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,75,34,0.2);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 58px;
+      width: auto;
+      display: block;
+      background: var(--white);
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-cta { margin-left: 16px; }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      background: var(--navy);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,75,34,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+      margin-bottom: 24px;
+    }
+    .breadcrumb a {
+      color: var(--gray-400);
+      transition: color var(--transition);
+    }
+    .breadcrumb a:hover { color: var(--white); }
+    .breadcrumb .sep { color: rgba(255,255,255,0.2); }
+    .breadcrumb .current { color: var(--gold); }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      max-width: 760px;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .page-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .page-hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-400);
+      margin-bottom: 32px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--white); }
+
+    /* ─── METRICS BAR ─── */
+    .metrics-bar {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(200,75,34,0.2);
+      border-bottom: 1px solid rgba(200,75,34,0.2);
+      padding: 40px 0;
+    }
+    .metrics-bar-inner {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+    .metrics-bar-item {
+      text-align: center;
+    }
+    .metrics-bar-item .val {
+      font-family: var(--font-head);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+    }
+    .metrics-bar-item .lbl {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* ─── CONTENT SECTION ─── */
+    section { padding: 96px 0; position: relative; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    .content-section {
+      background: var(--off-white);
+    }
+
+    .content-body {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .content-body p {
+      font-size: 1.0625rem;
+      color: var(--gray-600);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .content-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ─── LESSON BLOCK ─── */
+    .lesson-section {
+      background: var(--navy);
+      padding: 64px 0;
+    }
+    .lesson-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      border-left: 4px solid var(--orange);
+      padding-left: 28px;
+    }
+    .lesson-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .lesson-text {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    /* ─── WATERMARK ─── */
+    .wm::before {
+      content: '';
+      position: absolute;
+      right: -2%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42%;
+      aspect-ratio: 300 / 143;
+      background: url('../jozu-logo2.png') no-repeat center / contain;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .wm-dark::before {
+      content: '';
+      position: absolute;
+      right: -2%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42%;
+      aspect-ratio: 300 / 143;
+      background: url('../jozu-logo2.png') no-repeat center / contain;
+      opacity: 0.09;
+      filter: brightness(0) invert(1);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .wm > .container, .wm-dark > .container { position: relative; z-index: 1; }
+
+    /* ─── NEXT / CTA ─── */
+    .case-nav {
+      background: var(--white);
+      padding: 64px 0;
+    }
+    .case-nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .case-nav-link {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--red);
+      transition: color var(--transition);
+    }
+    .case-nav-link:hover { color: var(--red-dark); }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--red);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.08);
+      pointer-events: none;
+    }
+    .cta-band-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cta-band h2 {
+      font-size: clamp(1.625rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 560px;
+    }
+    .cta-band .btn-white {
+      background: var(--white);
+      color: var(--red);
+      border-color: var(--white);
+      font-size: 1rem;
+      padding: 16px 36px;
+    }
+    .cta-band .btn-white:hover {
+      background: var(--off-white);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #010F1F;
+      padding: 48px 0;
+      border-top: 1px solid rgba(200,75,34,0.15);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-logo img {
+      height: 52px;
+      width: auto;
+      display: block;
+      background: var(--white);
+      padding: 5px 14px;
+      border-radius: 4px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.4);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .cta-band-inner { flex-direction: column; text-align: center; }
+      .metrics-bar-inner { gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 64px 0; }
+      .metrics-bar-inner { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<header>
+  <nav class="container">
+    <a href="../index.html" class="nav-logo">
+      <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#methodology">Methodology</a></li>
+      <li><a href="../index.html#results">Results</a></li>
+      <li><a href="index.html" class="active">Case Studies</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to All Case Studies</a>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="index.html">Case Studies</a>
+      <span class="sep">/</span>
+      <span class="current">Healthcare Services</span>
+    </div>
+    <div class="page-hero-eyebrow">Case Study 02 &mdash; Healthcare Services / Revenue Operations</div>
+    <h1>Beyond OCR: Reframing a Process Problem as a <em>Revenue Problem</em></h1>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     METRICS BAR
+═══════════════════════════════════════ -->
+<div class="metrics-bar">
+  <div class="container">
+    <div class="metrics-bar-inner">
+      <div class="metrics-bar-item">
+        <div class="val">~$7M</div>
+        <div class="lbl">Total<br>contract value</div>
+      </div>
+      <div class="metrics-bar-item">
+        <div class="val">35&times;</div>
+        <div class="lbl">Expansion vs.<br>original ask</div>
+      </div>
+      <div class="metrics-bar-item">
+        <div class="val">3 Systems</div>
+        <div class="lbl">Integrated into<br>one program</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     NARRATIVE
+═══════════════════════════════════════ -->
+<section class="content-section wm">
+  <div class="container">
+    <div class="content-body">
+      <p>A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing &mdash; a back-office efficiency purchase worth roughly $200K.</p>
+
+      <p>But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage &mdash; intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
+
+      <p>The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
+
+      <p>The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source &mdash; not at the point where they first noticed the pain.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LESSON
+═══════════════════════════════════════ -->
+<section class="lesson-section wm-dark">
+  <div class="container">
+    <div class="lesson-inner">
+      <div class="lesson-label">The Lesson</div>
+      <p class="lesson-text">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CASE NAV
+═══════════════════════════════════════ -->
+<section class="case-nav">
+  <div class="container">
+    <div class="case-nav-inner">
+      <a href="healthcare-payer.html" class="case-nav-link">&larr; Previous: Commodity to Enterprise</a>
+      <a href="enterprise-sales-system.html" class="case-nav-link">Next Case Study: Enterprise Sales System &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════ -->
+<section class="cta-band wm-dark">
+  <div class="container">
+    <div class="cta-band-inner">
+      <h2>Ready to Rethink Your Sales Architecture?</h2>
+      <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html#methodology">Methodology</a></li>
+        <li><a href="../index.html#results">Results</a></li>
+        <li><a href="index.html">Case Studies</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
