@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Studies — Jozu Consulting Group</title>
+  <title>Case Study: Beyond OCR — Reframing a Process Problem as a Revenue Problem — Jozu Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
@@ -87,15 +87,6 @@
       box-shadow: 0 0 28px rgba(200,75,34,0.4);
       transform: translateY(-1px);
     }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border-color: rgba(255,255,255,0.4);
-    }
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
     .btn-outline-dark {
       background: transparent;
       color: var(--red);
@@ -115,14 +106,12 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(200,75,34,0.2);
     }
-
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 72px;
     }
-
     .nav-logo {
       display: flex;
       align-items: center;
@@ -135,7 +124,6 @@
       padding: 6px 14px;
       border-radius: 4px;
     }
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -150,7 +138,6 @@
     }
     .nav-links a:hover { color: var(--white); }
     .nav-links a.active { color: var(--white); }
-
     .nav-cta { margin-left: 16px; }
 
     /* ─── PAGE HERO ─── */
@@ -193,18 +180,77 @@
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
       color: var(--white);
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 16px;
     }
-
-    .page-hero-intro {
-      font-size: 1.0625rem;
-      color: rgba(255,255,255,0.65);
-      max-width: 720px;
-      line-height: 1.75;
+    .page-hero h1 em {
+      font-style: normal;
+      color: var(--red);
     }
 
-    /* ─── SECTION BASE ─── */
+    .page-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .page-hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-400);
+      margin-bottom: 32px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--white); }
+
+    /* ─── METRICS BAR ─── */
+    .metrics-bar {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(200,75,34,0.2);
+      border-bottom: 1px solid rgba(200,75,34,0.2);
+      padding: 40px 0;
+    }
+    .metrics-bar-inner {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+    .metrics-bar-item {
+      text-align: center;
+    }
+    .metrics-bar-item .val {
+      font-family: var(--font-head);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+    }
+    .metrics-bar-item .lbl {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* ─── CONTENT SECTION ─── */
     section { padding: 96px 0; position: relative; }
 
     .section-eyebrow {
@@ -224,6 +270,52 @@
       width: 20px;
       height: 2px;
       background: var(--red);
+    }
+
+    .content-section {
+      background: var(--off-white);
+    }
+
+    .content-body {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .content-body p {
+      font-size: 1.0625rem;
+      color: var(--gray-600);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .content-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ─── LESSON BLOCK ─── */
+    .lesson-section {
+      background: var(--navy);
+      padding: 64px 0;
+    }
+    .lesson-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      border-left: 4px solid var(--orange);
+      padding-left: 28px;
+    }
+    .lesson-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .lesson-text {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-style: italic;
     }
 
     /* ─── WATERMARK ─── */
@@ -256,109 +348,26 @@
     }
     .wm > .container, .wm-dark > .container { position: relative; z-index: 1; }
 
-    /* ─── INSIGHTS GRID (3 columns) ─── */
-    .insights-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 48px;
-    }
-
-    .cs-card {
+    /* ─── NEXT / CTA ─── */
+    .case-nav {
       background: var(--white);
-      border-radius: 12px;
-      border: 1px solid var(--gray-100);
-      overflow: hidden;
-      transition: all var(--transition);
+      padding: 64px 0;
+    }
+    .case-nav-inner {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
     }
-    .cs-card:hover {
-      box-shadow: 0 16px 48px rgba(3,32,66,0.09);
-      transform: translateY(-4px);
-    }
-
-    .cs-card-top {
-      background: var(--navy);
-      padding: 28px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .cs-card-top::after {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      right: -40px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 24px solid rgba(200,75,34,0.07);
-    }
-
-    .cs-card-number {
-      font-family: var(--font-head);
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--red-light);
-      opacity: 0.6;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .cs-card-category {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .cs-card-title {
-      font-family: var(--font-head);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.35;
-    }
-
-    .cs-card-body {
-      padding: 24px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cs-card-metric {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-    .cs-card-metric .val {
-      font-family: var(--font-head);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--red);
-    }
-    .cs-card-metric .lbl {
-      font-size: 0.8125rem;
-      color: var(--gray-600);
-    }
-
-    .cs-card-link {
-      margin-top: auto;
-      padding-top: 20px;
-      border-top: 1px solid var(--gray-100);
+    .case-nav-link {
       font-family: var(--font-head);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.9375rem;
       color: var(--red);
       transition: color var(--transition);
     }
-    .cs-card-link:hover {
-      color: var(--red-dark);
-    }
+    .case-nav-link:hover { color: var(--red-dark); }
 
     /* ─── CTA BAND ─── */
     .cta-band {
@@ -443,13 +452,13 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      .insights-grid { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
       .cta-band-inner { flex-direction: column; text-align: center; }
+      .metrics-bar-inner { gap: 32px; }
     }
     @media (max-width: 600px) {
       section { padding: 64px 0; }
-      .insights-grid { grid-template-columns: 1fr; }
+      .metrics-bar-inner { flex-direction: column; gap: 24px; }
     }
   </style>
 </head>
@@ -482,100 +491,78 @@
 ═══════════════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to All Case Studies</a>
     <div class="breadcrumb">
       <a href="../index.html">Home</a>
       <span class="sep">/</span>
-      <span class="current">Case Studies</span>
+      <a href="index.html">Case Studies</a>
+      <span class="sep">/</span>
+      <span class="current">Healthcare Services</span>
     </div>
-    <h1>The Real Problem Is Rarely the Stated One.</h1>
-    <p class="page-hero-intro">
-      Each engagement below began with a buyer who had a clear request and a budget to match.
-      Through deeper discovery, the request revealed itself as a partial solution to a larger problem.
-      The intervention was not to sell harder against the original ask. It was to surface the economic
-      consequence of solving it incompletely. These case studies document that shift.
-    </p>
+    <div class="page-hero-eyebrow">Case Study 02 &mdash; Healthcare Services / Revenue Operations</div>
+    <h1>Beyond OCR: Reframing a Process Problem as a <em>Revenue Problem</em></h1>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════
-     CASE STUDIES GRID
+     METRICS BAR
 ═══════════════════════════════════════ -->
-<section class="wm" style="background: var(--off-white);">
+<div class="metrics-bar">
   <div class="container">
-    <div class="insights-grid">
+    <div class="metrics-bar-inner">
+      <div class="metrics-bar-item">
+        <div class="val">~$7M</div>
+        <div class="lbl">Total<br>contract value</div>
+      </div>
+      <div class="metrics-bar-item">
+        <div class="val">35&times;</div>
+        <div class="lbl">Expansion vs.<br>original ask</div>
+      </div>
+      <div class="metrics-bar-item">
+        <div class="val">3 Systems</div>
+        <div class="lbl">Integrated into<br>one program</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Card 1 -->
-      <a href="healthcare-payer.html" class="cs-card">
-        <div class="cs-card-top">
-          <div class="cs-card-number">01</div>
-          <div class="cs-card-category">Healthcare Payer / Digital Engagement</div>
-          <div class="cs-card-title">From Commodity Transaction to Enterprise Contract</div>
-        </div>
-        <div class="cs-card-body">
-          <div class="cs-card-metric">
-            <span class="val">7x</span>
-            <span class="lbl">increase in contract value</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">$1.4M</span>
-            <span class="lbl">ARR on 3-year term</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">$4.2M</span>
-            <span class="lbl">total contract value</span>
-          </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
-        </div>
-      </a>
+<!-- ═══════════════════════════════════════
+     NARRATIVE
+═══════════════════════════════════════ -->
+<section class="content-section wm">
+  <div class="container">
+    <div class="content-body">
+      <p>A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing &mdash; a back-office efficiency purchase worth roughly $200K.</p>
 
-      <!-- Card 2 -->
-      <a href="healthcare-services.html" class="cs-card">
-        <div class="cs-card-top">
-          <div class="cs-card-number">02</div>
-          <div class="cs-card-category">Healthcare Services / Revenue Operations</div>
-          <div class="cs-card-title">Beyond OCR: Reframing a Process Problem as a Revenue Problem</div>
-        </div>
-        <div class="cs-card-body">
-          <div class="cs-card-metric">
-            <span class="val">~$7M</span>
-            <span class="lbl">total contract value</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">35x</span>
-            <span class="lbl">expansion vs. original ask</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">3</span>
-            <span class="lbl">systems integrated</span>
-          </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
-        </div>
-      </a>
+      <p>But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage &mdash; intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
 
-      <!-- Card 3 -->
-      <a href="enterprise-sales-system.html" class="cs-card">
-        <div class="cs-card-top">
-          <div class="cs-card-number">03</div>
-          <div class="cs-card-category">Enterprise Technology / Sales System Design</div>
-          <div class="cs-card-title">Building an Enterprise Motion Where None Existed</div>
-        </div>
-        <div class="cs-card-body">
-          <div class="cs-card-metric">
-            <span class="val">$8M</span>
-            <span class="lbl">annual recurring revenue</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">$24M</span>
-            <span class="lbl">total contract value</span>
-          </div>
-          <div class="cs-card-metric">
-            <span class="val">26x</span>
-            <span class="lbl">return on $300K investment</span>
-          </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
-        </div>
-      </a>
+      <p>The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
 
+      <p>The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source &mdash; not at the point where they first noticed the pain.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LESSON
+═══════════════════════════════════════ -->
+<section class="lesson-section wm-dark">
+  <div class="container">
+    <div class="lesson-inner">
+      <div class="lesson-label">The Lesson</div>
+      <p class="lesson-text">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CASE NAV
+═══════════════════════════════════════ -->
+<section class="case-nav">
+  <div class="container">
+    <div class="case-nav-inner">
+      <a href="healthcare-payer.html" class="case-nav-link">&larr; Previous: Commodity to Enterprise</a>
+      <a href="enterprise-sales-system.html" class="case-nav-link">Next Case Study: Enterprise Sales System &rarr;</a>
     </div>
   </div>
 </section>
@@ -586,7 +573,7 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Sales Infrastructure That Lasts?</h2>
+      <h2>Ready to Rethink Your Sales Architecture?</h2>
       <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
     </div>
   </div>
