@@ -31,6 +31,7 @@
       <li><a href="../contact.html">Contact</a></li>
     </ul>
     <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
 
@@ -46,7 +47,8 @@
         <span style="margin: 0 8px;">/</span>
         <span style="color: var(--gold);">Insights</span>
       </span>
-    </nav>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
     <h1>Insights &mdash; Enterprise Revenue <em>Thinking</em></h1>
     <p class="lead">Perspectives on enterprise sales, revenue architecture, and building systems that last.</p>
   </div>
@@ -138,5 +140,6 @@
   </div>
 </footer>
 
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
 </body>
 </html>
