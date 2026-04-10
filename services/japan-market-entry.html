@@ -3,12 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Japan &amp; Asia-Pacific Market Entry — Japanese Companies US Market Entry Consulting | Jozu Consulting Group</title>
+  <title>Japan &amp; Asia-Pacific Market Entry - Japanese Companies US Market Entry Consulting | Jozu Consulting Group</title>
   <meta name="description" content="Go-to-market consulting for Japanese companies entering the U.S. market. Cultural bridge between Japanese business practices and American enterprise buying. U.S. messaging adaptation, pipeline generation, sales process design.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ── Language Toggle ── */
+    .lang-toggle-bar {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 8px 0;
+    }
+    .lang-toggle-bar .container {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.45);
+      padding: 4px 12px;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+      line-height: 1;
+    }
+    .lang-toggle button.active {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .lang-toggle button:hover:not(.active) {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Japanese body font override */
+    body.lang-ja,
+    body.lang-ja p,
+    body.lang-ja li,
+    body.lang-ja span,
+    body.lang-ja div {
+      font-family: 'Noto Sans JP', 'Sora', sans-serif;
+    }
+    body.lang-ja h1,
+    body.lang-ja h2,
+    body.lang-ja h3,
+    body.lang-ja h4 {
+      font-family: 'Noto Sans JP', 'Sora', sans-serif;
+      letter-spacing: 0.02em;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,19 +79,31 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Services</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../index.html#results">Results</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="../insights/index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../index.html#results" data-en="Results" data-ja="実績">Results</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談を申し込む">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
+
+<!-- ═══════════════════════════════════════
+     LANGUAGE TOGGLE BAR
+═══════════════════════════════════════ -->
+<div class="lang-toggle-bar">
+  <div class="container">
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════
      PAGE HERO
@@ -45,23 +115,23 @@
   <div class="container" style="position:relative;z-index:2;">
     <nav aria-label="Breadcrumb" style="margin-bottom:24px;">
       <span style="font-size:0.8125rem;color:rgba(255,255,255,0.45);">
-        <a href="../index.html" style="color:rgba(255,255,255,0.55);transition:color 0.25s;">Home</a>
+        <a href="../index.html" style="color:rgba(255,255,255,0.55);transition:color 0.25s;" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin:0 8px;">/</span>
-        <a href="./" style="color:rgba(255,255,255,0.55);transition:color 0.25s;">Services</a>
+        <a href="./" style="color:rgba(255,255,255,0.55);transition:color 0.25s;" data-en="Services" data-ja="サービス">Services</a>
         <span style="margin:0 8px;">/</span>
-        <span style="color:var(--gold);">Japan &amp; Asia-Pacific Market Entry</span>
+        <span style="color:var(--gold);" data-en="Japan &amp; Asia-Pacific Market Entry" data-ja="日本・アジア太平洋市場参入">Japan &amp; Asia-Pacific Market Entry</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-    <div class="hero-eyebrow">Cross-Cultural GTM</div>
+    </nav>
+    <div class="hero-eyebrow" data-en="Cross-Cultural GTM" data-ja="異文化間GTM戦略">Cross-Cultural GTM</div>
     <h1 style="font-size:clamp(2.25rem,4.5vw,3.5rem);font-weight:800;color:var(--white);max-width:760px;">
-      Helping Japanese Companies <em style="font-style:normal;color:var(--red);">Win in the American Market.</em>
+      <span data-en="Helping Japanese Companies " data-ja="日本企業の">Helping Japanese Companies </span><em style="font-style:normal;color:var(--red);" data-en="Win in the American Market." data-ja="アメリカ市場での成功を、共に。">Win in the American Market.</em>
     </h1>
-    <p class="hero-sub" style="font-size:clamp(1rem,2vw,1.125rem);color:rgba(255,255,255,0.7);max-width:620px;margin-top:20px;line-height:1.75;">
-      Go-to-market foundation for Japanese companies entering or scaling in the U.S. — bridging the cultural and operational gap between Japanese relationship-building and American enterprise buying.
+    <p class="hero-sub" style="font-size:clamp(1rem,2vw,1.125rem);color:rgba(255,255,255,0.7);max-width:620px;margin-top:20px;line-height:1.75;" data-en="Go-to-market foundation for Japanese companies entering or scaling in the U.S. - bridging the cultural and operational gap between Japanese relationship-building and American enterprise buying." data-ja="米国市場への参入・拡大を目指す日本企業のためのGTM基盤構築。日本型の関係構築と米国エンタープライズ購買の間にある文化的・運用的ギャップを橋渡しします。">
+      Go-to-market foundation for Japanese companies entering or scaling in the U.S. - bridging the cultural and operational gap between Japanese relationship-building and American enterprise buying.
     </p>
     <div style="margin-top:40px;">
-      <a href="../index.html#contact" class="btn btn-primary">Start the Conversation &rarr;</a>
+      <a href="../index.html#contact" class="btn btn-primary" data-en="Start the Conversation →" data-ja="まずはご相談を →">Start the Conversation &rarr;</a>
     </div>
   </div>
 </section>
@@ -77,21 +147,21 @@
         <div class="japan-word" style="font-family:'Ma Shan Zheng','Noto Serif JP','Yu Mincho',serif;font-size:8rem;font-weight:400;background:linear-gradient(180deg,var(--orange) 0%,var(--red) 40%,rgba(200,75,34,0.3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:-8px;letter-spacing:0.08em;filter:drop-shadow(0 0 24px rgba(240,120,48,0.25)) drop-shadow(0 4px 12px rgba(200,75,34,0.15));">
           &#19978;&#25163;
         </div>
-        <p style="font-size:1.125rem;color:rgba(255,255,255,0.7);margin-top:16px;line-height:1.75;">
-          <strong style="color:var(--white);">Jouzu</strong> (&#19978;&#25163;) — skillful, masterful. The art of doing something so well it appears effortless. This is our standard, and our name.
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.7);margin-top:16px;line-height:1.75;" data-en="<strong style='color:var(--white);'>Jouzu</strong> (上手) - skillful, masterful. The art of doing something so well it appears effortless. This is our standard, and our name." data-ja="<strong style='color:var(--white);'>上手（じょうず）</strong> - 熟練した、卓越した技術を持つこと。物事を難なくこなすように見えるほどの域に達すること。これが私たちの基準であり、社名の由来です。">
+          <strong style="color:var(--white);">Jouzu</strong> (&#19978;&#25163;) - skillful, masterful. The art of doing something so well it appears effortless. This is our standard, and our name.
         </p>
       </div>
       <div>
-        <div class="section-eyebrow" style="color:var(--gold);">The Cultural Bridge</div>
-        <h2 class="section-title light" style="color:var(--white);">Understanding Both Sides of the Table.</h2>
-        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-top:16px;">
+        <div class="section-eyebrow" style="color:var(--gold);" data-en="The Cultural Bridge" data-ja="文化的架け橋">The Cultural Bridge</div>
+        <h2 class="section-title light" style="color:var(--white);" data-en="Understanding Both Sides of the Table." data-ja="テーブルの両側を理解する。">Understanding Both Sides of the Table.</h2>
+        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-top:16px;" data-en="Japanese business culture is built on <strong style='color:rgba(255,255,255,0.85);'>nemawashi</strong> (consensus-building before formal decisions), <strong style='color:rgba(255,255,255,0.85);'>ringi</strong> (bottom-up approval processes), and deep relationship cultivation that precedes any transaction." data-ja="日本のビジネス文化は、<strong style='color:rgba(255,255,255,0.85);'>根回し</strong>（正式な意思決定前のコンセンサス形成）、<strong style='color:rgba(255,255,255,0.85);'>稟議</strong>（ボトムアップの承認プロセス）、そして取引に先立つ深い関係構築によって成り立っています。">
           Japanese business culture is built on <strong style="color:rgba(255,255,255,0.85);">nemawashi</strong> (consensus-building before formal decisions), <strong style="color:rgba(255,255,255,0.85);">ringi</strong> (bottom-up approval processes), and deep relationship cultivation that precedes any transaction.
         </p>
-        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-top:12px;">
-          American enterprise buying operates differently — faster timelines, explicit ROI requirements, multi-stakeholder evaluation committees, and competitive procurement processes. The companies that succeed in both markets understand how to translate between these two systems without losing what makes them strong.
+        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-top:12px;" data-en="American enterprise buying operates differently - faster timelines, explicit ROI requirements, multi-stakeholder evaluation committees, and competitive procurement processes. The companies that succeed in both markets understand how to translate between these two systems without losing what makes them strong." data-ja="米国エンタープライズ企業の購買プロセスはまったく異なります。スピードを重視したタイムライン、明確なROI要件、複数ステークホルダーによる評価委員会、そして競争入札プロセス。両市場で成功する企業は、自社の強みを損なうことなく、この二つのシステムを橋渡しする方法を理解しています。">
+          American enterprise buying operates differently - faster timelines, explicit ROI requirements, multi-stakeholder evaluation committees, and competitive procurement processes. The companies that succeed in both markets understand how to translate between these two systems without losing what makes them strong.
         </p>
-        <div class="assertion-block" style="border-color:var(--red-light);color:rgba(255,255,255,0.75);margin-top:24px;">
-          "The discipline of Japanese relationship-building is an asset in American enterprise sales — when you know how to translate it."
+        <div class="assertion-block" style="border-color:var(--red-light);color:rgba(255,255,255,0.75);margin-top:24px;" data-en="&ldquo;The discipline of Japanese relationship-building is an asset in American enterprise sales - when you know how to translate it.&rdquo;" data-ja="「日本式の関係構築の規律は、米国エンタープライズ営業においても強力な資産になります - その翻訳の仕方を知っていれば。」">
+          "The discipline of Japanese relationship-building is an asset in American enterprise sales - when you know how to translate it."
         </div>
       </div>
     </div>
@@ -104,23 +174,23 @@
 <section class="wm" style="background:var(--off-white);padding:96px 0;">
   <div class="container" style="position:relative;z-index:1;">
     <div style="max-width:760px;margin:0 auto;">
-      <div class="section-eyebrow">Jeff's Japan Credentials</div>
-      <h2 class="section-title">Four Years Teaching The Harvard Negotiation Project in Tokyo.</h2>
-      <p class="section-body" style="margin-top:16px;max-width:680px;">
-        Jeff spent four years in Tokyo teaching The Harvard Negotiation Project methodology to Japanese business leaders — executives navigating complex international negotiations, cross-cultural joint ventures, and American enterprise buying processes.
+      <div class="section-eyebrow" data-en="Jeff's Japan Credentials" data-ja="ジェフの日本における実績">Jeff's Japan Credentials</div>
+      <h2 class="section-title" data-en="Four Years Teaching The Harvard Negotiation Project in Tokyo." data-ja="東京でハーバード交渉術を4年間指導。">Four Years Teaching The Harvard Negotiation Project in Tokyo.</h2>
+      <p class="section-body" style="margin-top:16px;max-width:680px;" data-en="Jeff spent four years in Tokyo teaching The Harvard Negotiation Project methodology to Japanese business leaders - executives navigating complex international negotiations, cross-cultural joint ventures, and American enterprise buying processes." data-ja="ジェフは東京に4年間滞在し、ハーバード交渉術のメソドロジーを日本のビジネスリーダーたちに指導しました。対象は、複雑な国際交渉、異文化間の合弁事業、米国エンタープライズ企業との購買プロセスを担うエグゼクティブたちです。">
+        Jeff spent four years in Tokyo teaching The Harvard Negotiation Project methodology to Japanese business leaders - executives navigating complex international negotiations, cross-cultural joint ventures, and American enterprise buying processes.
       </p>
-      <p class="section-body" style="margin-top:12px;max-width:680px;">
-        That experience gave him a deep understanding of how Japanese companies think about relationships, consensus, and decision-making — and how to bridge those strengths into the American enterprise sales environment where speed, specificity, and economic justification drive purchasing decisions.
+      <p class="section-body" style="margin-top:12px;max-width:680px;" data-en="That experience gave him a deep understanding of how Japanese companies think about relationships, consensus, and decision-making - and how to bridge those strengths into the American enterprise sales environment where speed, specificity, and economic justification drive purchasing decisions." data-ja="その経験を通じて、ジェフは日本企業が関係性・コンセンサス・意思決定をどのように捉えているかを深く理解しました。そして、その強みを、スピード・明確さ・経済的根拠が購買決定を左右する米国エンタープライズ営業環境へと橋渡しする方法を習得しました。">
+        That experience gave him a deep understanding of how Japanese companies think about relationships, consensus, and decision-making - and how to bridge those strengths into the American enterprise sales environment where speed, specificity, and economic justification drive purchasing decisions.
       </p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;">
         <div class="accent-card">
-          <h4 style="font-family:var(--font-head);font-size:0.9375rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Harvard Negotiation Project</h4>
-          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;">Four years teaching principled negotiation methodology to Japanese executives and business leaders in Tokyo.</p>
+          <h4 style="font-family:var(--font-head);font-size:0.9375rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;" data-en="Harvard Negotiation Project" data-ja="ハーバード交渉プロジェクト">Harvard Negotiation Project</h4>
+          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;" data-en="Four years teaching principled negotiation methodology to Japanese executives and business leaders in Tokyo." data-ja="東京にて、日本企業の経営幹部やビジネスリーダーを対象に、原則的交渉メソドロジーを4年間指導。">Four years teaching principled negotiation methodology to Japanese executives and business leaders in Tokyo.</p>
         </div>
         <div class="accent-card">
-          <h4 style="font-family:var(--font-head);font-size:0.9375rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Cross-Cultural Fluency</h4>
-          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;">Deep operational understanding of nemawashi, ringi, and the relationship-first approach that defines Japanese business culture.</p>
+          <h4 style="font-family:var(--font-head);font-size:0.9375rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;" data-en="Cross-Cultural Fluency" data-ja="異文化間の深い理解">Cross-Cultural Fluency</h4>
+          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;" data-en="Deep operational understanding of nemawashi, ringi, and the relationship-first approach that defines Japanese business culture." data-ja="根回し・稟議・関係性を最優先とする日本のビジネス文化を、実務レベルで深く理解しています。">Deep operational understanding of nemawashi, ringi, and the relationship-first approach that defines Japanese business culture.</p>
         </div>
       </div>
     </div>
@@ -133,30 +203,30 @@
 <section style="background:var(--white);padding:96px 0;">
   <div class="container">
     <div style="text-align:center;max-width:640px;margin:0 auto 56px;">
-      <div class="section-eyebrow" style="justify-content:center;">Scope</div>
-      <h2 class="section-title" style="max-width:100%;">What We Build Together.</h2>
-      <p class="section-body" style="margin:16px auto 0;">A complete go-to-market foundation for Japanese companies entering or scaling in the American enterprise market.</p>
+      <div class="section-eyebrow" style="justify-content:center;" data-en="Scope" data-ja="支援範囲">Scope</div>
+      <h2 class="section-title" style="max-width:100%;" data-en="What We Build Together." data-ja="共に構築するもの。">What We Build Together.</h2>
+      <p class="section-body" style="margin:16px auto 0;" data-en="A complete go-to-market foundation for Japanese companies entering or scaling in the American enterprise market." data-ja="米国エンタープライズ市場への参入・拡大を目指す日本企業のための、完全なGTM基盤を構築します。">A complete go-to-market foundation for Japanese companies entering or scaling in the American enterprise market.</p>
     </div>
     <div class="service-features" style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:800px;margin:0 auto;">
       <div class="accent-card">
         <div class="system-bar">01</div>
-        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;">U.S. Messaging Adaptation</h3>
-        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;">Translating your value proposition from Japanese business context into messaging that resonates with American enterprise buyers — specificity, ROI, and urgency.</p>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;" data-en="U.S. Messaging Adaptation" data-ja="米国向けメッセージング適応">U.S. Messaging Adaptation</h3>
+        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;" data-en="Translating your value proposition from Japanese business context into messaging that resonates with American enterprise buyers - specificity, ROI, and urgency." data-ja="日本のビジネス文脈に基づくバリュープロポジションを、米国エンタープライズバイヤーに響くメッセージへと変換します。具体性・ROI・緊迫感を軸に再構築。">Translating your value proposition from Japanese business context into messaging that resonates with American enterprise buyers - specificity, ROI, and urgency.</p>
       </div>
       <div class="accent-card">
         <div class="system-bar">02</div>
-        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;">Pipeline Generation</h3>
-        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;">Building an American pipeline from scratch — target account identification, outbound strategy, and meeting generation with U.S. enterprise buyers.</p>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;" data-en="Pipeline Generation" data-ja="パイプライン構築">Pipeline Generation</h3>
+        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;" data-en="Building an American pipeline from scratch - target account identification, outbound strategy, and meeting generation with U.S. enterprise buyers." data-ja="米国パイプラインをゼロから構築します。ターゲットアカウントの特定、アウトバウンド戦略の策定、米国エンタープライズバイヤーとの商談創出まで一貫して対応。">Building an American pipeline from scratch - target account identification, outbound strategy, and meeting generation with U.S. enterprise buyers.</p>
       </div>
       <div class="accent-card">
         <div class="system-bar">03</div>
-        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;">Sales Process Design</h3>
-        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;">An enterprise sales process built for the American market — from first call to signed contract — with the discipline your team already values.</p>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;" data-en="Sales Process Design" data-ja="営業プロセス設計">Sales Process Design</h3>
+        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;" data-en="An enterprise sales process built for the American market - from first call to signed contract - with the discipline your team already values." data-ja="初回コールから契約締結まで、米国市場向けエンタープライズ営業プロセスを設計します。貴社チームが培ってきた規律をそのままに、米国市場仕様へと最適化。">An enterprise sales process built for the American market - from first call to signed contract - with the discipline your team already values.</p>
       </div>
       <div class="accent-card">
         <div class="system-bar">04</div>
-        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;">Team Training for American Buyers</h3>
-        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;">Preparing your sales team to navigate American enterprise buying — competitive dynamics, procurement timelines, multi-stakeholder selling, and direct negotiation.</p>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin:12px 0 8px;" data-en="Team Training for American Buyers" data-ja="米国バイヤー対応チームトレーニング">Team Training for American Buyers</h3>
+        <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.7;" data-en="Preparing your sales team to navigate American enterprise buying - competitive dynamics, procurement timelines, multi-stakeholder selling, and direct negotiation." data-ja="米国エンタープライズ購買に対応できる営業チームを育成します。競争環境の理解、調達タイムライン、複数ステークホルダーへの販売、直接交渉のスキルを体系的に習得。">Preparing your sales team to navigate American enterprise buying - competitive dynamics, procurement timelines, multi-stakeholder selling, and direct negotiation.</p>
       </div>
     </div>
   </div>
@@ -168,8 +238,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Your American Go-to-Market?</h2>
-      <a href="../index.html#contact" class="btn btn-white">Start the Conversation &rarr;</a>
+      <h2 data-en="Ready to Build Your American Go-to-Market?" data-ja="米国GTM戦略の構築を始めましょう。">Ready to Build Your American Go-to-Market?</h2>
+      <a href="../index.html#contact" class="btn btn-white" data-en="Start the Conversation →" data-ja="まずはご相談を →">Start the Conversation &rarr;</a>
     </div>
   </div>
 </section>
@@ -184,18 +254,57 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../index.html#results">Results</a></li>
-        <li><a href="../index.html#case-studies">Case Studies</a></li>
-        <li><a href="./">Services</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../index.html#results" data-en="Results" data-ja="実績">Results</a></li>
+        <li><a href="../index.html#case-studies" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="./" data-en="Services" data-ja="サービス">Services</a></li>
+        <li><a href="../index.html#about" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. 無断転載禁止。">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<script>
+  // ── Mobile nav toggle ──
+  document.querySelector(".nav-toggle").addEventListener("click", function() {
+    this.classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-links a").forEach(function(a) {
+    a.addEventListener("click", function() {
+      document.querySelector(".nav-toggle").classList.remove("active");
+      document.querySelector(".nav-links").classList.remove("open");
+    });
+  });
+
+  // ── Language toggle ──
+  var currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Update button states
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+
+    // Toggle body class for font override
+    document.body.classList.toggle('lang-ja', lang === 'ja');
+
+    // Swap all translatable elements
+    var elements = document.querySelectorAll('[data-en][data-ja]');
+    elements.forEach(function(el) {
+      var content = el.getAttribute('data-' + lang);
+      if (content !== null) {
+        // Use innerHTML to support bold/strong tags inside translations
+        el.innerHTML = content;
+      }
+    });
+  }
+</script>
 </body>
 </html>
