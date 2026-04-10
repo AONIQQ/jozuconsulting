@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Founders - GTM Foundation Sprint - Jozu Consulting Group</title>
+  <meta name="description" content="Building your first sales motion? The Jozu GTM Foundation Sprint installs a proven revenue system into your startup in 90 days. Two tiers starting at $2,500/mo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ─── FOUNDERS PAGE STYLES ─── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .pricing-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      position: relative;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .pricing-card.featured {
+      border-color: var(--red);
+      border-width: 2px;
+    }
+    .pricing-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -13px;
+      left: 36px;
+      background: linear-gradient(135deg, var(--red) 0%, var(--orange) 100%);
+      color: white;
+      font-family: var(--font-head);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      border-radius: 4px;
+    }
+    .pricing-tier {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .pricing-name {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .pricing-desc {
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .pricing-price {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-price span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gray-400);
+    }
+    .pricing-term {
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+      margin-bottom: 32px;
+    }
+    .pricing-divider {
+      height: 1px;
+      background: var(--gray-100);
+      margin-bottom: 28px;
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 36px;
+      flex: 1;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .pricing-features li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      background: var(--red);
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E") no-repeat center / contain;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E") no-repeat center / contain;
+    }
+    .founder-pain {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .founder-pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 24px;
+      background: rgba(200,75,34,0.04);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--red);
+    }
+    .founder-pain-item .icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      color: var(--red);
+      font-size: 1.125rem;
+      line-height: 24px;
+      text-align: center;
+    }
+    .founder-pain-item .text {
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    .system-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .system-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+    }
+    .system-item-number {
+      font-family: var(--font-head);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .system-item h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .system-item p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+    .cro-card {
+      background: var(--navy-mid);
+      border: 1px solid rgba(200,75,34,0.25);
+      border-radius: var(--radius);
+      padding: 48px;
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 48px;
+    }
+    .cro-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .cro-card p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      max-width: 560px;
+    }
+    .diagnostic-section {
+      text-align: center;
+    }
+    .diagnostic-section .section-eyebrow,
+    .diagnostic-section .section-title,
+    .diagnostic-section .section-body {
+      max-width: 100%;
+    }
+    .diagnostic-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    .diagnostic-step {
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .diagnostic-step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red) 0%, var(--orange) 100%);
+      color: white;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .diagnostic-step h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .diagnostic-step p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .founder-pain { grid-template-columns: 1fr; }
+      .system-items { grid-template-columns: 1fr; }
+      .diagnostic-steps { grid-template-columns: 1fr; }
+      .cro-card { grid-template-columns: 1fr; text-align: center; }
+      .cro-card .btn { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      .pricing-card { padding: 32px 24px; }
+      .cro-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<header>
+  <nav class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="jozu-logo2.png" alt="Jozu Consulting Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="services/index.html">Services</a></li>
+      <li><a href="founders.html" style="color:var(--gold);">For Founders</a></li>
+      <li><a href="index.html#methodology">Methodology</a></li>
+      <li><a href="case-studies/index.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#japan">Japan &amp; Asia</a></li>
+      <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#diagnostic" class="btn btn-primary nav-cta">Free Pipeline Diagnostic</a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="page-hero" style="background:var(--navy);padding:100px 0 80px;position:relative;overflow:hidden;">
+  <div class="hero-grid" style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <nav aria-label="Breadcrumb" style="margin-bottom:24px;">
+      <span style="font-size:0.8125rem;color:rgba(255,255,255,0.45);">
+        <a href="index.html" style="color:rgba(255,255,255,0.55);transition:color 0.25s;">Home</a>
+        <span style="margin:0 8px;">/</span>
+        <span style="color:var(--gold);">For Founders</span>
+      </span>
+    </nav>
+    <div class="hero-eyebrow">For Early-Stage Founders</div>
+    <h1 style="font-size:clamp(2.25rem,4.5vw,3.5rem);font-weight:800;color:var(--white);max-width:760px;">
+      You Don't Need a VP of Sales.<br><em style="font-style:normal;color:var(--red);">You Need a System.</em>
+    </h1>
+    <p class="hero-sub" style="font-size:clamp(1rem,2vw,1.125rem);color:rgba(255,255,255,0.7);max-width:620px;margin-top:20px;line-height:1.75;">
+      The GTM Foundation Sprint installs a proven, repeatable sales system into your startup in 90 days. The same methodology behind $150M+ in enterprise revenue - scoped for founders who are building their first real sales motion.
+    </p>
+    <div class="hero-actions" style="margin-top:32px;">
+      <a href="#diagnostic" class="btn btn-primary">Get a Free Pipeline Diagnostic</a>
+      <a href="#pricing" class="btn btn-outline">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     THE PROBLEM
+═══════════════════════════════════════ -->
+<section class="wm" style="background:var(--off-white);padding:96px 0;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-eyebrow">Sound Familiar?</div>
+    <h2 class="section-title">You Built the Product. Now You Need Revenue That Compounds.</h2>
+    <p class="section-body">Most seed-to-Series-A founders are stuck in the same pattern: closing deals on founder energy alone, hoping the next hire will "figure out sales," and watching pipeline stall the moment they stop selling personally.</p>
+
+    <div class="founder-pain">
+      <div class="founder-pain-item">
+        <div class="icon">1</div>
+        <div class="text"><strong>No repeatable process.</strong> Every deal is improvised. What works once doesn't transfer to the next rep.</div>
+      </div>
+      <div class="founder-pain-item">
+        <div class="icon">2</div>
+        <div class="text"><strong>Demos before discovery.</strong> Your team leads with the product instead of the buyer's problem - and loses on price.</div>
+      </div>
+      <div class="founder-pain-item">
+        <div class="icon">3</div>
+        <div class="text"><strong>Pipeline is a wish list.</strong> Forecast says $500K. Real committed pipeline is closer to $80K.</div>
+      </div>
+      <div class="founder-pain-item">
+        <div class="icon">4</div>
+        <div class="text"><strong>Hiring won't fix it.</strong> A VP of Sales without a system underneath them will build their own - slowly, expensively, and from scratch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHAT YOU GET: THE SYSTEM
+═══════════════════════════════════════ -->
+<section class="wm-dark" style="background:var(--navy);padding:96px 0;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-eyebrow" style="color:var(--gold);">The Jozu System</div>
+    <h2 class="section-title light">What Gets Installed in 90 Days</h2>
+    <p class="section-body light">Not a playbook. Not a workshop. Permanent infrastructure embedded into your daily workflows - so your sales motion runs whether you're in the room or not.</p>
+
+    <div class="system-items">
+      <div class="system-item">
+        <div class="system-item-number">01 - Messaging</div>
+        <h3>Power Messages</h3>
+        <p>Messaging frameworks that connect your product's capability to the buyer's economic outcome. No feature lists. No generic value props. Statements that make buyers lean forward.</p>
+      </div>
+      <div class="system-item">
+        <div class="system-item-number">02 - Process</div>
+        <h3>Sequence of Events</h3>
+        <p>A buyer-seller roadmap of every step from intro call to close. Each stage has clear exit criteria and buyer-visible actions - not just internal CRM stages.</p>
+      </div>
+      <div class="system-item">
+        <div class="system-item-number">03 - Pipeline</div>
+        <h3>Forecast Gates</h3>
+        <p>Evidence-based checkpoints that tell you which deals are real and which are noise. No more gut-feel forecasting. Your pipeline becomes a tool, not a guessing game.</p>
+      </div>
+      <div class="system-item">
+        <div class="system-item-number">04 - Discovery</div>
+        <h3>Discovery Framework</h3>
+        <p>Structured discovery that follows the buyer's problem downstream to its economic consequence. This is where deal size gets multiplied - before a single demo.</p>
+      </div>
+      <div class="system-item">
+        <div class="system-item-number">05 - Scoring</div>
+        <h3>Pipeline Scoring Model</h3>
+        <p>A composite score for every deal based on discovery depth, stakeholder coverage, proof density, and economic alignment. See deal quality at a glance.</p>
+      </div>
+      <div class="system-item">
+        <div class="system-item-number">06 - Templates</div>
+        <h3>Operational Templates</h3>
+        <p>Plan letters, mutual action plans, demo frameworks, and intro call scripts - all customized to your product and market. Your team uses these on day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PRICING
+═══════════════════════════════════════ -->
+<section id="pricing" class="wm" style="background:var(--off-white);padding:96px 0;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-eyebrow">GTM Foundation Sprint</div>
+    <h2 class="section-title">Two Ways to Work Together</h2>
+    <p class="section-body">Both tiers install the full Jozu system. The difference is how much direct access you get to Jeff during the 90 days.</p>
+
+    <div class="pricing-grid">
+
+      <!-- TIER 1: System Install -->
+      <div class="pricing-card">
+        <div class="pricing-tier">Tier 1</div>
+        <div class="pricing-name">System Install</div>
+        <div class="pricing-desc">The full Jozu operating system - delivered, customized, and embedded into your workflows. Ideal for founders who want the system and can run it themselves with light guidance.</div>
+        <div class="pricing-price">$2,500 <span>/ month</span></div>
+        <div class="pricing-term">3-month engagement - $7,500 total</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li>Full system delivery: Power Messages, Sequence of Events, Forecast Gates, discovery framework, templates</li>
+          <li>ICP definition and pipeline scoring model</li>
+          <li>1x 30-minute live consultation per week</li>
+          <li>Async support: submit deals, messaging, or pipeline questions anytime - written feedback within 48 hours</li>
+          <li>All deliverables customized to your product, market, and buyer</li>
+          <li>Your team owns everything permanently</li>
+        </ul>
+        <a href="#diagnostic" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Start with a Free Diagnostic</a>
+      </div>
+
+      <!-- TIER 2: System + Operator -->
+      <div class="pricing-card featured">
+        <div class="pricing-tier">Tier 2</div>
+        <div class="pricing-name">System + Operator</div>
+        <div class="pricing-desc">Everything in System Install, plus Jeff working live deals with you weekly. For founders who want hands-on deal coaching and real-time process calibration.</div>
+        <div class="pricing-price">$5,000 <span>/ month</span></div>
+        <div class="pricing-term">3-month engagement - $15,000 total</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li>Everything in System Install</li>
+          <li>1x 60-minute live session per week with Jeff - deal inspection, pipeline review, and process coaching</li>
+          <li>Direct deal coaching on your active opportunities</li>
+          <li>Live pipeline reviews with real-time scoring</li>
+          <li>Rep ride-alongs and call reviews</li>
+          <li>Forecast calibration and pipeline strategy</li>
+        </ul>
+        <a href="#diagnostic" class="btn btn-primary" style="width:100%;justify-content:center;">Start with a Free Diagnostic</a>
+      </div>
+
+    </div>
+
+    <!-- Top of Funnel add-on -->
+    <div style="margin-top:32px;background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:32px 36px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;">
+      <div>
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:inline-flex;align-items:center;gap:8px;"><span style="display:block;width:16px;height:2px;background:var(--red);"></span>Add-On</div>
+        <h3 style="font-family:var(--font-head);font-size:1.25rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Top-of-Funnel Activation</h3>
+        <p style="font-size:0.9375rem;color:var(--gray-600);line-height:1.7;max-width:560px;">Need pipeline, not just process? We also scope top-of-funnel programs - LinkedIn activation, outbound sequencing, and full SDR-as-a-service with remote cold outreach systems - as a custom add-on to either tier. Priced based on your required scope.</p>
+      </div>
+      <a href="#diagnostic" class="btn btn-outline-dark" style="flex-shrink:0;">Ask About TOF &rarr;</a>
+    </div>
+
+    <!-- Fractional CRO callout -->
+    <div class="cro-card">
+      <div>
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Beyond the Sprint</div>
+        <h3>Need a Dedicated GTM Leader?</h3>
+        <p>For companies that need a hands-on fractional CRO or Head of Sales - someone who leads your entire go-to-market motion, not just installs the system - Jeff embeds directly into your leadership team. These engagements bring the full Jozu operating system plus dedicated strategic leadership, deal execution, and team building. Scoped individually based on your stage and needs.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="flex-shrink:0;">Let's Talk &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHY THIS WORKS
+═══════════════════════════════════════ -->
+<section style="background:var(--white);padding:96px 0;">
+  <div class="container">
+    <div class="section-eyebrow">Why This Works</div>
+    <h2 class="section-title">This Isn't Training. It's Infrastructure.</h2>
+    <p class="section-body" style="margin-bottom:48px;">Most sales consultants deliver a workshop, hand you a binder, and leave. Your team is back to old habits in three weeks. The Jozu system is different because it's built to outlast everyone - including us.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div class="accent-card">
+        <div class="system-bar">The Usual Approach</div>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Hire a VP of Sales First</h3>
+        <p style="font-size:0.9375rem;color:var(--gray-600);line-height:1.7;">6-month search. $180K+ base + equity. Then they spend another 6 months building a process from scratch. 12 months and $200K+ before your sales motion even exists. If they leave, the process leaves with them.</p>
+      </div>
+      <div class="accent-card" style="border-left-color:var(--gold);">
+        <div class="system-bar" style="color:var(--gold);border-color:rgba(246,183,32,0.25);">The Jozu Approach</div>
+        <h3 style="font-family:var(--font-head);font-size:1.125rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Install the System First</h3>
+        <p style="font-size:0.9375rem;color:var(--gray-600);line-height:1.7;">90 days. $7,500-$15,000. Your sales process, messaging, pipeline model, and scoring system are permanently embedded into your workflows. When you do hire a VP of Sales, they walk into a functioning machine - not a blank slate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FULL JOZU PLATFORM
+═══════════════════════════════════════ -->
+<section class="wm-dark" style="background:var(--navy);padding:96px 0;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-eyebrow" style="color:var(--gold);">The Full Jozu Platform</div>
+    <h2 class="section-title light">The Sprint Is Just the Starting Point</h2>
+    <p class="section-body light" style="margin-bottom:48px;">The GTM Foundation Sprint installs your sales system. But Jozu Consulting Group builds and executes across the entire go-to-market stack. As your needs grow, so does what we deliver.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Demand Generation</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">LinkedIn activation programs, outbound sequencing, full SDR-as-a-service with remote cold outreach systems, and pipeline generation campaigns.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Website &amp; Digital Presence</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">Full website design and deployment. Messaging-aligned landing pages, conversion architecture, and positioning that sells before the first call.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Content &amp; Nurture Systems</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">Email courses, thought leadership content, drip sequences, and nurture programs that keep your pipeline warm and your brand in front of buyers.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Revenue Architecture</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">Full-stack design of how your organization creates, captures, and scales revenue - ICP definition, sales motion design, pipeline models, and pricing strategy.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Enterprise Messaging</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">Messaging frameworks, value propositions, competitive positioning, and sales narratives built to move executive buyers.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px 24px;">
+        <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Japan &amp; Asia-Pacific GTM</div>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.7;">Go-to-market foundation for Japanese companies entering the U.S. market - bridging cultural sales approaches with American enterprise buying patterns.</p>
+      </div>
+    </div>
+
+    <p style="font-size:0.9375rem;color:rgba(255,255,255,0.5);margin-top:32px;line-height:1.7;text-align:center;">These capabilities are scoped individually based on your needs. <a href="contact.html" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;">Talk to us</a> about what your GTM requires beyond the Sprint.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PROOF
+═══════════════════════════════════════ -->
+<section class="wm" style="background:var(--off-white);padding:96px 0;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-eyebrow">Results</div>
+    <h2 class="section-title">The System Behind the Numbers</h2>
+    <p class="section-body" style="margin-bottom:48px;">The same methodology powering these GTM Foundation Sprints has generated $150M+ in attributed revenue across enterprise engagements. These are the frameworks your startup gets on day one.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+      <div class="accent-card" style="text-align:center;padding:36px 28px;">
+        <div style="font-family:var(--font-head);font-size:2.25rem;font-weight:800;color:var(--red);line-height:1;">3x</div>
+        <div style="font-size:0.8125rem;color:var(--gray-400);margin-top:8px;text-transform:uppercase;letter-spacing:0.06em;">Avg. Pipeline Growth</div>
+      </div>
+      <div class="accent-card" style="text-align:center;padding:36px 28px;">
+        <div style="font-family:var(--font-head);font-size:2.25rem;font-weight:800;color:var(--red);line-height:1;">25%</div>
+        <div style="font-size:0.8125rem;color:var(--gray-400);margin-top:8px;text-transform:uppercase;letter-spacing:0.06em;">Shorter Sales Cycles</div>
+      </div>
+      <div class="accent-card" style="text-align:center;padding:36px 28px;">
+        <div style="font-family:var(--font-head);font-size:2.25rem;font-weight:800;color:var(--red);line-height:1;">70%</div>
+        <div style="font-size:0.8125rem;color:var(--gray-400);margin-top:8px;text-transform:uppercase;letter-spacing:0.06em;">Forecast Accuracy Gain</div>
+      </div>
+    </div>
+
+    <div class="accent-card" style="margin-top:32px;padding:32px 36px;">
+      <div class="system-bar">Case in Point</div>
+      <p style="font-size:1rem;color:var(--text-dark);line-height:1.75;margin-bottom:12px;"><strong>A company came to us selling OCR software for $200K.</strong> We followed the problem downstream - from document processing to integration to patient timing to scheduling to asset utilization to revenue leakage. The reframed solution: an integrated revenue operations platform.</p>
+      <p style="font-size:1rem;color:var(--text-dark);line-height:1.75;"><strong>Result: $7M contract.</strong> The product didn't change. The discovery process did. That same discovery framework is what gets installed in your GTM Foundation Sprint.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FREE DIAGNOSTIC
+═══════════════════════════════════════ -->
+<section id="diagnostic" style="background:var(--navy);padding:96px 0;">
+  <div class="container diagnostic-section">
+    <div class="section-eyebrow" style="color:var(--gold);justify-content:center;">
+      <span style="display:inline-flex;align-items:center;gap:10px;">
+        <span style="display:block;width:20px;height:2px;background:var(--gold);"></span>
+        No Commitment Required
+      </span>
+    </div>
+    <h2 class="section-title light" style="margin:0 auto 16px;text-align:center;">Free 30-Minute Pipeline Diagnostic</h2>
+    <p class="section-body light" style="margin:0 auto;text-align:center;max-width:600px;">Not a sales call. An actual diagnostic. We look at your pipeline, your messaging, and your sales process - and tell you exactly what's broken and what to fix first. No obligation. If the system is right for you, we'll talk about it. If not, you still walk away with actionable insight.</p>
+
+    <div class="diagnostic-steps">
+      <div class="diagnostic-step">
+        <div class="diagnostic-step-number">1</div>
+        <h4 style="color:var(--white);">Book the Call</h4>
+        <p style="color:rgba(255,255,255,0.55);">30 minutes on the calendar. Come with your current pipeline, a recent demo recording, or your pitch deck - whatever you have.</p>
+      </div>
+      <div class="diagnostic-step">
+        <div class="diagnostic-step-number">2</div>
+        <h4 style="color:var(--white);">Get the Diagnosis</h4>
+        <p style="color:rgba(255,255,255,0.55);">We identify the 2-3 highest-leverage gaps in your sales motion - messaging, discovery, pipeline structure, or process - and tell you exactly where revenue is leaking.</p>
+      </div>
+      <div class="diagnostic-step">
+        <div class="diagnostic-step-number">3</div>
+        <h4 style="color:var(--white);">Decide What's Next</h4>
+        <p style="color:rgba(255,255,255,0.55);">If the GTM Foundation Sprint fits, we scope it together. If not, you leave with a clear picture of what to fix and the priority order to fix it.</p>
+      </div>
+    </div>
+
+    <a href="https://calendly.com/jeff-jozuconsultinggroup/intro" target="_blank" class="btn btn-primary" style="font-size:1.0625rem;padding:18px 40px;">Book Your Free Diagnostic &rarr;</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════ -->
+<section class="cta-band wm-dark">
+  <div class="container">
+    <div class="cta-band-inner">
+      <h2>Questions? Let's Talk.</h2>
+      <a href="contact.html" class="btn btn-white">Contact Us &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="jozu-logo2.png" alt="Jozu Consulting Group">
+      </div>
+      <ul class="footer-links">
+        <li><a href="services/index.html">Services</a></li>
+        <li><a href="founders.html">For Founders</a></li>
+        <li><a href="index.html#methodology">Methodology</a></li>
+        <li><a href="case-studies/index.html">Case Studies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#japan">Japan &amp; Asia</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+</body>
+</html>
