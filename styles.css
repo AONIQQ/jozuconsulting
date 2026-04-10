@@ -1569,3 +1569,65 @@ footer {
   .steps { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ─── LANGUAGE TOGGLE (global) ─── */
+.lang-toggle-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(3, 32, 66, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200,75,34,0.3);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.lang-toggle-float button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.5);
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+  white-space: nowrap;
+}
+.lang-toggle-float button.active {
+  background: var(--gold);
+  color: var(--navy);
+}
+.lang-toggle-float button:hover:not(.active) {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Japanese font overrides */
+body.lang-ja,
+body.lang-ja p,
+body.lang-ja li,
+body.lang-ja span,
+body.lang-ja div,
+body.lang-ja td,
+body.lang-ja th,
+body.lang-ja label,
+body.lang-ja textarea,
+body.lang-ja input,
+body.lang-ja select,
+body.lang-ja option {
+  font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
+}
+body.lang-ja h1,
+body.lang-ja h2,
+body.lang-ja h3,
+body.lang-ja h4 {
+  font-family: 'Noto Sans JP', 'Sora', sans-serif;
+  letter-spacing: 0.02em;
+}

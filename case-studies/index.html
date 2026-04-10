@@ -6,7 +6,7 @@
   <title>Case Studies — Jozu Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -451,6 +451,51 @@
       section { padding: 64px 0; }
       .insights-grid { grid-template-columns: 1fr; }
     }
+    /* ─── LANGUAGE TOGGLE ─── */
+    .lang-toggle-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      transition: all var(--transition);
+    }
+    .lang-toggle-float button.active {
+      background: var(--red);
+      color: var(--white);
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: var(--white);
+    }
+    body.lang-ja h1, body.lang-ja h2, body.lang-ja h3, body.lang-ja h4,
+    body.lang-ja p, body.lang-ja span, body.lang-ja a, body.lang-ja div, body.lang-ja li, body.lang-ja button {
+      font-feature-settings: normal;
+    }
+    body.lang-ja .page-hero h1,
+    body.lang-ja .section-eyebrow,
+    body.lang-ja .cs-card-title,
+    body.lang-ja .cs-card-category {
+      font-family: 'Noto Sans JP', var(--font-head), sans-serif;
+    }
+    body.lang-ja .page-hero-intro,
+    body.lang-ja .cs-card-body,
+    body.lang-ja .footer-copy {
+      font-family: 'Noto Sans JP', var(--font-body), sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -464,16 +509,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/index.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="../insights/index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -484,12 +529,12 @@
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="../index.html">Home</a>
+      <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
       <span class="sep">/</span>
-      <span class="current">Case Studies</span>
+      <span class="current" data-en="Case Studies" data-ja="事例紹介">Case Studies</span>
     </div>
-    <h1>The Real Problem Is Rarely the Stated One.</h1>
-    <p class="page-hero-intro">
+    <h1 data-en="The Real Problem Is Rarely the Stated One." data-ja="本当の課題は、表面に現れたものとは限らない。">The Real Problem Is Rarely the Stated One.</h1>
+    <p class="page-hero-intro" data-en="Each engagement below began with a buyer who had a clear request and a budget to match. Through deeper discovery, the request revealed itself as a partial solution to a larger problem. The intervention was not to sell harder against the original ask. It was to surface the economic consequence of solving it incompletely. These case studies document that shift." data-ja="以下の各案件は、明確な要望と予算を持つ買い手から始まりました。より深いディスカバリーを通じて、その要望はより大きな課題に対する部分的な解決策に過ぎないことが明らかになりました。私たちの介入は、最初の要望に対してより強く売り込むことではありませんでした。不完全な解決がもたらす経済的影響を明らかにすることでした。これらの事例はその転換を記録しています。">
       Each engagement below began with a buyer who had a clear request and a budget to match.
       Through deeper discovery, the request revealed itself as a partial solution to a larger problem.
       The intervention was not to sell harder against the original ask. It was to surface the economic
@@ -509,23 +554,23 @@
       <a href="healthcare-payer.html" class="cs-card">
         <div class="cs-card-top">
           <div class="cs-card-number">01</div>
-          <div class="cs-card-category">Healthcare Payer / Digital Engagement</div>
-          <div class="cs-card-title">From Commodity Transaction to Enterprise Contract</div>
+          <div class="cs-card-category" data-en="Healthcare Payer / Digital Engagement" data-ja="医療保険者 / デジタルエンゲージメント">Healthcare Payer / Digital Engagement</div>
+          <div class="cs-card-title" data-en="From Commodity Transaction to Enterprise Contract" data-ja="コモディティ取引からエンタープライズ契約へ">From Commodity Transaction to Enterprise Contract</div>
         </div>
         <div class="cs-card-body">
           <div class="cs-card-metric">
             <span class="val">7x</span>
-            <span class="lbl">increase in contract value</span>
+            <span class="lbl" data-en="increase in contract value" data-ja="契約金額の増加">increase in contract value</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">$1.4M</span>
-            <span class="lbl">ARR on 3-year term</span>
+            <span class="lbl" data-en="ARR on 3-year term" data-ja="3年契約のARR">ARR on 3-year term</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">$4.2M</span>
-            <span class="lbl">total contract value</span>
+            <span class="lbl" data-en="total contract value" data-ja="総契約金額">total contract value</span>
           </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
+          <div class="cs-card-link" data-en="Read Case Study &rarr;" data-ja="事例を読む &rarr;">Read Case Study &rarr;</div>
         </div>
       </a>
 
@@ -533,23 +578,23 @@
       <a href="healthcare-services.html" class="cs-card">
         <div class="cs-card-top">
           <div class="cs-card-number">02</div>
-          <div class="cs-card-category">Healthcare Services / Revenue Operations</div>
-          <div class="cs-card-title">Beyond OCR: Reframing a Process Problem as a Revenue Problem</div>
+          <div class="cs-card-category" data-en="Healthcare Services / Revenue Operations" data-ja="医療サービス / レベニューオペレーション">Healthcare Services / Revenue Operations</div>
+          <div class="cs-card-title" data-en="Beyond OCR: Reframing a Process Problem as a Revenue Problem" data-ja="OCRを超えて - プロセスの課題を収益の課題として再定義する">Beyond OCR: Reframing a Process Problem as a Revenue Problem</div>
         </div>
         <div class="cs-card-body">
           <div class="cs-card-metric">
             <span class="val">~$7M</span>
-            <span class="lbl">total contract value</span>
+            <span class="lbl" data-en="total contract value" data-ja="総契約金額">total contract value</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">35x</span>
-            <span class="lbl">expansion vs. original ask</span>
+            <span class="lbl" data-en="expansion vs. original ask" data-ja="当初の要望比での拡大">expansion vs. original ask</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">3</span>
-            <span class="lbl">systems integrated</span>
+            <span class="lbl" data-en="systems integrated" data-ja="統合されたシステム">systems integrated</span>
           </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
+          <div class="cs-card-link" data-en="Read Case Study &rarr;" data-ja="事例を読む &rarr;">Read Case Study &rarr;</div>
         </div>
       </a>
 
@@ -557,23 +602,23 @@
       <a href="enterprise-sales-system.html" class="cs-card">
         <div class="cs-card-top">
           <div class="cs-card-number">03</div>
-          <div class="cs-card-category">Enterprise Technology / Sales System Design</div>
-          <div class="cs-card-title">Building an Enterprise Motion Where None Existed</div>
+          <div class="cs-card-category" data-en="Enterprise Technology / Sales System Design" data-ja="エンタープライズテクノロジー / 営業システム設計">Enterprise Technology / Sales System Design</div>
+          <div class="cs-card-title" data-en="Building an Enterprise Motion Where None Existed" data-ja="エンタープライズ営業の仕組みをゼロから構築する">Building an Enterprise Motion Where None Existed</div>
         </div>
         <div class="cs-card-body">
           <div class="cs-card-metric">
             <span class="val">$8M</span>
-            <span class="lbl">annual recurring revenue</span>
+            <span class="lbl" data-en="annual recurring revenue" data-ja="年間経常収益">annual recurring revenue</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">$24M</span>
-            <span class="lbl">total contract value</span>
+            <span class="lbl" data-en="total contract value" data-ja="総契約金額">total contract value</span>
           </div>
           <div class="cs-card-metric">
             <span class="val">26x</span>
-            <span class="lbl">return on $300K investment</span>
+            <span class="lbl" data-en="return on $300K investment" data-ja="$300K投資に対するリターン">return on $300K investment</span>
           </div>
-          <div class="cs-card-link">Read Case Study &rarr;</div>
+          <div class="cs-card-link" data-en="Read Case Study &rarr;" data-ja="事例を読む &rarr;">Read Case Study &rarr;</div>
         </div>
       </a>
 
@@ -587,8 +632,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Sales Infrastructure That Lasts?</h2>
-      <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
+      <h2 data-en="Ready to Build Sales Infrastructure That Lasts?" data-ja="永続的な営業インフラを構築する準備はできていますか?">Ready to Build Sales Infrastructure That Lasts?</h2>
+      <a href="../index.html#contact" class="btn btn-white" data-en="Discuss Your Situation &rarr;" data-ja="ご状況をお聞かせください &rarr;">Discuss Your Situation &rarr;</a>
     </div>
   </div>
 </section>
@@ -603,17 +648,36 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="index.html">Case Studies</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../index.html#about" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="../index.html#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

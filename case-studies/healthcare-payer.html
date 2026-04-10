@@ -6,7 +6,7 @@
   <title>Case Study: From Commodity Transaction to Enterprise Contract — Jozu Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -460,6 +460,39 @@
       section { padding: 64px 0; }
       .metrics-bar-inner { flex-direction: column; gap: 24px; }
     }
+    /* ─── LANGUAGE TOGGLE ─── */
+    .lang-toggle-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      transition: all var(--transition);
+    }
+    .lang-toggle-float button.active {
+      background: var(--red);
+      color: var(--white);
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: var(--white);
+    }
+    body.lang-ja {
+      font-family: 'Noto Sans JP', var(--font-body), sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -473,16 +506,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/index.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="../insights/index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -492,16 +525,16 @@
 ═══════════════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to All Case Studies</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Case Studies" data-ja="&larr; 全事例紹介に戻る">&larr; Back to All Case Studies</a>
     <div class="breadcrumb">
-      <a href="../index.html">Home</a>
+      <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
       <span class="sep">/</span>
-      <a href="index.html">Case Studies</a>
+      <a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a>
       <span class="sep">/</span>
-      <span class="current">Healthcare Payer</span>
+      <span class="current" data-en="Healthcare Payer" data-ja="医療保険者">Healthcare Payer</span>
     </div>
-    <div class="page-hero-eyebrow">Case Study 01 &mdash; Healthcare Payer / Digital Engagement</div>
-    <h1>From Commodity Transaction to <em>Enterprise Contract</em></h1>
+    <div class="page-hero-eyebrow" data-en="Case Study 01 - Healthcare Payer / Digital Engagement" data-ja="事例 01 - 医療保険者 / デジタルエンゲージメント">Case Study 01 &mdash; Healthcare Payer / Digital Engagement</div>
+    <h1 data-en="From Commodity Transaction to &lt;em&gt;Enterprise Contract&lt;/em&gt;" data-ja="コモディティ取引から&lt;em&gt;エンタープライズ契約&lt;/em&gt;へ">From Commodity Transaction to <em>Enterprise Contract</em></h1>
   </div>
 </section>
 
@@ -513,15 +546,15 @@
     <div class="metrics-bar-inner">
       <div class="metrics-bar-item">
         <div class="val">7&times;</div>
-        <div class="lbl">Increase in annual<br>contract value</div>
+        <div class="lbl" data-en="Increase in annual&lt;br&gt;contract value" data-ja="年間契約金額の&lt;br&gt;増加倍率">Increase in annual<br>contract value</div>
       </div>
       <div class="metrics-bar-item">
         <div class="val">$1.4M</div>
-        <div class="lbl">ARR on a<br>3-year term</div>
+        <div class="lbl" data-en="ARR on a&lt;br&gt;3-year term" data-ja="3年契約の&lt;br&gt;ARR">ARR on a<br>3-year term</div>
       </div>
       <div class="metrics-bar-item">
         <div class="val">$4.2M</div>
-        <div class="lbl">Total<br>contract value</div>
+        <div class="lbl" data-en="Total&lt;br&gt;contract value" data-ja="総&lt;br&gt;契約金額">Total<br>contract value</div>
       </div>
     </div>
   </div>
@@ -533,13 +566,13 @@
 <section class="content-section wm">
   <div class="container">
     <div class="content-body">
-      <p>A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle &mdash; enough to cover a single communication use case. The deal as scoped was worth approximately $200K.</p>
+      <p data-en="A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle - enough to cover a single communication use case. The deal as scoped was worth approximately $200K." data-ja="ある地域の医療保険プランが、コモディティ価格を手に持ってプラットフォームにアプローチしてきました。彼らは各ベンダーのメッセージ単価をベンチマークし、単一のコミュニケーションユースケースをカバーするのに十分な小規模トランザクションバンドルを購入したいと考えていました。スコープされた案件の価値は約$200Kでした。">A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle &mdash; enough to cover a single communication use case. The deal as scoped was worth approximately $200K.</p>
 
-      <p>The problem was what that model left exposed. Under a transaction-based purchase, every new campaign &mdash; disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications &mdash; required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages.</p>
+      <p data-en="The problem was what that model left exposed. Under a transaction-based purchase, every new campaign - disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications - required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages." data-ja="問題は、そのモデルが何を露呈させたかでした。トランザクションベースの購入では、すべての新しいキャンペーン - 災害避難通知、緊急の処方箋リフィル指示、季節的な加入通知、規制コミュニケーション - に別途の調達サイクルが必要でした。そのサイクルには数週間かかりました。数十万人の会員にサービスを提供する医療保険プランにおいて、その遅延は、購買チームが次のメッセージバッチの予算承認を待っている間に、山火事シーズン中の避難者が緊急のリフィル指示や時間的に重要なケアガイダンスを受けられないことを意味しました。">The problem was what that model left exposed. Under a transaction-based purchase, every new campaign &mdash; disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications &mdash; required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages.</p>
 
-      <p>I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not &ldquo;how many messages do you need this quarter&rdquo; but &ldquo;what happens to your members when you need to communicate urgently and you don&rsquo;t have capacity pre-authorized?&rdquo; I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness &mdash; the ability to act immediately at scale, without rationing a capability their members depended on.</p>
+      <p data-en="I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not &quot;how many messages do you need this quarter&quot; but &quot;what happens to your members when you need to communicate urgently and you don't have capacity pre-authorized?&quot; I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness - the ability to act immediately at scale, without rationing a capability their members depended on." data-ja="私は会話を単価設定から完全に離れさせました。購買チームに投げかけた質問は「今四半期に何通のメッセージが必要ですか」ではなく、「緊急にコミュニケーションが必要な時に、事前承認された容量がない場合、会員はどうなりますか?」でした。私は調達のボトルネックを完全に排除する無制限トランザクションモデルを導入しました。買い手は完全な運用準備体制 - 会員が依存する能力を制限することなく、大規模に即座に行動する能力 - を獲得しました。">I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not &ldquo;how many messages do you need this quarter&rdquo; but &ldquo;what happens to your members when you need to communicate urgently and you don&rsquo;t have capacity pre-authorized?&rdquo; I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness &mdash; the ability to act immediately at scale, without rationing a capability their members depended on.</p>
 
-      <p>The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift &mdash; from commodity transaction to enterprise commitment &mdash; was worth 7&times; the original ask and resulted in better care outcomes for members.</p>
+      <p data-en="The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift - from commodity transaction to enterprise commitment - was worth 7x the original ask and resulted in better care outcomes for members." data-ja="契約は$200Kから年間$1.4Mの3年契約に移行しました。買い手はメッセージ単価の比較をやめ、運用能力への投資を始めました。コモディティ取引からエンタープライズコミットメントへのその転換は、当初の要望の7倍の価値があり、会員のケアアウトカムの改善をもたらしました。">The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift &mdash; from commodity transaction to enterprise commitment &mdash; was worth 7&times; the original ask and resulted in better care outcomes for members.</p>
     </div>
   </div>
 </section>
@@ -550,8 +583,8 @@
 <section class="lesson-section wm-dark">
   <div class="container">
     <div class="lesson-inner">
-      <div class="lesson-label">The Lesson</div>
-      <p class="lesson-text">Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows.</p>
+      <div class="lesson-label" data-en="The Lesson" data-ja="教訓">The Lesson</div>
+      <p class="lesson-text" data-en="Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows." data-ja="トランザクション価格設定は、準備不足の真のコストを隠すことで、買い手に過少購入を促します。能力を配給することの運用的・人的影響を明らかにすると、購買ロジックが変わり、契約がそれに続きます。">Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows.</p>
     </div>
   </div>
 </section>
@@ -562,8 +595,8 @@
 <section class="case-nav">
   <div class="container">
     <div class="case-nav-inner">
-      <a href="index.html" class="case-nav-link">&larr; All Case Studies</a>
-      <a href="healthcare-services.html" class="case-nav-link">Next Case Study: Beyond OCR &rarr;</a>
+      <a href="index.html" class="case-nav-link" data-en="&larr; All Case Studies" data-ja="&larr; 全事例紹介">&larr; All Case Studies</a>
+      <a href="healthcare-services.html" class="case-nav-link" data-en="Next Case Study: Beyond OCR &rarr;" data-ja="次の事例: OCRを超えて &rarr;">Next Case Study: Beyond OCR &rarr;</a>
     </div>
   </div>
 </section>
@@ -574,8 +607,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Rethink Your Sales Architecture?</h2>
-      <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
+      <h2 data-en="Ready to Rethink Your Sales Architecture?" data-ja="営業アーキテクチャを見直す準備はできていますか?">Ready to Rethink Your Sales Architecture?</h2>
+      <a href="../index.html#contact" class="btn btn-white" data-en="Discuss Your Situation &rarr;" data-ja="ご状況をお聞かせください &rarr;">Discuss Your Situation &rarr;</a>
     </div>
   </div>
 </section>
@@ -590,17 +623,36 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="index.html">Case Studies</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../index.html#about" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="../index.html#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

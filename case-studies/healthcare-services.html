@@ -6,7 +6,7 @@
   <title>Case Study: Beyond OCR — Reframing a Process Problem as a Revenue Problem — Jozu Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -460,6 +460,39 @@
       section { padding: 64px 0; }
       .metrics-bar-inner { flex-direction: column; gap: 24px; }
     }
+    /* ─── LANGUAGE TOGGLE ─── */
+    .lang-toggle-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      transition: all var(--transition);
+    }
+    .lang-toggle-float button.active {
+      background: var(--red);
+      color: var(--white);
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: var(--white);
+    }
+    body.lang-ja {
+      font-family: 'Noto Sans JP', var(--font-body), sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -473,16 +506,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/index.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="../insights/index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -492,16 +525,16 @@
 ═══════════════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to All Case Studies</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Case Studies" data-ja="&larr; 全事例紹介に戻る">&larr; Back to All Case Studies</a>
     <div class="breadcrumb">
-      <a href="../index.html">Home</a>
+      <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
       <span class="sep">/</span>
-      <a href="index.html">Case Studies</a>
+      <a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a>
       <span class="sep">/</span>
-      <span class="current">Healthcare Services</span>
+      <span class="current" data-en="Healthcare Services" data-ja="医療サービス">Healthcare Services</span>
     </div>
-    <div class="page-hero-eyebrow">Case Study 02 &mdash; Healthcare Services / Revenue Operations</div>
-    <h1>Beyond OCR: Reframing a Process Problem as a <em>Revenue Problem</em></h1>
+    <div class="page-hero-eyebrow" data-en="Case Study 02 - Healthcare Services / Revenue Operations" data-ja="事例 02 - 医療サービス / レベニューオペレーション">Case Study 02 &mdash; Healthcare Services / Revenue Operations</div>
+    <h1 data-en="Beyond OCR: Reframing a Process Problem as a &lt;em&gt;Revenue Problem&lt;/em&gt;" data-ja="OCRを超えて - プロセスの課題を&lt;em&gt;収益の課題&lt;/em&gt;として再定義する">Beyond OCR: Reframing a Process Problem as a <em>Revenue Problem</em></h1>
   </div>
 </section>
 
@@ -513,15 +546,15 @@
     <div class="metrics-bar-inner">
       <div class="metrics-bar-item">
         <div class="val">~$7M</div>
-        <div class="lbl">Total<br>contract value</div>
+        <div class="lbl" data-en="Total&lt;br&gt;contract value" data-ja="総&lt;br&gt;契約金額">Total<br>contract value</div>
       </div>
       <div class="metrics-bar-item">
         <div class="val">35&times;</div>
-        <div class="lbl">Expansion vs.<br>original ask</div>
+        <div class="lbl" data-en="Expansion vs.&lt;br&gt;original ask" data-ja="当初の要望比&lt;br&gt;での拡大">Expansion vs.<br>original ask</div>
       </div>
       <div class="metrics-bar-item">
-        <div class="val">3 Systems</div>
-        <div class="lbl">Integrated into<br>one program</div>
+        <div class="val" data-en="3 Systems" data-ja="3 システム">3 Systems</div>
+        <div class="lbl" data-en="Integrated into&lt;br&gt;one program" data-ja="1つのプログラムに&lt;br&gt;統合">Integrated into<br>one program</div>
       </div>
     </div>
   </div>
@@ -533,13 +566,13 @@
 <section class="content-section wm">
   <div class="container">
     <div class="content-body">
-      <p>A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing &mdash; a back-office efficiency purchase worth roughly $200K.</p>
+      <p data-en="A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing - a back-office efficiency purchase worth roughly $200K." data-ja="ある医療サービス組織は紙に埋もれていました。年間約550万ページの受信FAX紹介状があり、患者の予約を入れる前に各ページを手動で抽出する必要がありました。彼らの表明されたニーズは、文書処理を自動化するOCRソフトウェア - 約$200K相当のバックオフィス効率化の購入でした。">A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing &mdash; a back-office efficiency purchase worth roughly $200K.</p>
 
-      <p>But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage &mdash; intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
+      <p data-en="But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage - intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss." data-ja="しかし、文書処理は壊れたチェーンの最初のリンクに過ぎませんでした。拡張されたディスカバリーを通じて、紹介状が到着した後に何が起こるかをマッピングしました。患者がアウトリーチを受けるまでの時間、予定された診察のうち実際に行われた数、無断キャンセルの間に高価な診断機器がどれだけ遊休状態だったか、そして患者がケアのコースを完了する前に離脱した際に失われた収益です。浮かび上がった全体像は、各段階で損失が複合する仕組みでした - 受付の遅延が不適切なアウトリーチタイミングを招き、それが無断キャンセルを招き、それが機器の稼働不足を招き、それが収益損失を招いていました。">But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage &mdash; intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
 
-      <p>The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
+      <p data-en="The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization." data-ja="元のOCR要件は実在しましたが不完全でした。抽出は解決しましたが、すべての下流の障害はそのまま残されていました。私はスコープを拡大し、購入を統合レベニューオペレーションプラットフォームとして位置づけました。受付自動化、患者エンゲージメントワークフロー、そしてスケジューリング最適化を1つのシステムとして機能させます。買い手は文書処理速度について考えることをやめ、患者のスループットと資産稼働率について考え始めました。">The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
 
-      <p>The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source &mdash; not at the point where they first noticed the pain.</p>
+      <p data-en="The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source - not at the point where they first noticed the pain." data-ja="エンゲージメントは狭いソフトウェア購入から、これまで切り離されていた3つのシステムをカバーする$7Mのプラットフォーム投資に成長しました。買い手は、最初に痛みを感じた箇所ではなく、収益漏洩の根源に対処する統合された能力を獲得しました。">The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source &mdash; not at the point where they first noticed the pain.</p>
     </div>
   </div>
 </section>
@@ -550,8 +583,8 @@
 <section class="lesson-section wm-dark">
   <div class="container">
     <div class="lesson-inner">
-      <div class="lesson-label">The Lesson</div>
-      <p class="lesson-text">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
+      <div class="lesson-label" data-en="The Lesson" data-ja="教訓">The Lesson</div>
+      <p class="lesson-text" data-en="Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it." data-ja="買い手は、最大の経済的影響が生じるポイントではなく、直接的な痛みのポイントで課題を定義します。課題を下流に向かって収益に到達するまで追跡すれば、ソリューションもそれに伴って拡大します。">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
     </div>
   </div>
 </section>
@@ -562,8 +595,8 @@
 <section class="case-nav">
   <div class="container">
     <div class="case-nav-inner">
-      <a href="healthcare-payer.html" class="case-nav-link">&larr; Previous: Commodity to Enterprise</a>
-      <a href="enterprise-sales-system.html" class="case-nav-link">Next Case Study: Enterprise Sales System &rarr;</a>
+      <a href="healthcare-payer.html" class="case-nav-link" data-en="&larr; Previous: Commodity to Enterprise" data-ja="&larr; 前の事例: コモディティからエンタープライズへ">&larr; Previous: Commodity to Enterprise</a>
+      <a href="enterprise-sales-system.html" class="case-nav-link" data-en="Next Case Study: Enterprise Sales System &rarr;" data-ja="次の事例: エンタープライズ営業システム &rarr;">Next Case Study: Enterprise Sales System &rarr;</a>
     </div>
   </div>
 </section>
@@ -574,8 +607,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Rethink Your Sales Architecture?</h2>
-      <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
+      <h2 data-en="Ready to Rethink Your Sales Architecture?" data-ja="営業アーキテクチャを見直す準備はできていますか?">Ready to Rethink Your Sales Architecture?</h2>
+      <a href="../index.html#contact" class="btn btn-white" data-en="Discuss Your Situation &rarr;" data-ja="ご状況をお聞かせください &rarr;">Discuss Your Situation &rarr;</a>
     </div>
   </div>
 </section>
@@ -590,17 +623,36 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="index.html">Case Studies</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../index.html#about" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="../index.html#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

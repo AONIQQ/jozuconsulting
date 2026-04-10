@@ -6,7 +6,7 @@
   <title>Case Study: Building an Enterprise Motion Where None Existed — Jozu Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -460,6 +460,43 @@
       section { padding: 64px 0; }
       .metrics-bar-inner { flex-direction: column; gap: 24px; }
     }
+    /* ─── LANGUAGE TOGGLE ─── */
+    .lang-toggle-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      transition: all var(--transition);
+    }
+    .lang-toggle-float button.active {
+      background: var(--red);
+      color: var(--white);
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: var(--white);
+    }
+    body.lang-ja h1, body.lang-ja h2, body.lang-ja h3, body.lang-ja h4,
+    body.lang-ja p, body.lang-ja span, body.lang-ja a, body.lang-ja div, body.lang-ja li, body.lang-ja button {
+      font-feature-settings: normal;
+    }
+    body.lang-ja {
+      font-family: 'Noto Sans JP', var(--font-body), sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -473,16 +510,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/index.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="../insights/index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../index.html#contact" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -492,16 +529,16 @@
 ═══════════════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to All Case Studies</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Case Studies" data-ja="&larr; 全事例紹介に戻る">&larr; Back to All Case Studies</a>
     <div class="breadcrumb">
-      <a href="../index.html">Home</a>
+      <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
       <span class="sep">/</span>
-      <a href="index.html">Case Studies</a>
+      <a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a>
       <span class="sep">/</span>
-      <span class="current">Enterprise Sales System</span>
+      <span class="current" data-en="Enterprise Sales System" data-ja="エンタープライズ営業システム">Enterprise Sales System</span>
     </div>
-    <div class="page-hero-eyebrow">Case Study 03 &mdash; Enterprise Technology / Sales System Design</div>
-    <h1>Building an <em>Enterprise Motion</em> Where None Existed</h1>
+    <div class="page-hero-eyebrow" data-en="Case Study 03 - Enterprise Technology / Sales System Design" data-ja="事例 03 - エンタープライズテクノロジー / 営業システム設計">Case Study 03 &mdash; Enterprise Technology / Sales System Design</div>
+    <h1 data-en="Building an &lt;em&gt;Enterprise Motion&lt;/em&gt; Where None Existed" data-ja="エンタープライズ営業の&lt;em&gt;仕組み&lt;/em&gt;をゼロから構築する">Building an <em>Enterprise Motion</em> Where None Existed</h1>
   </div>
 </section>
 
@@ -513,15 +550,15 @@
     <div class="metrics-bar-inner">
       <div class="metrics-bar-item">
         <div class="val">$8M</div>
-        <div class="lbl">Annual<br>recurring revenue</div>
+        <div class="lbl" data-en="Annual&lt;br&gt;recurring revenue" data-ja="年間&lt;br&gt;経常収益">Annual<br>recurring revenue</div>
       </div>
       <div class="metrics-bar-item">
         <div class="val">$24M</div>
-        <div class="lbl">Total<br>contract value</div>
+        <div class="lbl" data-en="Total&lt;br&gt;contract value" data-ja="総&lt;br&gt;契約金額">Total<br>contract value</div>
       </div>
       <div class="metrics-bar-item">
         <div class="val">26&times;</div>
-        <div class="lbl">Return on<br>$300K investment</div>
+        <div class="lbl" data-en="Return on&lt;br&gt;$300K investment" data-ja="$300K投資に対する&lt;br&gt;リターン">Return on<br>$300K investment</div>
       </div>
     </div>
   </div>
@@ -533,13 +570,13 @@
 <section class="content-section wm">
   <div class="container">
     <div class="content-body">
-      <p>The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range &mdash; not because the product couldn&rsquo;t support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction.</p>
+      <p data-en="The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range - not because the product couldn't support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction." data-ja="製品はエンタープライズレベルでした。しかし営業活動はそうではありませんでした。私が組織に参画した時、ほとんどの営業担当者は$75K程度の案件をクローズしていました - 製品がそれ以上に対応できなかったからではなく、営業プロセスのどこにもより大きな対話を促す仕組みがなかったからです。営業担当者は機能デモから入りました。ディスカバリーは浅いか、完全にスキップされていました。会議は次のステップが定義されないまま終了していました。ステークホルダーマッピングは非公式でした。案件は最も摩擦の少ない規模でクローズされていました。">The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range &mdash; not because the product couldn&rsquo;t support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction.</p>
 
-      <p>I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer&rsquo;s inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer&rsquo;s economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides.</p>
+      <p data-en="I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer's inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer's economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides." data-ja="私はゼロから完全なエンタープライズ営業システムを構築し導入しました。すべての要素は、買い手の惰性に従うのではなく、勢いをコントロールするために設計されました。すべての会話がコミットされた次のステップで終わるよう明確な会議目標を設定し、大きな飛躍を必要とせずに案件を前進させる段階的な低リスクコミットメント、買い手の経済的課題が完全に理解されるまで製品を見せないデモ前の必須ディスカバリー、全機能ウォークスルーではなく表明された優先事項に合わせた統制されたデモ構成、経済的意思決定者を早期に関与させるための公式なステークホルダーマッピング、そして両者からの文書化されたコミットメントの下で案件を動かし続ける構造化された共同アクションプランを導入しました。">I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer&rsquo;s inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer&rsquo;s economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides.</p>
 
-      <p>The company&rsquo;s total investment &mdash; including my compensation and the time required to embed these processes &mdash; was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization&rsquo;s previous results.</p>
+      <p data-en="The company's total investment - including my compensation and the time required to embed these processes - was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization's previous results." data-ja="企業の総投資額は - 私の報酬とこれらのプロセスを定着させるために必要な時間を含めて - 約$300Kでした。このシステムは、それまでの組織の成果を定義していた非公式でトランザクション型のパターンに取って代わりました。">The company&rsquo;s total investment &mdash; including my compensation and the time required to embed these processes &mdash; was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization&rsquo;s previous results.</p>
 
-      <p>The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26&times; return on a $300K investment was not a single deal &mdash; it was the output of a permanent system that continued producing after the engagement ended.</p>
+      <p data-en="The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26x return on a $300K investment was not a single deal - it was the output of a permanent system that continued producing after the engagement ended." data-ja="この規律ある営業活動は、年間経常収益$8Mと複数年のエンゲージメントで総契約金額$24Mを生み出しました。契約は深さと更新確率を重視して構造化されました。$300K投資に対する26倍のリターンは単一の案件ではなく、エンゲージメント終了後も生産し続ける永続的なシステムの成果でした。">The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26&times; return on a $300K investment was not a single deal &mdash; it was the output of a permanent system that continued producing after the engagement ended.</p>
     </div>
   </div>
 </section>
@@ -550,8 +587,8 @@
 <section class="lesson-section wm-dark">
   <div class="container">
     <div class="lesson-inner">
-      <div class="lesson-label">The Lesson</div>
-      <p class="lesson-text">Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms.</p>
+      <div class="lesson-label" data-en="The Lesson" data-ja="教訓">The Lesson</div>
+      <p class="lesson-text" data-en="Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms." data-ja="案件規模は営業プロセスの関数であり、製品の関数ではありません。優れた製品であっても、弱い営業活動を通じて販売すれば、常にそのポテンシャルの下限でクローズされます。すべての段階に規律を導入することで、より大きな予算、シニアな意思決定者、そして複数年契約へのアクセスを獲得できます。">Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms.</p>
     </div>
   </div>
 </section>
@@ -562,8 +599,8 @@
 <section class="case-nav">
   <div class="container">
     <div class="case-nav-inner">
-      <a href="healthcare-services.html" class="case-nav-link">&larr; Previous: Beyond OCR</a>
-      <a href="index.html" class="case-nav-link">All Case Studies &rarr;</a>
+      <a href="healthcare-services.html" class="case-nav-link" data-en="&larr; Previous: Beyond OCR" data-ja="&larr; 前の事例: OCRを超えて">&larr; Previous: Beyond OCR</a>
+      <a href="index.html" class="case-nav-link" data-en="All Case Studies &rarr;" data-ja="全事例紹介 &rarr;">All Case Studies &rarr;</a>
     </div>
   </div>
 </section>
@@ -574,8 +611,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Rethink Your Sales Architecture?</h2>
-      <a href="../index.html#contact" class="btn btn-white">Discuss Your Situation &rarr;</a>
+      <h2 data-en="Ready to Rethink Your Sales Architecture?" data-ja="営業アーキテクチャを見直す準備はできていますか?">Ready to Rethink Your Sales Architecture?</h2>
+      <a href="../index.html#contact" class="btn btn-white" data-en="Discuss Your Situation &rarr;" data-ja="ご状況をお聞かせください &rarr;">Discuss Your Situation &rarr;</a>
     </div>
   </div>
 </section>
@@ -590,17 +627,36 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="index.html">Case Studies</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../index.html#about" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="../index.html#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

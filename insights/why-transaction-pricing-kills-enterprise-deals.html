@@ -7,8 +7,23 @@
   <meta name="description" content="Transaction-based pricing trains buyers to under-buy. Learn how to reframe pricing conversations from units to operational readiness and close larger enterprise deals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; display: flex; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px; font-family: 'Sora', sans-serif; font-size: 0.85rem;
+      font-weight: 600; border: none; cursor: pointer; background: #032042;
+      color: rgba(255,255,255,0.5); transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active { background: #C84B22; color: #fff; }
+    .lang-toggle-float button:hover:not(.active) { color: #fff; }
+    body.lang-ja { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body>
 
@@ -21,16 +36,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,16 +58,16 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <a href="index.html">Insights</a>
+        <a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Pricing Strategy</span>
+        <span style="color: var(--gold);" data-en="Pricing Strategy" data-ja="価格戦略">Pricing Strategy</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>Why Transaction Pricing <em>Kills</em> Enterprise Deals</h1>
-    <p class="lead">Transaction-based pricing trains buyers to under-buy. The seller's job is to surface the full scope of need before the buying decision locks in.</p>
+    <h1 data-en="Why Transaction Pricing &lt;em&gt;Kills&lt;/em&gt; Enterprise Deals" data-ja="トランザクション価格設定がエンタープライズ案件を&lt;em&gt;潰す&lt;/em&gt;理由">Why Transaction Pricing <em>Kills</em> Enterprise Deals</h1>
+    <p class="lead" data-en="Transaction-based pricing trains buyers to under-buy. The seller's job is to surface the full scope of need before the buying decision locks in." data-ja="トランザクションベースの価格設定は、買い手に過少購入を促します。売り手の仕事は、購買意思決定が固まる前にニーズの全体像を明らかにすることです。">Transaction-based pricing trains buyers to under-buy. The seller's job is to surface the full scope of need before the buying decision locks in.</p>
   </div>
 </section>
 
@@ -63,77 +78,77 @@
 
 <section class="content-section wm">
   <div class="container" style="max-width: 780px;">
-    <a href="index.html" class="back-link">&larr; Back to All Insights</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Insights" data-ja="&larr; 全インサイトに戻る">&larr; Back to All Insights</a>
 
-    <h2>The Pricing Model Is the First Sales Conversation</h2>
+    <h2 data-en="The Pricing Model Is the First Sales Conversation" data-ja="価格モデルは最初の営業対話である">The Pricing Model Is the First Sales Conversation</h2>
 
-    <p>Most enterprise software companies think of pricing as a packaging problem. They build tiers, bundle features, and publish a per-unit cost on their website. Then they hand that rate card to a sales team and wonder why deals come in small.</p>
+    <p data-en="Most enterprise software companies think of pricing as a packaging problem. They build tiers, bundle features, and publish a per-unit cost on their website. Then they hand that rate card to a sales team and wonder why deals come in small." data-ja="ほとんどのエンタープライズソフトウェア企業は、価格設定をパッケージングの問題として考えます。ティアを構築し、機能をバンドルし、ウェブサイトにユニット単価を掲載します。そしてそのレートカードを営業チームに渡し、なぜ案件が小さく入ってくるのか不思議に思います。">Most enterprise software companies think of pricing as a packaging problem. They build tiers, bundle features, and publish a per-unit cost on their website. Then they hand that rate card to a sales team and wonder why deals come in small.</p>
 
-    <p>The problem is not the price. The problem is the frame. When you sell by the transaction, the seat, or the unit, you are training the buyer to ask one question: "How few of these can I get away with buying?" That question becomes the anchor for every negotiation that follows. And every negotiation that follows will be smaller than it should be.</p>
+    <p data-en="The problem is not the price. The problem is the frame. When you sell by the transaction, the seat, or the unit, you are training the buyer to ask one question: &quot;How few of these can I get away with buying?&quot; That question becomes the anchor for every negotiation that follows. And every negotiation that follows will be smaller than it should be." data-ja="問題は価格ではありません。問題はフレームです。トランザクション、シート、またはユニットで売る時、買い手に1つの質問をさせるよう訓練しています:「これをいくつ買えば済みますか?」その質問が、続くすべての交渉のアンカーになります。そして続くすべての交渉は、あるべきサイズより小さくなります。">The problem is not the price. The problem is the frame. When you sell by the transaction, the seat, or the unit, you are training the buyer to ask one question: "How few of these can I get away with buying?" That question becomes the anchor for every negotiation that follows. And every negotiation that follows will be smaller than it should be.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;Transaction pricing doesn't just limit deal size. It limits the buyer's own understanding of their problem.&quot;" data-ja="「トランザクション価格設定は案件規模を制限するだけではありません。買い手自身の課題理解を制限します。」">
       "Transaction pricing doesn't just limit deal size. It limits the buyer's own understanding of their problem."
     </div>
 
-    <h3>What Happens When the Buyer Controls the Scope</h3>
+    <h3 data-en="What Happens When the Buyer Controls the Scope" data-ja="買い手がスコープをコントロールするとどうなるか">What Happens When the Buyer Controls the Scope</h3>
 
-    <p>Consider a scenario we see often. A healthcare technology company sells a compliance and data management platform. The product is priced per transaction. A large payer organization comes in and says, "We need to process about 50,000 transactions a month." The rep does the math, quotes $200,000 annually, and the deal closes.</p>
+    <p data-en="Consider a scenario we see often. A healthcare technology company sells a compliance and data management platform. The product is priced per transaction. A large payer organization comes in and says, &quot;We need to process about 50,000 transactions a month.&quot; The rep does the math, quotes $200,000 annually, and the deal closes." data-ja="よく見るシナリオを考えてみてください。医療テクノロジー企業がコンプライアンスとデータ管理プラットフォームを販売しています。製品はトランザクション単位で価格設定されています。大手保険者組織が来て言います:「月に約50,000件のトランザクションを処理する必要があります。」営業担当者が計算し、年間$200,000を見積もり、案件がクローズします。">Consider a scenario we see often. A healthcare technology company sells a compliance and data management platform. The product is priced per transaction. A large payer organization comes in and says, "We need to process about 50,000 transactions a month." The rep does the math, quotes $200,000 annually, and the deal closes.</p>
 
-    <p>Everyone celebrates. But here is what actually happened: the buyer described their current pain in the narrowest possible terms. They named the volume they could see from their desk. They did not account for the five other departments that handle the same data in parallel. They did not think about the compliance exposure they are carrying on manual processes. They did not model what their transaction volume looks like at the end of a growth year, not just the beginning.</p>
+    <p data-en="Everyone celebrates. But here is what actually happened: the buyer described their current pain in the narrowest possible terms. They named the volume they could see from their desk. They did not account for the five other departments that handle the same data in parallel. They did not think about the compliance exposure they are carrying on manual processes. They did not model what their transaction volume looks like at the end of a growth year, not just the beginning." data-ja="全員が祝います。しかし実際に起こったことはこうです:買い手は現在の痛みを最も狭い用語で説明しました。自分のデスクから見えるボリュームを挙げました。同じデータを並行して扱う他の5つの部門を考慮しませんでした。手動プロセスで抱えているコンプライアンスリスクについて考えませんでした。成長年度の終わりのトランザクションボリュームがどうなるかをモデル化しませんでした。始めだけでなく。">Everyone celebrates. But here is what actually happened: the buyer described their current pain in the narrowest possible terms. They named the volume they could see from their desk. They did not account for the five other departments that handle the same data in parallel. They did not think about the compliance exposure they are carrying on manual processes. They did not model what their transaction volume looks like at the end of a growth year, not just the beginning.</p>
 
-    <p>The rep never asked those questions because the pricing model did not require it. The pricing model said: tell me how many, and I will tell you how much. That is a vending machine, not a sales process.</p>
+    <p data-en="The rep never asked those questions because the pricing model did not require it. The pricing model said: tell me how many, and I will tell you how much. That is a vending machine, not a sales process." data-ja="営業担当者はこれらの質問をしませんでした。価格モデルがそれを要求しなかったからです。価格モデルはこう言いました:いくつ必要か教えてくれれば、いくらか教えます。それは自動販売機であり、営業プロセスではありません。">The rep never asked those questions because the pricing model did not require it. The pricing model said: tell me how many, and I will tell you how much. That is a vending machine, not a sales process.</p>
 
-    <h3>The Real Deal Was Twenty Times Larger</h3>
+    <h3 data-en="The Real Deal Was Twenty Times Larger" data-ja="本当の案件は20倍大きかった">The Real Deal Was Twenty Times Larger</h3>
 
-    <p>In one engagement we led, we worked with a company facing exactly this dynamic. The initial deal was $200,000. After we rebuilt the discovery process and restructured how the sales team framed the conversation, the deal expanded to $4.2 million. Same buyer. Same product. Different conversation.</p>
+    <p data-en="In one engagement we led, we worked with a company facing exactly this dynamic. The initial deal was $200,000. After we rebuilt the discovery process and restructured how the sales team framed the conversation, the deal expanded to $4.2 million. Same buyer. Same product. Different conversation." data-ja="私たちが主導したあるエンゲージメントで、まさにこのダイナミクスに直面している企業と協業しました。最初の案件は$200,000でした。ディスカバリープロセスを再構築し、営業チームがどのように対話をフレーミングするかを再構成した後、案件は$4.2Mに拡大しました。同じ買い手。同じ製品。異なる対話。">In one engagement we led, we worked with a company facing exactly this dynamic. The initial deal was $200,000. After we rebuilt the discovery process and restructured how the sales team framed the conversation, the deal expanded to $4.2 million. Same buyer. Same product. Different conversation.</p>
 
-    <p>What changed? The sales team stopped leading with "how many transactions do you need?" and started leading with "what does full operational readiness look like for your compliance infrastructure?" That question forced the buyer to think about the problem across their entire organization, not just the one team that raised the flag.</p>
+    <p data-en="What changed? The sales team stopped leading with &quot;how many transactions do you need?&quot; and started leading with &quot;what does full operational readiness look like for your compliance infrastructure?&quot; That question forced the buyer to think about the problem across their entire organization, not just the one team that raised the flag." data-ja="何が変わったか? 営業チームは「何件のトランザクションが必要ですか?」からリードすることをやめ、「コンプライアンスインフラの完全な運用準備体制とはどのようなものですか?」からリードし始めました。その質問は、買い手に問題を提起した1つのチームだけでなく、組織全体にわたって課題を考えさせました。">What changed? The sales team stopped leading with "how many transactions do you need?" and started leading with "what does full operational readiness look like for your compliance infrastructure?" That question forced the buyer to think about the problem across their entire organization, not just the one team that raised the flag.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;The gap between a $200K deal and a $4.2M deal was not product. It was the question the seller asked first.&quot;" data-ja="「$200Kの案件と$4.2Mの案件のギャップは製品ではありませんでした。売り手が最初に尋ねた質問でした。」">
       "The gap between a $200K deal and a $4.2M deal was not product. It was the question the seller asked first."
     </div>
 
-    <h3>Why Sellers Default to Unit Pricing</h3>
+    <h3 data-en="Why Sellers Default to Unit Pricing" data-ja="なぜ売り手はユニット価格設定にデフォルトするのか">Why Sellers Default to Unit Pricing</h3>
 
-    <p>There are three reasons sellers default to transaction-based conversations, and all three are fixable.</p>
+    <p data-en="There are three reasons sellers default to transaction-based conversations, and all three are fixable." data-ja="売り手がトランザクションベースの対話にデフォルトする3つの理由があり、3つすべて修正可能です。">There are three reasons sellers default to transaction-based conversations, and all three are fixable.</p>
 
     <ul>
-      <li><strong>It feels safe.</strong> Quoting a per-unit price removes ambiguity. The rep can do the math on a napkin. But safety for the rep is not the same as value for the buyer or revenue for the company.</li>
-      <li><strong>It mirrors how the buyer asks.</strong> Buyers almost always frame their need in unit terms because that is the easiest way to describe immediate pain. A good seller recognizes that frame and expands it. A mediocre seller accepts it.</li>
-      <li><strong>The pricing model incentivizes it.</strong> If your rate card only shows per-unit costs, your sellers will only have per-unit conversations. The pricing model is the first sales playbook your team reads every morning.</li>
+      <li data-en="&lt;strong&gt;It feels safe.&lt;/strong&gt; Quoting a per-unit price removes ambiguity. The rep can do the math on a napkin. But safety for the rep is not the same as value for the buyer or revenue for the company." data-ja="&lt;strong&gt;安心感がある。&lt;/strong&gt; ユニット単価を提示すると曖昧さがなくなります。営業担当者はナプキンで計算できます。しかし営業担当者にとっての安心は、買い手にとっての価値や企業にとっての収益とは同じではありません。"><strong>It feels safe.</strong> Quoting a per-unit price removes ambiguity. The rep can do the math on a napkin. But safety for the rep is not the same as value for the buyer or revenue for the company.</li>
+      <li data-en="&lt;strong&gt;It mirrors how the buyer asks.&lt;/strong&gt; Buyers almost always frame their need in unit terms because that is the easiest way to describe immediate pain. A good seller recognizes that frame and expands it. A mediocre seller accepts it." data-ja="&lt;strong&gt;買い手の聞き方を反映している。&lt;/strong&gt; 買い手はほぼ常にユニットの用語でニーズをフレーミングします。それが直接的な痛みを説明する最も簡単な方法だからです。良い売り手はそのフレームを認識し拡大します。平凡な売り手はそれを受け入れます。"><strong>It mirrors how the buyer asks.</strong> Buyers almost always frame their need in unit terms because that is the easiest way to describe immediate pain. A good seller recognizes that frame and expands it. A mediocre seller accepts it.</li>
+      <li data-en="&lt;strong&gt;The pricing model incentivizes it.&lt;/strong&gt; If your rate card only shows per-unit costs, your sellers will only have per-unit conversations. The pricing model is the first sales playbook your team reads every morning." data-ja="&lt;strong&gt;価格モデルがそれを促進する。&lt;/strong&gt; レートカードにユニット単価しか表示されていなければ、売り手はユニット単位の対話しかしません。価格モデルは、チームが毎朝最初に読む営業プレイブックです。"><strong>The pricing model incentivizes it.</strong> If your rate card only shows per-unit costs, your sellers will only have per-unit conversations. The pricing model is the first sales playbook your team reads every morning.</li>
     </ul>
 
-    <h3>How to Reframe the Pricing Conversation</h3>
+    <h3 data-en="How to Reframe the Pricing Conversation" data-ja="価格の対話を再フレーミングする方法">How to Reframe the Pricing Conversation</h3>
 
-    <p>If you want larger enterprise deals, you need to change the question the seller asks before the buyer ever sees a number. Here is a practical framework:</p>
+    <p data-en="If you want larger enterprise deals, you need to change the question the seller asks before the buyer ever sees a number. Here is a practical framework:" data-ja="より大きなエンタープライズ案件を望むなら、買い手が数字を見る前に売り手が尋ねる質問を変える必要があります。実用的なフレームワークはこちらです:">If you want larger enterprise deals, you need to change the question the seller asks before the buyer ever sees a number. Here is a practical framework:</p>
 
-    <h3>1. Start With the Operational Map, Not the Order Form</h3>
+    <h3 data-en="1. Start With the Operational Map, Not the Order Form" data-ja="1. 注文書ではなく、運用マップから始める">1. Start With the Operational Map, Not the Order Form</h3>
 
-    <p>Before any pricing discussion, the seller should map the buyer's operational footprint for the problem the product solves. Who touches this workflow? How many departments are affected? What happens when this process fails? The goal is to help the buyer see the full surface area of their need, not just the part that hurts today.</p>
+    <p data-en="Before any pricing discussion, the seller should map the buyer's operational footprint for the problem the product solves. Who touches this workflow? How many departments are affected? What happens when this process fails? The goal is to help the buyer see the full surface area of their need, not just the part that hurts today." data-ja="価格の議論の前に、売り手は製品が解決する課題に対する買い手の運用フットプリントをマッピングすべきです。このワークフローに誰が関与していますか? いくつの部門が影響を受けていますか? このプロセスが失敗するとどうなりますか? 目標は、今日痛む部分だけでなく、ニーズの全体的な表面積を買い手に見せることです。">Before any pricing discussion, the seller should map the buyer's operational footprint for the problem the product solves. Who touches this workflow? How many departments are affected? What happens when this process fails? The goal is to help the buyer see the full surface area of their need, not just the part that hurts today.</p>
 
-    <h3>2. Quantify the Downstream Cost of Under-Buying</h3>
+    <h3 data-en="2. Quantify the Downstream Cost of Under-Buying" data-ja="2. 過少購入の下流コストを定量化する">2. Quantify the Downstream Cost of Under-Buying</h3>
 
-    <p>Buyers under-buy because they do not see the cost of doing so. Help them see it. What does it cost when transactions are processed manually in Department B because they were not included in the original scope? What is the compliance risk of running two parallel systems? Put a dollar figure on the gap between "what you asked for" and "what you actually need."</p>
+    <p data-en="Buyers under-buy because they do not see the cost of doing so. Help them see it. What does it cost when transactions are processed manually in Department B because they were not included in the original scope? What is the compliance risk of running two parallel systems? Put a dollar figure on the gap between &quot;what you asked for&quot; and &quot;what you actually need.&quot;" data-ja="買い手が過少購入するのは、そのコストが見えないからです。見えるようにしてください。元のスコープに含まれなかったため、部門Bでトランザクションが手動で処理される場合のコストはいくらですか? 2つの並行システムを運用するコンプライアンスリスクは何ですか? 「要望したもの」と「実際に必要なもの」のギャップに金額を付けてください。">Buyers under-buy because they do not see the cost of doing so. Help them see it. What does it cost when transactions are processed manually in Department B because they were not included in the original scope? What is the compliance risk of running two parallel systems? Put a dollar figure on the gap between "what you asked for" and "what you actually need."</p>
 
-    <h3>3. Present Pricing as Operational Readiness, Not Unit Cost</h3>
+    <h3 data-en="3. Present Pricing as Operational Readiness, Not Unit Cost" data-ja="3. ユニットコストではなく、運用準備体制として価格を提示する">3. Present Pricing as Operational Readiness, Not Unit Cost</h3>
 
-    <p>Instead of "here is the per-transaction rate," say: "Here is what full operational coverage looks like for your organization. Here is the investment required to eliminate this category of risk entirely." This is not about inflating the deal. It is about being honest with the buyer about what the real scope of the problem is.</p>
+    <p data-en="Instead of &quot;here is the per-transaction rate,&quot; say: &quot;Here is what full operational coverage looks like for your organization. Here is the investment required to eliminate this category of risk entirely.&quot; This is not about inflating the deal. It is about being honest with the buyer about what the real scope of the problem is." data-ja="「トランザクション単価はこちらです」の代わりに、こう言ってください:「貴社の組織にとっての完全な運用カバレッジはこのようになります。このカテゴリのリスクを完全に排除するために必要な投資はこちらです。」これは案件を水増しすることではありません。課題の本当のスコープについて買い手に正直であることです。">Instead of "here is the per-transaction rate," say: "Here is what full operational coverage looks like for your organization. Here is the investment required to eliminate this category of risk entirely." This is not about inflating the deal. It is about being honest with the buyer about what the real scope of the problem is.</p>
 
-    <h3>4. Build the Business Case Before the Proposal</h3>
+    <h3 data-en="4. Build the Business Case Before the Proposal" data-ja="4. 提案書の前にビジネスケースを構築する">4. Build the Business Case Before the Proposal</h3>
 
-    <p>The proposal should never be the first time the buyer sees a large number. If you have done discovery correctly, the buyer has already built the business case in their own mind. The proposal just confirms what they already know. If the number in the proposal surprises the buyer, you skipped a step.</p>
+    <p data-en="The proposal should never be the first time the buyer sees a large number. If you have done discovery correctly, the buyer has already built the business case in their own mind. The proposal just confirms what they already know. If the number in the proposal surprises the buyer, you skipped a step." data-ja="提案書が買い手が大きな数字を初めて見る場所であってはなりません。ディスカバリーを正しく行っていれば、買い手はすでに自分の心の中でビジネスケースを構築しています。提案書はすでに知っていることを確認するだけです。提案書の数字が買い手を驚かせるなら、ステップを飛ばしています。">The proposal should never be the first time the buyer sees a large number. If you have done discovery correctly, the buyer has already built the business case in their own mind. The proposal just confirms what they already know. If the number in the proposal surprises the buyer, you skipped a step.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;A good pricing conversation does not end with the buyer knowing what it costs. It ends with the buyer knowing what it costs to do nothing.&quot;" data-ja="「良い価格の対話は、買い手がコストを知ることで終わるのではありません。何もしないことのコストを買い手が知ることで終わります。」">
       "A good pricing conversation does not end with the buyer knowing what it costs. It ends with the buyer knowing what it costs to do nothing."
     </div>
 
-    <h3>The Structural Fix</h3>
+    <h3 data-en="The Structural Fix" data-ja="構造的な修正">The Structural Fix</h3>
 
-    <p>This is not a training problem. It is a structural one. If your pricing model leads with units, your sellers will lead with units. If your discovery framework does not require the seller to map operational scope before quoting, they will not do it. The fix is not a workshop. The fix is rebuilding the conversation architecture so that the right questions get asked before the pricing discussion begins.</p>
+    <p data-en="This is not a training problem. It is a structural one. If your pricing model leads with units, your sellers will lead with units. If your discovery framework does not require the seller to map operational scope before quoting, they will not do it. The fix is not a workshop. The fix is rebuilding the conversation architecture so that the right questions get asked before the pricing discussion begins." data-ja="これはトレーニングの問題ではありません。構造的な問題です。価格モデルがユニットでリードすれば、売り手はユニットでリードします。ディスカバリーフレームワークが見積もり前に運用スコープのマッピングを売り手に要求しなければ、彼らはそれをしません。修正はワークショップではありません。修正は、価格の議論が始まる前に適切な質問がされるよう対話アーキテクチャを再構築することです。">This is not a training problem. It is a structural one. If your pricing model leads with units, your sellers will lead with units. If your discovery framework does not require the seller to map operational scope before quoting, they will not do it. The fix is not a workshop. The fix is rebuilding the conversation architecture so that the right questions get asked before the pricing discussion begins.</p>
 
-    <p>Transaction pricing is not inherently wrong. But when it becomes the opening frame for an enterprise sale, it shrinks the deal before the deal even starts. The companies that win large enterprise contracts are the ones that help the buyer understand the full scope of their problem before they ever see a number.</p>
+    <p data-en="Transaction pricing is not inherently wrong. But when it becomes the opening frame for an enterprise sale, it shrinks the deal before the deal even starts. The companies that win large enterprise contracts are the ones that help the buyer understand the full scope of their problem before they ever see a number." data-ja="トランザクション価格設定は本質的に間違っていません。しかし、エンタープライズセールスの最初のフレームになると、案件が始まる前に案件を縮小します。大きなエンタープライズ契約を勝ち取る企業は、買い手が数字を見る前に課題の全体像を理解するよう手助けする企業です。">Transaction pricing is not inherently wrong. But when it becomes the opening frame for an enterprise sale, it shrinks the deal before the deal even starts. The companies that win large enterprise contracts are the ones that help the buyer understand the full scope of their problem before they ever see a number.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);">
+    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);" data-en="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;, Founder - Jozu Consulting Group" data-ja="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;、創業者 - Jozu Consulting Group">
       <strong style="color: var(--text-dark);">Jeff Aragon</strong>, Founder &mdash; Jozu Consulting Group
     </p>
 
@@ -148,8 +163,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Reframe Your Enterprise Pricing Conversations?</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Reframe Your Enterprise Pricing Conversations?" data-ja="エンタープライズの価格対話を再フレーミングする準備はできていますか?">Ready to Reframe Your Enterprise Pricing Conversations?</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -164,18 +179,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

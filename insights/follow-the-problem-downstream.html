@@ -7,8 +7,23 @@
   <meta name="description" content="Buyers define their problem at the point of immediate pain. Enterprise sellers follow it downstream to revenue impact. A practical framework for larger deals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; display: flex; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px; font-family: 'Sora', sans-serif; font-size: 0.85rem;
+      font-weight: 600; border: none; cursor: pointer; background: #032042;
+      color: rgba(255,255,255,0.5); transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active { background: #C84B22; color: #fff; }
+    .lang-toggle-float button:hover:not(.active) { color: #fff; }
+    body.lang-ja { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body>
 
@@ -21,16 +36,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,16 +58,16 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <a href="index.html">Insights</a>
+        <a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Enterprise Selling</span>
+        <span style="color: var(--gold);" data-en="Enterprise Selling" data-ja="エンタープライズセリング">Enterprise Selling</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>Follow the Problem Downstream Until It Reaches <em>Revenue</em></h1>
-    <p class="lead">Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure.</p>
+    <h1 data-en="Follow the Problem Downstream Until It Reaches &lt;em&gt;Revenue&lt;/em&gt;" data-ja="課題を下流に追跡し、&lt;em&gt;収益&lt;/em&gt;に到達するまで追い続ける">Follow the Problem Downstream Until It Reaches <em>Revenue</em></h1>
+    <p class="lead" data-en="Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure." data-ja="買い手は直接的な痛みのポイントで課題を定義します。そのフレーミングを受け入れる売り手は小さな案件をクローズします。仕事は、金額に到達するまで課題を下流に追跡することです。">Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure.</p>
   </div>
 </section>
 
@@ -63,75 +78,75 @@
 
 <section class="content-section wm">
   <div class="container" style="max-width: 780px;">
-    <a href="index.html" class="back-link">&larr; Back to All Insights</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Insights" data-ja="&larr; 全インサイトに戻る">&larr; Back to All Insights</a>
 
-    <h2>The Buyer's Frame Is Always Too Small</h2>
+    <h2 data-en="The Buyer's Frame Is Always Too Small" data-ja="買い手のフレームは常に小さすぎる">The Buyer's Frame Is Always Too Small</h2>
 
-    <p>When a buyer reaches out to a vendor, they have already defined their problem. They have thought about it. They have discussed it internally. They have probably written it into a budget request or an RFP. And almost without exception, they have defined it too narrowly.</p>
+    <p data-en="When a buyer reaches out to a vendor, they have already defined their problem. They have thought about it. They have discussed it internally. They have probably written it into a budget request or an RFP. And almost without exception, they have defined it too narrowly." data-ja="買い手がベンダーに連絡する時、彼らはすでに課題を定義しています。考え抜いています。社内で議論しています。おそらく予算申請やRFPに書き込んでいます。そして、ほぼ例外なく、狭すぎる定義をしています。">When a buyer reaches out to a vendor, they have already defined their problem. They have thought about it. They have discussed it internally. They have probably written it into a budget request or an RFP. And almost without exception, they have defined it too narrowly.</p>
 
-    <p>This is not because buyers are unsophisticated. It is because buyers experience problems at the point of pain. They feel the symptom, not the system failure. A department head who is drowning in manual data entry does not describe their problem as "our revenue operations infrastructure lacks the integration layer necessary to support growth." They say: "We need an OCR tool."</p>
+    <p data-en="This is not because buyers are unsophisticated. It is because buyers experience problems at the point of pain. They feel the symptom, not the system failure. A department head who is drowning in manual data entry does not describe their problem as &quot;our revenue operations infrastructure lacks the integration layer necessary to support growth.&quot; They say: &quot;We need an OCR tool.&quot;" data-ja="これは買い手が洗練されていないからではありません。買い手は痛みのポイントで課題を経験するからです。症状を感じますが、システムの障害は感じません。手動データ入力に溺れている部門長は、課題を「当社のレベニューオペレーションインフラには、成長を支えるために必要な統合レイヤーが不足している」とは説明しません。「OCRツールが必要です」と言います。">This is not because buyers are unsophisticated. It is because buyers experience problems at the point of pain. They feel the symptom, not the system failure. A department head who is drowning in manual data entry does not describe their problem as "our revenue operations infrastructure lacks the integration layer necessary to support growth." They say: "We need an OCR tool."</p>
 
-    <p>If the seller accepts that framing, they sell an OCR tool. It might be a $50,000 deal. It might be $100,000. It will be a fraction of what the problem is actually worth. Because the problem is never the OCR tool. The problem is everything that happens downstream when the data is wrong, the processes are manual, and the organization cannot scale.</p>
+    <p data-en="If the seller accepts that framing, they sell an OCR tool. It might be a $50,000 deal. It might be $100,000. It will be a fraction of what the problem is actually worth. Because the problem is never the OCR tool. The problem is everything that happens downstream when the data is wrong, the processes are manual, and the organization cannot scale." data-ja="売り手がそのフレーミングを受け入れれば、OCRツールを売ります。$50,000の案件かもしれません。$100,000かもしれません。課題が実際に価値のあるもののほんの一部です。なぜなら、課題はOCRツールではないからです。課題は、データが間違っていて、プロセスが手動で、組織がスケールできない時に下流で起こるすべてのことです。">If the seller accepts that framing, they sell an OCR tool. It might be a $50,000 deal. It might be $100,000. It will be a fraction of what the problem is actually worth. Because the problem is never the OCR tool. The problem is everything that happens downstream when the data is wrong, the processes are manual, and the organization cannot scale.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;Every enterprise problem has a surface and a floor. The surface is where the buyer feels pain. The floor is where revenue is lost. The distance between the two is where the real deal lives.&quot;" data-ja="「すべてのエンタープライズの課題には表面と底があります。表面は買い手が痛みを感じる場所です。底は収益が失われる場所です。その2つの間の距離こそが、本当の案件が存在する場所です。」">
       "Every enterprise problem has a surface and a floor. The surface is where the buyer feels pain. The floor is where revenue is lost. The distance between the two is where the real deal lives."
     </div>
 
-    <h2>A Case in Downstream Thinking</h2>
+    <h2 data-en="A Case in Downstream Thinking" data-ja="下流思考の事例">A Case in Downstream Thinking</h2>
 
-    <p>We once worked with a company that sold document processing technology. Their buyers typically came in looking for an OCR solution. The initial conversations were always small: "We need to digitize these forms." "We need to extract data from these documents." The average deal was modest, and the sales team was working hard just to maintain volume.</p>
+    <p data-en="We once worked with a company that sold document processing technology. Their buyers typically came in looking for an OCR solution. The initial conversations were always small: &quot;We need to digitize these forms.&quot; &quot;We need to extract data from these documents.&quot; The average deal was modest, and the sales team was working hard just to maintain volume." data-ja="私たちはかつて、文書処理技術を販売する企業と協業しました。彼らの買い手は通常、OCRソリューションを探して来ました。最初の会話は常に小さなものでした。「これらのフォームをデジタル化する必要があります。」「これらの文書からデータを抽出する必要があります。」平均的な案件は控えめで、営業チームはボリュームを維持するだけで精一杯でした。">We once worked with a company that sold document processing technology. Their buyers typically came in looking for an OCR solution. The initial conversations were always small: "We need to digitize these forms." "We need to extract data from these documents." The average deal was modest, and the sales team was working hard just to maintain volume.</p>
 
-    <p>We asked the sales team to stop answering the buyer's stated question and start following the problem downstream. Here is what they found:</p>
+    <p data-en="We asked the sales team to stop answering the buyer's stated question and start following the problem downstream. Here is what they found:" data-ja="私たちは営業チームに、買い手の表明された質問に答えることをやめ、課題を下流に追跡し始めるよう求めました。彼らが発見したものは以下の通りです:">We asked the sales team to stop answering the buyer's stated question and start following the problem downstream. Here is what they found:</p>
 
-    <p>The buyer needed OCR because they were processing documents manually. Why were they processing documents manually? Because the data in those documents needed to flow into three downstream systems, and there was no integration layer connecting them. Why did that matter? Because manual data entry created errors, and errors created compliance risk. Why did compliance risk matter? Because each compliance incident cost the organization six figures in remediation, and they were averaging several per quarter.</p>
+    <p data-en="The buyer needed OCR because they were processing documents manually. Why were they processing documents manually? Because the data in those documents needed to flow into three downstream systems, and there was no integration layer connecting them. Why did that matter? Because manual data entry created errors, and errors created compliance risk. Why did compliance risk matter? Because each compliance incident cost the organization six figures in remediation, and they were averaging several per quarter." data-ja="買い手がOCRを必要としていたのは、文書を手動で処理していたからです。なぜ手動で処理していたのか? それらの文書のデータは3つの下流システムに流す必要があり、それらを接続する統合レイヤーがなかったからです。なぜそれが重要だったのか? 手動データ入力がエラーを生み、エラーがコンプライアンスリスクを生んだからです。なぜコンプライアンスリスクが重要だったのか? 各コンプライアンス事案の是正に6桁のコストがかかり、四半期に数件の頻度で発生していたからです。">The buyer needed OCR because they were processing documents manually. Why were they processing documents manually? Because the data in those documents needed to flow into three downstream systems, and there was no integration layer connecting them. Why did that matter? Because manual data entry created errors, and errors created compliance risk. Why did compliance risk matter? Because each compliance incident cost the organization six figures in remediation, and they were averaging several per quarter.</p>
 
-    <p>But it went further. The manual process also created a bottleneck. The team processing documents could not keep up with volume during peak periods. What happened during peak periods? Delays. What did delays cause? Missed SLAs with their own customers. What did missed SLAs cost? Revenue. Specifically, penalties in their contracts and churn in their customer base.</p>
+    <p data-en="But it went further. The manual process also created a bottleneck. The team processing documents could not keep up with volume during peak periods. What happened during peak periods? Delays. What did delays cause? Missed SLAs with their own customers. What did missed SLAs cost? Revenue. Specifically, penalties in their contracts and churn in their customer base." data-ja="しかし、さらに先がありました。手動プロセスはボトルネックも生み出していました。文書を処理するチームは、ピーク時にボリュームについていけませんでした。ピーク時に何が起こったか? 遅延です。遅延は何を引き起こしたか? 自社の顧客とのSLA未達です。SLA未達のコストは? 収益です。具体的には、契約におけるペナルティと顧客ベースの離反です。">But it went further. The manual process also created a bottleneck. The team processing documents could not keep up with volume during peak periods. What happened during peak periods? Delays. What did delays cause? Missed SLAs with their own customers. What did missed SLAs cost? Revenue. Specifically, penalties in their contracts and churn in their customer base.</p>
 
-    <p>By the time the sales team followed the problem to its floor, the conversation was no longer about an OCR tool. It was about a revenue operations platform that eliminated an entire category of operational risk. The deal went from a point solution purchase to a $7 million enterprise engagement.</p>
+    <p data-en="By the time the sales team followed the problem to its floor, the conversation was no longer about an OCR tool. It was about a revenue operations platform that eliminated an entire category of operational risk. The deal went from a point solution purchase to a $7 million enterprise engagement." data-ja="営業チームが課題をその底まで追跡した時、会話はもはやOCRツールについてではありませんでした。運用リスクのカテゴリ全体を排除するレベニューオペレーションプラットフォームについてでした。案件はポイントソリューションの購入から$7Mのエンタープライズエンゲージメントに変わりました。">By the time the sales team followed the problem to its floor, the conversation was no longer about an OCR tool. It was about a revenue operations platform that eliminated an entire category of operational risk. The deal went from a point solution purchase to a $7 million enterprise engagement.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;The buyer asked for an OCR tool. The problem required a revenue operations platform. The difference was $7 million.&quot;" data-ja="「買い手はOCRツールを求めました。課題にはレベニューオペレーションプラットフォームが必要でした。その差は$7Mでした。」">
       "The buyer asked for an OCR tool. The problem required a revenue operations platform. The difference was $7 million."
     </div>
 
-    <h2>The "And Then What Happens?" Framework</h2>
+    <h2 data-en="The &quot;And Then What Happens?&quot; Framework" data-ja="「それで次に何が起こる?」フレームワーク">The "And Then What Happens?" Framework</h2>
 
-    <p>Following the problem downstream is not intuition. It is a discipline. And it can be taught. The framework is deceptively simple: at every stage of the buyer's problem description, ask "and then what happens?" Keep asking until you reach a dollar figure.</p>
+    <p data-en="Following the problem downstream is not intuition. It is a discipline. And it can be taught. The framework is deceptively simple: at every stage of the buyer's problem description, ask &quot;and then what happens?&quot; Keep asking until you reach a dollar figure." data-ja="課題を下流に追跡するのは直感ではありません。規律です。そして教えることができます。フレームワークは一見シンプルです。買い手の課題説明のすべての段階で「それで次に何が起こる?」と尋ねます。金額に到達するまで聞き続けてください。">Following the problem downstream is not intuition. It is a discipline. And it can be taught. The framework is deceptively simple: at every stage of the buyer's problem description, ask "and then what happens?" Keep asking until you reach a dollar figure.</p>
 
-    <h3>Stage 1: The Stated Problem</h3>
+    <h3 data-en="Stage 1: The Stated Problem" data-ja="段階1: 表明された課題">Stage 1: The Stated Problem</h3>
 
-    <p>This is where the buyer starts. "We need to automate X." "We need a tool that does Y." "Our current system cannot handle Z." Accept the statement. Write it down. Do not solve it yet.</p>
+    <p data-en="This is where the buyer starts. &quot;We need to automate X.&quot; &quot;We need a tool that does Y.&quot; &quot;Our current system cannot handle Z.&quot; Accept the statement. Write it down. Do not solve it yet." data-ja="これは買い手が出発する場所です。「Xを自動化する必要があります。」「Yを行うツールが必要です。」「現在のシステムではZに対応できません。」その発言を受け入れてください。書き留めてください。まだ解決しないでください。">This is where the buyer starts. "We need to automate X." "We need a tool that does Y." "Our current system cannot handle Z." Accept the statement. Write it down. Do not solve it yet.</p>
 
-    <h3>Stage 2: The Operational Impact</h3>
+    <h3 data-en="Stage 2: The Operational Impact" data-ja="段階2: 運用上の影響">Stage 2: The Operational Impact</h3>
 
-    <p>Ask: "What happens in your organization when this problem occurs?" This moves the conversation from the tool to the workflow. You will hear about manual workarounds, delays, errors, and rework. These are the first-order consequences, and they are almost always more expensive than the buyer realizes.</p>
+    <p data-en="Ask: &quot;What happens in your organization when this problem occurs?&quot; This moves the conversation from the tool to the workflow. You will hear about manual workarounds, delays, errors, and rework. These are the first-order consequences, and they are almost always more expensive than the buyer realizes." data-ja="尋ねてください:「この課題が発生した時、組織で何が起こりますか?」これは会話をツールからワークフローに移します。手動の回避策、遅延、エラー、やり直しについて聞くことになります。これらは一次的な結果であり、買い手が認識しているよりもほぼ常に高コストです。">Ask: "What happens in your organization when this problem occurs?" This moves the conversation from the tool to the workflow. You will hear about manual workarounds, delays, errors, and rework. These are the first-order consequences, and they are almost always more expensive than the buyer realizes.</p>
 
-    <h3>Stage 3: The Organizational Impact</h3>
+    <h3 data-en="Stage 3: The Organizational Impact" data-ja="段階3: 組織的な影響">Stage 3: The Organizational Impact</h3>
 
-    <p>Ask: "Who else in the organization is affected by this?" Problems rarely stay contained in one department. Data errors in operations affect finance. Processing delays affect customer success. Compliance gaps affect legal. Each stakeholder you surface expands the scope of the problem and the scope of the deal.</p>
+    <p data-en="Ask: &quot;Who else in the organization is affected by this?&quot; Problems rarely stay contained in one department. Data errors in operations affect finance. Processing delays affect customer success. Compliance gaps affect legal. Each stakeholder you surface expands the scope of the problem and the scope of the deal." data-ja="尋ねてください:「組織内で他に誰がこの影響を受けていますか?」課題が1つの部門に留まることはめったにありません。オペレーションのデータエラーは財務に影響します。処理の遅延はカスタマーサクセスに影響します。コンプライアンスのギャップは法務に影響します。明らかにする各ステークホルダーが課題のスコープと案件のスコープを拡大します。">Ask: "Who else in the organization is affected by this?" Problems rarely stay contained in one department. Data errors in operations affect finance. Processing delays affect customer success. Compliance gaps affect legal. Each stakeholder you surface expands the scope of the problem and the scope of the deal.</p>
 
-    <h3>Stage 4: The Customer Impact</h3>
+    <h3 data-en="Stage 4: The Customer Impact" data-ja="段階4: 顧客への影響">Stage 4: The Customer Impact</h3>
 
-    <p>Ask: "How does this affect your customers or your ability to serve them?" This is where the problem crosses from internal cost to external revenue. If the buyer's problem causes delays in their own customer delivery, missed SLAs, or degraded service quality, you have found the revenue impact. And revenue impact is where executive attention lives.</p>
+    <p data-en="Ask: &quot;How does this affect your customers or your ability to serve them?&quot; This is where the problem crosses from internal cost to external revenue. If the buyer's problem causes delays in their own customer delivery, missed SLAs, or degraded service quality, you have found the revenue impact. And revenue impact is where executive attention lives." data-ja="尋ねてください:「これは顧客やサービス提供能力にどのような影響を与えていますか?」ここが課題が内部コストから外部収益に移る場所です。買い手の課題が自社の顧客への納品遅延、SLA未達、またはサービス品質の低下を引き起こしている場合、収益への影響を見つけたことになります。そして収益への影響こそが、経営層の注目が集まる場所です。">Ask: "How does this affect your customers or your ability to serve them?" This is where the problem crosses from internal cost to external revenue. If the buyer's problem causes delays in their own customer delivery, missed SLAs, or degraded service quality, you have found the revenue impact. And revenue impact is where executive attention lives.</p>
 
-    <h3>Stage 5: The Revenue Floor</h3>
+    <h3 data-en="Stage 5: The Revenue Floor" data-ja="段階5: 収益の底">Stage 5: The Revenue Floor</h3>
 
-    <p>Ask: "What does this cost you annually, when you add up the penalties, the churn, the rework, and the opportunity cost?" This is the dollar figure. This is the floor of the problem. And this number is the anchor for your deal, not the unit price of your product.</p>
+    <p data-en="Ask: &quot;What does this cost you annually, when you add up the penalties, the churn, the rework, and the opportunity cost?&quot; This is the dollar figure. This is the floor of the problem. And this number is the anchor for your deal, not the unit price of your product." data-ja="尋ねてください:「ペナルティ、離反、やり直し、機会コストを合計すると、年間どれくらいのコストですか?」これが金額です。これが課題の底です。そしてこの数字が案件のアンカーであり、製品の単価ではありません。">Ask: "What does this cost you annually, when you add up the penalties, the churn, the rework, and the opportunity cost?" This is the dollar figure. This is the floor of the problem. And this number is the anchor for your deal, not the unit price of your product.</p>
 
-    <p>When you can articulate the buyer's problem at the revenue floor, you are no longer selling a tool. You are selling a solution to a revenue problem. And revenue problems get executive budgets, not departmental ones.</p>
+    <p data-en="When you can articulate the buyer's problem at the revenue floor, you are no longer selling a tool. You are selling a solution to a revenue problem. And revenue problems get executive budgets, not departmental ones." data-ja="収益の底で買い手の課題を明確に表現できるようになれば、もはやツールを売っているのではありません。収益の課題に対するソリューションを売っています。そして収益の課題には、部門予算ではなく経営層の予算が充てられます。">When you can articulate the buyer's problem at the revenue floor, you are no longer selling a tool. You are selling a solution to a revenue problem. And revenue problems get executive budgets, not departmental ones.</p>
 
-    <h2>Why Sellers Stop Too Early</h2>
+    <h2 data-en="Why Sellers Stop Too Early" data-ja="なぜ売り手は早く止まってしまうのか">Why Sellers Stop Too Early</h2>
 
-    <p>Most sellers stop at Stage 1 or Stage 2. They hear the stated problem, maybe ask about the operational impact, and then jump to a demo. The reason is partly habit and partly incentive: it is faster to close a small deal than to invest the time to uncover a large one. Pipeline metrics reward volume. Discovery takes patience.</p>
+    <p data-en="Most sellers stop at Stage 1 or Stage 2. They hear the stated problem, maybe ask about the operational impact, and then jump to a demo. The reason is partly habit and partly incentive: it is faster to close a small deal than to invest the time to uncover a large one. Pipeline metrics reward volume. Discovery takes patience." data-ja="ほとんどの売り手は段階1か段階2で止まります。表明された課題を聞き、運用上の影響について尋ねるかもしれませんが、すぐにデモに飛びます。理由の一部は習慣であり、一部はインセンティブです。大きな案件を発掘するために時間を投資するよりも、小さな案件をクローズする方が速いのです。パイプラインの指標はボリュームを報います。ディスカバリーには忍耐が必要です。">Most sellers stop at Stage 1 or Stage 2. They hear the stated problem, maybe ask about the operational impact, and then jump to a demo. The reason is partly habit and partly incentive: it is faster to close a small deal than to invest the time to uncover a large one. Pipeline metrics reward volume. Discovery takes patience.</p>
 
-    <p>But the math is clear. One deal at $7 million is worth more than seventy deals at $100,000, and it takes less effort to manage. The investment in downstream discovery pays for itself many times over, not just in deal size, but in deal quality, buyer commitment, and competitive defensibility. A buyer who understands that you are solving a $7 million problem does not switch vendors over a 10% price difference.</p>
+    <p data-en="But the math is clear. One deal at $7 million is worth more than seventy deals at $100,000, and it takes less effort to manage. The investment in downstream discovery pays for itself many times over, not just in deal size, but in deal quality, buyer commitment, and competitive defensibility. A buyer who understands that you are solving a $7 million problem does not switch vendors over a 10% price difference." data-ja="しかし計算は明確です。$7Mの案件1つは$100,000の案件70件よりも価値があり、管理にかかる労力も少なくなります。下流ディスカバリーへの投資は、案件規模だけでなく、案件の質、買い手のコミットメント、競合防御力においても何倍にも回収されます。$7Mの課題を解決していると理解している買い手は、10%の価格差でベンダーを変えません。">But the math is clear. One deal at $7 million is worth more than seventy deals at $100,000, and it takes less effort to manage. The investment in downstream discovery pays for itself many times over, not just in deal size, but in deal quality, buyer commitment, and competitive defensibility. A buyer who understands that you are solving a $7 million problem does not switch vendors over a 10% price difference.</p>
 
-    <h2>Make It Structural</h2>
+    <h2 data-en="Make It Structural" data-ja="構造化する">Make It Structural</h2>
 
-    <p>Like everything in enterprise sales, this works best when it is embedded in the process rather than left to individual talent. Build the "and then what happens?" progression into your discovery framework. Make each stage a required field in your CRM. Train managers to review deals against the downstream map, not just the stated need.</p>
+    <p data-en="Like everything in enterprise sales, this works best when it is embedded in the process rather than left to individual talent. Build the &quot;and then what happens?&quot; progression into your discovery framework. Make each stage a required field in your CRM. Train managers to review deals against the downstream map, not just the stated need." data-ja="エンタープライズ営業のすべてと同様に、これは個人の才能に委ねるのではなく、プロセスに組み込まれた時に最も効果を発揮します。「それで次に何が起こる?」の進行をディスカバリーフレームワークに組み込んでください。各段階をCRMの必須フィールドにしてください。マネージャーに、表明されたニーズだけでなく、下流マップに対して案件をレビューするよう教育してください。">Like everything in enterprise sales, this works best when it is embedded in the process rather than left to individual talent. Build the "and then what happens?" progression into your discovery framework. Make each stage a required field in your CRM. Train managers to review deals against the downstream map, not just the stated need.</p>
 
-    <p>The buyer will always tell you the smallest version of their problem. That is not deception. That is perspective. They see the surface because they live at the surface. Your job, as an enterprise seller, is to follow the problem downstream until it reaches the floor. That is where the deal actually lives.</p>
+    <p data-en="The buyer will always tell you the smallest version of their problem. That is not deception. That is perspective. They see the surface because they live at the surface. Your job, as an enterprise seller, is to follow the problem downstream until it reaches the floor. That is where the deal actually lives." data-ja="買い手は常に課題の最小バージョンを伝えます。それは欺瞞ではありません。それは視点です。彼らは表面に住んでいるから表面を見るのです。エンタープライズセラーとしてのあなたの仕事は、課題を下流に追跡し、底に到達するまで追い続けることです。そこが案件が実際に存在する場所です。">The buyer will always tell you the smallest version of their problem. That is not deception. That is perspective. They see the surface because they live at the surface. Your job, as an enterprise seller, is to follow the problem downstream until it reaches the floor. That is where the deal actually lives.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);">
+    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);" data-en="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;, Founder - Jozu Consulting Group" data-ja="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;、創業者 - Jozu Consulting Group">
       <strong style="color: var(--text-dark);">Jeff Aragon</strong>, Founder &mdash; Jozu Consulting Group
     </p>
 
@@ -146,8 +161,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Follow the Problem to Where the Revenue Lives?</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Follow the Problem to Where the Revenue Lives?" data-ja="収益が存在する場所まで課題を追跡する準備はできていますか?">Ready to Follow the Problem to Where the Revenue Lives?</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -162,18 +177,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

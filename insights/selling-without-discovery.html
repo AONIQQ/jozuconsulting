@@ -7,8 +7,23 @@
   <meta name="description" content="When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest scope. Learn a practical discovery framework for enterprise sales.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; display: flex; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px; font-family: 'Sora', sans-serif; font-size: 0.85rem;
+      font-weight: 600; border: none; cursor: pointer; background: #032042;
+      color: rgba(255,255,255,0.5); transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active { background: #C84B22; color: #fff; }
+    .lang-toggle-float button:hover:not(.active) { color: #fff; }
+    body.lang-ja { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body>
 
@@ -21,16 +36,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,16 +58,16 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <a href="index.html">Insights</a>
+        <a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Sales Process</span>
+        <span style="color: var(--gold);" data-en="Sales Process" data-ja="営業プロセス">Sales Process</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>The Real Cost of Selling <em>Without</em> Discovery</h1>
-    <p class="lead">When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals.</p>
+    <h1 data-en="The Real Cost of Selling &lt;em&gt;Without&lt;/em&gt; Discovery" data-ja="ディスカバリー&lt;em&gt;なし&lt;/em&gt;で売ることの本当のコスト">The Real Cost of Selling <em>Without</em> Discovery</h1>
+    <p class="lead" data-en="When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals." data-ja="営業担当者がディスカバリーをスキップしてデモから入ると、買い手に最も狭いスコープで課題を定義させてしまいます。結果は一貫して小さすぎる案件です。">When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals.</p>
   </div>
 </section>
 
@@ -63,75 +78,75 @@
 
 <section class="content-section wm">
   <div class="container" style="max-width: 780px;">
-    <a href="index.html" class="back-link">&larr; Back to All Insights</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Insights" data-ja="&larr; 全インサイトに戻る">&larr; Back to All Insights</a>
 
-    <h2>The Demo Is Not the Sale</h2>
+    <h2 data-en="The Demo Is Not the Sale" data-ja="デモは営業ではない">The Demo Is Not the Sale</h2>
 
-    <p>There is a pattern in enterprise software sales that repeats so reliably it might as well be a law: the faster a rep gets to the demo, the smaller the deal. Not because the product is wrong. Because the conversation is wrong.</p>
+    <p data-en="There is a pattern in enterprise software sales that repeats so reliably it might as well be a law: the faster a rep gets to the demo, the smaller the deal. Not because the product is wrong. Because the conversation is wrong." data-ja="エンタープライズソフトウェア営業には、法則と言っても良いほど確実に繰り返されるパターンがあります。営業担当者がデモに早く到達するほど、案件は小さくなります。製品が間違っているからではありません。対話が間違っているからです。">There is a pattern in enterprise software sales that repeats so reliably it might as well be a law: the faster a rep gets to the demo, the smaller the deal. Not because the product is wrong. Because the conversation is wrong.</p>
 
-    <p>When a rep opens with a product demonstration, they hand control of the narrative to the buyer. The buyer watches the demo and thinks: "Does this solve my immediate problem?" If the answer is yes, they buy. If the answer is no, they leave. Either way, the scope of the deal is defined by whatever the buyer walked in thinking they needed. And what the buyer walks in thinking they need is almost never the full picture.</p>
+    <p data-en="When a rep opens with a product demonstration, they hand control of the narrative to the buyer. The buyer watches the demo and thinks: &quot;Does this solve my immediate problem?&quot; If the answer is yes, they buy. If the answer is no, they leave. Either way, the scope of the deal is defined by whatever the buyer walked in thinking they needed. And what the buyer walks in thinking they need is almost never the full picture." data-ja="営業担当者が製品デモで始めると、ナラティブのコントロールを買い手に渡します。買い手はデモを見て考えます:「これは私の今の課題を解決するか?」答えがはいなら買います。いいえなら去ります。いずれにせよ、案件のスコープは買い手が必要だと思って来たものによって定義されます。そして買い手が必要だと思って来るものは、ほぼ全体像ではありません。">When a rep opens with a product demonstration, they hand control of the narrative to the buyer. The buyer watches the demo and thinks: "Does this solve my immediate problem?" If the answer is yes, they buy. If the answer is no, they leave. Either way, the scope of the deal is defined by whatever the buyer walked in thinking they needed. And what the buyer walks in thinking they need is almost never the full picture.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;Discovery is not a phase of the sales process. It is the mechanism that determines the size of the deal.&quot;" data-ja="「ディスカバリーは営業プロセスの一段階ではありません。案件の規模を決定するメカニズムです。」">
       "Discovery is not a phase of the sales process. It is the mechanism that determines the size of the deal."
     </div>
 
-    <h2>What Skipping Discovery Actually Costs</h2>
+    <h2 data-en="What Skipping Discovery Actually Costs" data-ja="ディスカバリーをスキップすると実際にかかるコスト">What Skipping Discovery Actually Costs</h2>
 
-    <p>We worked with a company whose sales team was closing deals at an average of $75,000. The reps were competent. The product was strong. Win rates were reasonable. But every deal was small, and the pipeline was a hamster wheel: close one, start another, never compound.</p>
+    <p data-en="We worked with a company whose sales team was closing deals at an average of $75,000. The reps were competent. The product was strong. Win rates were reasonable. But every deal was small, and the pipeline was a hamster wheel: close one, start another, never compound." data-ja="平均$75,000で案件をクローズしていた営業チームを持つ企業と協業しました。営業担当者は有能でした。製品は強力でした。成約率は妥当でした。しかしすべての案件は小さく、パイプラインはハムスターの回し車でした。1つクローズし、次を始め、決して複利にならない。">We worked with a company whose sales team was closing deals at an average of $75,000. The reps were competent. The product was strong. Win rates were reasonable. But every deal was small, and the pipeline was a hamster wheel: close one, start another, never compound.</p>
 
-    <p>The root cause was structural. Reps were booking 30-minute intro calls, spending 5 minutes on pleasantries, and jumping into a demo for the remaining 25. The buyer saw a narrow slice of the product, matched it to a narrow slice of their problem, and bought a narrow solution. The rep moved on to the next call.</p>
+    <p data-en="The root cause was structural. Reps were booking 30-minute intro calls, spending 5 minutes on pleasantries, and jumping into a demo for the remaining 25. The buyer saw a narrow slice of the product, matched it to a narrow slice of their problem, and bought a narrow solution. The rep moved on to the next call." data-ja="根本原因は構造的でした。営業担当者は30分の紹介電話をブッキングし、5分を挨拶に費やし、残りの25分でデモに飛び込んでいました。買い手は製品の狭い断片を見て、課題の狭い断片にマッチングし、狭いソリューションを購入しました。営業担当者は次の電話に移りました。">The root cause was structural. Reps were booking 30-minute intro calls, spending 5 minutes on pleasantries, and jumping into a demo for the remaining 25. The buyer saw a narrow slice of the product, matched it to a narrow slice of their problem, and bought a narrow solution. The rep moved on to the next call.</p>
 
-    <p>After we restructured the sales process around a proper discovery methodology, the same product, sold to the same market, began closing at dramatically different numbers. Within 18 months, that company reached $8 million in annual recurring revenue. Not because the product changed. Because the conversation changed.</p>
+    <p data-en="After we restructured the sales process around a proper discovery methodology, the same product, sold to the same market, began closing at dramatically different numbers. Within 18 months, that company reached $8 million in annual recurring revenue. Not because the product changed. Because the conversation changed." data-ja="適切なディスカバリーメソドロジーを中心に営業プロセスを再構築した後、同じ製品が同じ市場に販売され、劇的に異なる数字でクローズし始めました。18ヶ月以内に、その企業は年間経常収益$8Mに到達しました。製品が変わったからではありません。対話が変わったからです。">After we restructured the sales process around a proper discovery methodology, the same product, sold to the same market, began closing at dramatically different numbers. Within 18 months, that company reached $8 million in annual recurring revenue. Not because the product changed. Because the conversation changed.</p>
 
-    <h3>Why Reps Skip Discovery</h3>
+    <h3 data-en="Why Reps Skip Discovery" data-ja="なぜ営業担当者はディスカバリーをスキップするのか">Why Reps Skip Discovery</h3>
 
-    <p>Before we talk about what good discovery looks like, it is worth understanding why sellers avoid it. There are three common reasons:</p>
+    <p data-en="Before we talk about what good discovery looks like, it is worth understanding why sellers avoid it. There are three common reasons:" data-ja="良いディスカバリーとは何かを話す前に、なぜ売り手がそれを避けるのかを理解する価値があります。3つの一般的な理由があります:">Before we talk about what good discovery looks like, it is worth understanding why sellers avoid it. There are three common reasons:</p>
 
     <ul>
-      <li><strong>They mistake activity for progress.</strong> A demo feels productive. You are showing the product. The buyer is nodding. Something is happening. Discovery, by contrast, feels slow. You are asking questions. You are listening. It does not look like selling. But it is the most important selling you will do.</li>
-      <li><strong>They are afraid of losing the buyer's attention.</strong> Reps worry that if they do not show the product immediately, the buyer will lose interest. This is backwards. A buyer who loses interest because you are trying to understand their problem is a buyer who was never going to buy at scale.</li>
-      <li><strong>The sales process does not require it.</strong> If your CRM does not have mandatory discovery fields, if your deal stages do not gate on discovery completion, if your managers do not review discovery notes in deal reviews, then discovery is optional. And optional steps get skipped.</li>
+      <li data-en="&lt;strong&gt;They mistake activity for progress.&lt;/strong&gt; A demo feels productive. You are showing the product. The buyer is nodding. Something is happening. Discovery, by contrast, feels slow. You are asking questions. You are listening. It does not look like selling. But it is the most important selling you will do." data-ja="&lt;strong&gt;活動を進捗と勘違いする。&lt;/strong&gt; デモは生産的に感じます。製品を見せています。買い手が頷いています。何かが起こっています。対照的に、ディスカバリーは遅く感じます。質問しています。聞いています。営業に見えません。しかし、あなたが行う最も重要な営業です。"><strong>They mistake activity for progress.</strong> A demo feels productive. You are showing the product. The buyer is nodding. Something is happening. Discovery, by contrast, feels slow. You are asking questions. You are listening. It does not look like selling. But it is the most important selling you will do.</li>
+      <li data-en="&lt;strong&gt;They are afraid of losing the buyer's attention.&lt;/strong&gt; Reps worry that if they do not show the product immediately, the buyer will lose interest. This is backwards. A buyer who loses interest because you are trying to understand their problem is a buyer who was never going to buy at scale." data-ja="&lt;strong&gt;買い手の注意を失うことを恐れる。&lt;/strong&gt; 営業担当者は、すぐに製品を見せなければ買い手が興味を失うと心配します。これは逆です。あなたが課題を理解しようとしているから興味を失う買い手は、大規模に購入するつもりがなかった買い手です。"><strong>They are afraid of losing the buyer's attention.</strong> Reps worry that if they do not show the product immediately, the buyer will lose interest. This is backwards. A buyer who loses interest because you are trying to understand their problem is a buyer who was never going to buy at scale.</li>
+      <li data-en="&lt;strong&gt;The sales process does not require it.&lt;/strong&gt; If your CRM does not have mandatory discovery fields, if your deal stages do not gate on discovery completion, if your managers do not review discovery notes in deal reviews, then discovery is optional. And optional steps get skipped." data-ja="&lt;strong&gt;営業プロセスがそれを要求しない。&lt;/strong&gt; CRMに必須のディスカバリーフィールドがなく、案件ステージがディスカバリー完了でゲートされず、マネージャーがディールレビューでディスカバリーノートをレビューしなければ、ディスカバリーは任意です。そして任意のステップはスキップされます。"><strong>The sales process does not require it.</strong> If your CRM does not have mandatory discovery fields, if your deal stages do not gate on discovery completion, if your managers do not review discovery notes in deal reviews, then discovery is optional. And optional steps get skipped.</li>
     </ul>
 
-    <h2>What Real Discovery Looks Like</h2>
+    <h2 data-en="What Real Discovery Looks Like" data-ja="本物のディスカバリーとは">What Real Discovery Looks Like</h2>
 
-    <p>Discovery is not a list of questions. It is a discipline. The goal is to understand the buyer's economic problem before you ever show them a product. Here is a framework that works:</p>
+    <p data-en="Discovery is not a list of questions. It is a discipline. The goal is to understand the buyer's economic problem before you ever show them a product. Here is a framework that works:" data-ja="ディスカバリーは質問のリストではありません。規律です。目標は、製品を見せる前に買い手の経済的課題を理解することです。機能するフレームワークはこちらです:">Discovery is not a list of questions. It is a discipline. The goal is to understand the buyer's economic problem before you ever show them a product. Here is a framework that works:</p>
 
-    <h3>1. Understand the Business Problem, Not the Feature Request</h3>
+    <h3 data-en="1. Understand the Business Problem, Not the Feature Request" data-ja="1. 機能要望ではなく、ビジネスの課題を理解する">1. Understand the Business Problem, Not the Feature Request</h3>
 
-    <p>Buyers will tell you what they think they need: "We need better reporting." "We need to automate this workflow." "We need a tool that integrates with X." These are symptoms. Your job is to find the disease.</p>
+    <p data-en="Buyers will tell you what they think they need: &quot;We need better reporting.&quot; &quot;We need to automate this workflow.&quot; &quot;We need a tool that integrates with X.&quot; These are symptoms. Your job is to find the disease." data-ja="買い手は必要だと思うものを伝えます。「より良いレポートが必要です。」「このワークフローを自動化する必要があります。」「Xと統合するツールが必要です。」これらは症状です。あなたの仕事は病気を見つけることです。">Buyers will tell you what they think they need: "We need better reporting." "We need to automate this workflow." "We need a tool that integrates with X." These are symptoms. Your job is to find the disease.</p>
 
-    <p>Ask: "Why is that a priority right now? What changed?" Ask: "What happens to your business if you do not solve this in the next six months?" These questions move the conversation from features to economics. And economics is where large deals live.</p>
+    <p data-en="Ask: &quot;Why is that a priority right now? What changed?&quot; Ask: &quot;What happens to your business if you do not solve this in the next six months?&quot; These questions move the conversation from features to economics. And economics is where large deals live." data-ja="尋ねてください:「なぜ今それが優先事項なのですか? 何が変わりましたか?」尋ねてください:「今後6ヶ月でこれを解決しなければ、ビジネスにどうなりますか?」これらの質問は対話を機能から経済性に移します。そして経済性こそが大きな案件が存在する場所です。">Ask: "Why is that a priority right now? What changed?" Ask: "What happens to your business if you do not solve this in the next six months?" These questions move the conversation from features to economics. And economics is where large deals live.</p>
 
-    <h3>2. Map the Stakeholder Landscape</h3>
+    <h3 data-en="2. Map the Stakeholder Landscape" data-ja="2. ステークホルダーランドスケープをマッピングする">2. Map the Stakeholder Landscape</h3>
 
-    <p>The person on the call is rarely the only person affected by the problem. Ask who else in the organization feels the impact. Ask who will need to approve a purchase of this size. Ask who has tried to solve this before and what happened. Each stakeholder you surface is a thread that, when pulled, reveals more scope.</p>
+    <p data-en="The person on the call is rarely the only person affected by the problem. Ask who else in the organization feels the impact. Ask who will need to approve a purchase of this size. Ask who has tried to solve this before and what happened. Each stakeholder you surface is a thread that, when pulled, reveals more scope." data-ja="電話の相手が課題の影響を受ける唯一の人物であることはめったにありません。組織内で他に誰が影響を感じているか尋ねてください。この規模の購入を承認する必要がある人を尋ねてください。以前にこれを解決しようとした人とその結果を尋ねてください。明らかにする各ステークホルダーは、引っ張るとより多くのスコープが現れる糸です。">The person on the call is rarely the only person affected by the problem. Ask who else in the organization feels the impact. Ask who will need to approve a purchase of this size. Ask who has tried to solve this before and what happened. Each stakeholder you surface is a thread that, when pulled, reveals more scope.</p>
 
-    <h3>3. Quantify Downstream Consequences</h3>
+    <h3 data-en="3. Quantify Downstream Consequences" data-ja="3. 下流の影響を定量化する">3. Quantify Downstream Consequences</h3>
 
-    <p>This is the step most reps skip entirely. Once you understand the problem, follow it downstream. If the reporting is bad, what decisions are being made on bad data? If the workflow is manual, how many hours per week does that cost and what are those people not doing instead? If the integration is missing, what is the error rate on manual data entry and what does each error cost?</p>
+    <p data-en="This is the step most reps skip entirely. Once you understand the problem, follow it downstream. If the reporting is bad, what decisions are being made on bad data? If the workflow is manual, how many hours per week does that cost and what are those people not doing instead? If the integration is missing, what is the error rate on manual data entry and what does each error cost?" data-ja="これはほとんどの営業担当者が完全にスキップするステップです。課題を理解したら、下流に追跡してください。レポートが悪いなら、悪いデータに基づいてどんな意思決定がされていますか? ワークフローが手動なら、週に何時間のコストがかかり、それらの人々は代わりに何をしていませんか? 統合がない場合、手動データ入力のエラー率はどれくらいで、各エラーのコストはいくらですか?">This is the step most reps skip entirely. Once you understand the problem, follow it downstream. If the reporting is bad, what decisions are being made on bad data? If the workflow is manual, how many hours per week does that cost and what are those people not doing instead? If the integration is missing, what is the error rate on manual data entry and what does each error cost?</p>
 
-    <p>Keep asking "and then what happens?" until you reach a revenue number. That revenue number is the real scope of the deal. Everything before it is just the entry point.</p>
+    <p data-en="Keep asking &quot;and then what happens?&quot; until you reach a revenue number. That revenue number is the real scope of the deal. Everything before it is just the entry point." data-ja="「それで次に何が起こる?」と収益の数字に到達するまで聞き続けてください。その収益の数字が案件の本当のスコープです。それ以前のすべてはただのエントリーポイントです。">Keep asking "and then what happens?" until you reach a revenue number. That revenue number is the real scope of the deal. Everything before it is just the entry point.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;The buyer will always define their problem at the point of immediate pain. Your job is to show them the full cost of that pain across their organization.&quot;" data-ja="「買い手は常に直接的な痛みのポイントで課題を定義します。あなたの仕事は、組織全体にわたるその痛みの全コストを示すことです。」">
       "The buyer will always define their problem at the point of immediate pain. Your job is to show them the full cost of that pain across their organization."
     </div>
 
-    <h3>4. Build the Business Case Together</h3>
+    <h3 data-en="4. Build the Business Case Together" data-ja="4. ビジネスケースを一緒に構築する">4. Build the Business Case Together</h3>
 
-    <p>Discovery is not interrogation. It is collaboration. By the end of discovery, the buyer should understand their own problem better than they did at the start of the conversation. They should be able to articulate the economic impact in their own words. When that happens, the deal sizes itself. You are not convincing anyone. You are helping them see clearly.</p>
+    <p data-en="Discovery is not interrogation. It is collaboration. By the end of discovery, the buyer should understand their own problem better than they did at the start of the conversation. They should be able to articulate the economic impact in their own words. When that happens, the deal sizes itself. You are not convincing anyone. You are helping them see clearly." data-ja="ディスカバリーは尋問ではありません。協業です。ディスカバリーの終わりまでに、買い手は対話の始めよりも自分の課題をよく理解しているはずです。経済的影響を自分の言葉で表現できるはずです。それが起こると、案件は自らサイズを決めます。誰かを説得しているのではありません。明確に見えるよう手助けしているのです。">Discovery is not interrogation. It is collaboration. By the end of discovery, the buyer should understand their own problem better than they did at the start of the conversation. They should be able to articulate the economic impact in their own words. When that happens, the deal sizes itself. You are not convincing anyone. You are helping them see clearly.</p>
 
-    <h3>5. Gate the Demo on Discovery Completion</h3>
+    <h3 data-en="5. Gate the Demo on Discovery Completion" data-ja="5. ディスカバリー完了でデモをゲートする">5. Gate the Demo on Discovery Completion</h3>
 
-    <p>This is the structural fix. Do not allow a demo to happen until discovery is complete. Build it into your deal stages. Make it a requirement in your CRM. Have managers enforce it in pipeline reviews. When the demo follows discovery, it is a precision instrument: you show exactly the capabilities that map to the problems the buyer just articulated. When the demo precedes discovery, it is a brochure.</p>
+    <p data-en="This is the structural fix. Do not allow a demo to happen until discovery is complete. Build it into your deal stages. Make it a requirement in your CRM. Have managers enforce it in pipeline reviews. When the demo follows discovery, it is a precision instrument: you show exactly the capabilities that map to the problems the buyer just articulated. When the demo precedes discovery, it is a brochure." data-ja="これが構造的な修正です。ディスカバリーが完了するまでデモを許可しないでください。案件ステージに組み込んでください。CRMの必須要件にしてください。マネージャーにパイプラインレビューで徹底させてください。デモがディスカバリーに続く時、それは精密な道具です。買い手がちょうど明確にした課題にマッピングする能力を正確に示します。デモがディスカバリーに先行する時、それはパンフレットです。">This is the structural fix. Do not allow a demo to happen until discovery is complete. Build it into your deal stages. Make it a requirement in your CRM. Have managers enforce it in pipeline reviews. When the demo follows discovery, it is a precision instrument: you show exactly the capabilities that map to the problems the buyer just articulated. When the demo precedes discovery, it is a brochure.</p>
 
-    <h2>The Compound Effect</h2>
+    <h2 data-en="The Compound Effect" data-ja="複利の効果">The Compound Effect</h2>
 
-    <p>The difference between a $75,000 average deal and an $8 million ARR run rate is not talent. It is not product. It is not market. It is the conversation that happens before the demo. Discovery is the mechanism that converts a narrow feature request into a broad enterprise engagement. Skip it, and you will close deals. They will just always be smaller than they should be.</p>
+    <p data-en="The difference between a $75,000 average deal and an $8 million ARR run rate is not talent. It is not product. It is not market. It is the conversation that happens before the demo. Discovery is the mechanism that converts a narrow feature request into a broad enterprise engagement. Skip it, and you will close deals. They will just always be smaller than they should be." data-ja="$75,000の平均案件と$8MのARRランレートの違いは才能ではありません。製品ではありません。市場ではありません。デモの前に行われる対話です。ディスカバリーは、狭い機能要望を広いエンタープライズエンゲージメントに変換するメカニズムです。スキップすれば案件はクローズします。ただし、常にあるべきサイズより小さいでしょう。">The difference between a $75,000 average deal and an $8 million ARR run rate is not talent. It is not product. It is not market. It is the conversation that happens before the demo. Discovery is the mechanism that converts a narrow feature request into a broad enterprise engagement. Skip it, and you will close deals. They will just always be smaller than they should be.</p>
 
-    <p>The companies that build real revenue engines understand this: discovery is not overhead. Discovery is the deal.</p>
+    <p data-en="The companies that build real revenue engines understand this: discovery is not overhead. Discovery is the deal." data-ja="本物の収益エンジンを構築する企業はこれを理解しています。ディスカバリーはオーバーヘッドではありません。ディスカバリーが案件そのものです。">The companies that build real revenue engines understand this: discovery is not overhead. Discovery is the deal.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);">
+    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);" data-en="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;, Founder - Jozu Consulting Group" data-ja="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;、創業者 - Jozu Consulting Group">
       <strong style="color: var(--text-dark);">Jeff Aragon</strong>, Founder &mdash; Jozu Consulting Group
     </p>
 
@@ -146,8 +161,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Discovery Into Your Sales DNA?</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Build Discovery Into Your Sales DNA?" data-ja="ディスカバリーを営業のDNAに組み込む準備はできていますか?">Ready to Build Discovery Into Your Sales DNA?</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -162,18 +177,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

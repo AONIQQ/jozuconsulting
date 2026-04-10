@@ -3,11 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jozu Consulting Group — From Process to Practice</title>
+  <title>Jozu Consulting Group - From Process to Practice</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .lang-ja { font-family: 'Noto Sans JP', 'Sora', sans-serif; }
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      display: flex; gap: 0; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .lang-toggle-float button {
+      padding: 10px 16px; border: none; cursor: pointer;
+      font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.04em;
+      background: var(--navy-mid, #1a2332); color: rgba(255,255,255,0.5);
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-toggle-float button.active {
+      background: var(--red, #c84b22); color: #fff;
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: rgba(255,255,255,0.8);
+    }
+  </style>
 </head>
 <body>
 
@@ -20,16 +41,16 @@
       <img src="jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="services/index.html">Services</a></li>
-      <li><a href="founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="index.html#methodology">Methodology</a></li>
-      <li><a href="case-studies/index.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="insights/index.html">Insights</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談を申し込む">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -42,36 +63,36 @@
   <div class="hero-grid"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-eyebrow">Enterprise Revenue Architecture</div>
-      <h1>
+      <div class="hero-eyebrow" data-en="Enterprise Revenue Architecture" data-ja="エンタープライズ・レベニュー・アーキテクチャ">Enterprise Revenue Architecture</div>
+      <h1 data-en="We've Generated&lt;br&gt;&lt;em&gt;$150M+&lt;/em&gt; in Revenue&lt;br&gt;for Companies Like Yours." data-ja="貴社と同じような企業で&lt;br&gt;&lt;em&gt;$150M+&lt;/em&gt;の収益を創出。">
         We've Generated<br>
         <em>$150M+</em> in Revenue<br>
         for Companies Like Yours.
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-en="Not theory. Not a binder. Permanent sales infrastructure embedded into your workflows and daily rhythms - so your team sells better long after we're gone." data-ja="理論でも、マニュアルでもありません。ワークフローと日々のリズムに組み込まれた、永続的な営業インフラ - 私たちが去った後も、チームの営業力は向上し続けます。">
         Not theory. Not a binder. Permanent sales infrastructure embedded into your
-        workflows and daily rhythms — so your team sells better long after we're gone.
+        workflows and daily rhythms - so your team sells better long after we're gone.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Request a Consultation</a>
-        <a href="#methodology" class="btn btn-outline">See Our Methodology</a>
+        <a href="#contact" class="btn btn-primary" data-en="Request a Consultation" data-ja="ご相談を申し込む">Request a Consultation</a>
+        <a href="#methodology" class="btn btn-outline" data-en="See Our Methodology" data-ja="メソドロジーを見る">See Our Methodology</a>
       </div>
       <div class="hero-proof">
         <div class="hero-stat">
           <div class="number">$150M<span>+</span></div>
-          <div class="label">Revenue Generated</div>
+          <div class="label" data-en="Revenue Generated" data-ja="創出した収益">Revenue Generated</div>
         </div>
         <div class="hero-stat">
           <div class="number">30<span>+</span></div>
-          <div class="label">Years Experience</div>
+          <div class="label" data-en="Years Experience" data-ja="年の実績">Years Experience</div>
         </div>
         <div class="hero-stat">
           <div class="number">25<span>+</span></div>
-          <div class="label">President's Club Awards</div>
+          <div class="label" data-en="President's Club Awards" data-ja="President's Club受賞歴">President's Club Awards</div>
         </div>
         <div class="hero-stat">
           <div class="number">F50</div>
-          <div class="label">to Startups Served</div>
+          <div class="label" data-en="to Startups Served" data-ja="からスタートアップまで支援">to Startups Served</div>
         </div>
       </div>
     </div>
@@ -83,7 +104,7 @@
 ═══════════════════════════════════════ -->
 <div class="logos">
   <div class="logos-inner">
-    <div class="logos-label">Clients Served</div>
+    <div class="logos-label" data-en="Clients Served" data-ja="支援実績のあるクライアント">Clients Served</div>
     <div class="logos-track">
       <div class="logos-slide">
         <img src="logos/att_logo.jpeg" alt="AT&amp;T">
@@ -116,16 +137,16 @@
   <div class="container">
     <div class="problem-grid">
       <div>
-        <div class="section-eyebrow">The Problem</div>
-        <h2 class="section-title">We're Not Your Sales Coach.</h2>
+        <div class="section-eyebrow" data-en="The Problem" data-ja="課題">The Problem</div>
+        <h2 class="section-title" data-en="We're Not Your Sales Coach." data-ja="私たちはセールスコーチではありません。">We're Not Your Sales Coach.</h2>
         <div class="problem-quote">
-          <blockquote>
+          <blockquote data-en="&quot;Most sales consultants show up, deliver a workshop, and vanish. You get a binder full of theory and a team that's back to old habits within weeks.&quot;" data-ja="&quot;多くのセールスコンサルタントは、来て、ワークショップを行い、消えていきます。残るのは理論の詰まったバインダーと、数週間で元の習慣に戻るチームだけです。&quot;">
             "Most sales consultants show up, deliver a workshop, and vanish.
             You get a binder full of theory and a team that's back to old habits within weeks."
           </blockquote>
         </div>
-        <p class="section-body">
-          Sales training fades. We build permanent process infrastructure that compounds over time —
+        <p class="section-body" data-en="Sales training fades. We build permanent process infrastructure that compounds over time - embedded directly into how your team operates every day." data-ja="営業研修は風化します。私たちは、時間とともに複利的に効果を発揮する、永続的なプロセスインフラを構築します - チームの日々のオペレーションに直接組み込まれるものです。">
+          Sales training fades. We build permanent process infrastructure that compounds over time -
           embedded directly into how your team operates every day.
         </p>
       </div>
@@ -133,19 +154,19 @@
         <div class="problem-points">
           <div class="problem-point">
             <div class="icon">✓</div>
-            <div class="text">We embed processes into your workflows and daily rhythms — not a separate playbook nobody reads.</div>
+            <div class="text" data-en="We embed processes into your workflows and daily rhythms - not a separate playbook nobody reads." data-ja="プロセスをワークフローと日々のリズムに組み込みます - 誰も読まない別のプレイブックではなく。">We embed processes into your workflows and daily rhythms - not a separate playbook nobody reads.</div>
           </div>
           <div class="problem-point">
             <div class="icon">✓</div>
-            <div class="text">Every rep gets tools they actually use, not binders they forget by Monday morning.</div>
+            <div class="text" data-en="Every rep gets tools they actually use, not binders they forget by Monday morning." data-ja="すべての営業担当者が実際に使えるツールを手にします。月曜の朝には忘れてしまうバインダーではなく。">Every rep gets tools they actually use, not binders they forget by Monday morning.</div>
           </div>
           <div class="problem-point">
             <div class="icon">✓</div>
-            <div class="text">We stay until adoption is permanent and measurable — not until the invoice clears.</div>
+            <div class="text" data-en="We stay until adoption is permanent and measurable - not until the invoice clears." data-ja="定着が永続的で測定可能になるまで伴走します - 請求書が処理されるまでではなく。">We stay until adoption is permanent and measurable - not until the invoice clears.</div>
           </div>
           <div class="problem-point">
             <div class="icon">✓</div>
-            <div class="text">Your team owns a system that outlasts any individual, including us.</div>
+            <div class="text" data-en="Your team owns a system that outlasts any individual, including us." data-ja="チームが所有するシステムは、私たちを含むどの個人よりも長く機能し続けます。">Your team owns a system that outlasts any individual, including us.</div>
           </div>
         </div>
       </div>
@@ -159,43 +180,43 @@
 <section class="methodology wm-dark" id="methodology">
   <div class="container">
     <div class="methodology-header">
-      <div class="section-eyebrow">The Jozu Framework</div>
-      <h2 class="section-title light">Five Steps. Permanent Infrastructure.</h2>
-      <p class="section-body light">
-        A structured engagement model built on 30+ years of enterprise sales leadership —
+      <div class="section-eyebrow" data-en="The Jozu Framework" data-ja="Jozuフレームワーク">The Jozu Framework</div>
+      <h2 class="section-title light" data-en="Five Steps. Permanent Infrastructure." data-ja="5つのステップ。永続的なインフラ。">Five Steps. Permanent Infrastructure.</h2>
+      <p class="section-body light" data-en="A structured engagement model built on 30+ years of enterprise sales leadership - from diagnosis to ongoing growth." data-ja="30年以上のエンタープライズ営業リーダーシップに基づく体系的なエンゲージメントモデル - 診断から継続的な成長まで。">
+        A structured engagement model built on 30+ years of enterprise sales leadership -
         from diagnosis to ongoing growth.
       </p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-number">01</div>
-        <div class="step-tag">Pipeline Analysis</div>
-        <div class="step-title">Data In. Power Out.</div>
-        <div class="step-desc">We analyze your calls, emails, and proposals to reveal gaps in your enterprise sales motion — and map how to connect your strengths to client business outcomes.</div>
+        <div class="step-tag" data-en="Pipeline Analysis" data-ja="パイプライン分析">Pipeline Analysis</div>
+        <div class="step-title" data-en="Data In. Power Out." data-ja="データを入力。成果を出力。">Data In. Power Out.</div>
+        <div class="step-desc" data-en="We analyze your calls, emails, and proposals to reveal gaps in your enterprise sales motion - and map how to connect your strengths to client business outcomes." data-ja="コール、メール、提案書を分析し、エンタープライズ営業プロセスのギャップを明らかにします - そして、貴社の強みをクライアントのビジネス成果に結びつける方法を設計します。">We analyze your calls, emails, and proposals to reveal gaps in your enterprise sales motion - and map how to connect your strengths to client business outcomes.</div>
       </div>
       <div class="step">
         <div class="step-number">02</div>
-        <div class="step-tag">Diagnosis &amp; Planning</div>
-        <div class="step-title">From Insight to Action.</div>
-        <div class="step-desc">We align findings with your business priorities and design deliverables — including enterprise messaging frameworks, plan letter templates, and value proposals — to drive measurable ROI.</div>
+        <div class="step-tag" data-en="Diagnosis &amp; Planning" data-ja="診断と計画">Diagnosis &amp; Planning</div>
+        <div class="step-title" data-en="From Insight to Action." data-ja="洞察から実行へ。">From Insight to Action.</div>
+        <div class="step-desc" data-en="We align findings with your business priorities and design deliverables - including enterprise messaging frameworks, plan letter templates, and value proposals - to drive measurable ROI." data-ja="分析結果をビジネス優先事項と整合させ、成果物を設計します - エンタープライズメッセージングフレームワーク、プランレターテンプレート、バリュープロポーザルなど - 測定可能なROIを実現するために。">We align findings with your business priorities and design deliverables - including enterprise messaging frameworks, plan letter templates, and value proposals - to drive measurable ROI.</div>
       </div>
       <div class="step">
         <div class="step-number">03</div>
-        <div class="step-tag">Top-of-Funnel Activation</div>
-        <div class="step-title">Fix the Funnel First.</div>
-        <div class="step-desc">When pipeline is the pain, we fill it. We generate new meetings and intro calls, then roll those opportunities into the proven sales process we'll embed for your team.</div>
+        <div class="step-tag" data-en="Top-of-Funnel Activation" data-ja="ファネル上部の活性化">Top-of-Funnel Activation</div>
+        <div class="step-title" data-en="Fix the Funnel First." data-ja="まずファネルを修正。">Fix the Funnel First.</div>
+        <div class="step-desc" data-en="When pipeline is the pain, we fill it. We generate new meetings and intro calls, then roll those opportunities into the proven sales process we'll embed for your team." data-ja="パイプラインが課題であれば、私たちが充填します。新しいミーティングとイントロコールを創出し、それらの案件を、チームに組み込む実証済みの営業プロセスに展開します。">When pipeline is the pain, we fill it. We generate new meetings and intro calls, then roll those opportunities into the proven sales process we'll embed for your team.</div>
       </div>
       <div class="step">
         <div class="step-number">04</div>
-        <div class="step-tag">Process Implementation</div>
-        <div class="step-title">Execution That Sticks.</div>
-        <div class="step-desc">We operationalize sales processes across your team — intro calls sell the next step, demos drive deeper discovery, and Plan Letters guide momentum toward closed deals.</div>
+        <div class="step-tag" data-en="Process Implementation" data-ja="プロセス実装">Process Implementation</div>
+        <div class="step-title" data-en="Execution That Sticks." data-ja="定着する実行。">Execution That Sticks.</div>
+        <div class="step-desc" data-en="We operationalize sales processes across your team - intro calls sell the next step, demos drive deeper discovery, and Plan Letters guide momentum toward closed deals." data-ja="営業プロセスをチーム全体にオペレーション化します - イントロコールで次のステップにつなげ、デモでより深い発見を促し、プランレターがクロージングに向けた推進力を導きます。">We operationalize sales processes across your team - intro calls sell the next step, demos drive deeper discovery, and Plan Letters guide momentum toward closed deals.</div>
       </div>
       <div class="step">
         <div class="step-number">05</div>
-        <div class="step-tag">Ongoing Maintenance</div>
-        <div class="step-title">No One-Offs. Just Growth.</div>
-        <div class="step-desc">We run audits and check-ins to ensure adoption, improve forecast accuracy, and keep your sales process humming as a permanent growth engine.</div>
+        <div class="step-tag" data-en="Ongoing Maintenance" data-ja="継続的メンテナンス">Ongoing Maintenance</div>
+        <div class="step-title" data-en="No One-Offs. Just Growth." data-ja="単発ではなく、成長だけを。">No One-Offs. Just Growth.</div>
+        <div class="step-desc" data-en="We run audits and check-ins to ensure adoption, improve forecast accuracy, and keep your sales process humming as a permanent growth engine." data-ja="監査とチェックインを実施し、定着を確認し、予測精度を向上させ、営業プロセスを永続的な成長エンジンとして稼働させ続けます。">We run audits and check-ins to ensure adoption, improve forecast accuracy, and keep your sales process humming as a permanent growth engine.</div>
       </div>
     </div>
   </div>
@@ -208,33 +229,33 @@
   <div class="container">
     <div class="results-grid">
       <div>
-        <div class="section-eyebrow">Measured Outcomes</div>
-        <h2 class="section-title">Results You Can Take to the Board.</h2>
-        <p class="section-body">
-          Every engagement is anchored to measurable outcomes — pipeline coverage,
+        <div class="section-eyebrow" data-en="Measured Outcomes" data-ja="測定された成果">Measured Outcomes</div>
+        <h2 class="section-title" data-en="Results You Can Take to the Board." data-ja="取締役会に報告できる成果。">Results You Can Take to the Board.</h2>
+        <p class="section-body" data-en="Every engagement is anchored to measurable outcomes - pipeline coverage, opportunity quality, cycle length, and forecast accuracy. These aren't claims. They're averages across our client base." data-ja="すべてのエンゲージメントは測定可能な成果に紐づいています - パイプラインカバレッジ、案件の質、サイクル期間、予測精度。これらは主張ではありません。クライアント全体の平均値です。">
+          Every engagement is anchored to measurable outcomes - pipeline coverage,
           opportunity quality, cycle length, and forecast accuracy. These aren't claims.
           They're averages across our client base.
         </p>
         <div style="margin-top: 32px;">
-          <a href="#case-studies" class="btn btn-outline-dark">See Client Case Studies</a>
+          <a href="#case-studies" class="btn btn-outline-dark" data-en="See Client Case Studies" data-ja="クライアント事例を見る">See Client Case Studies</a>
         </div>
       </div>
       <div class="metrics">
         <div class="metric-card">
           <div class="metric-number">3×</div>
-          <div class="metric-label">Average pipeline improvement</div>
+          <div class="metric-label" data-en="Average pipeline improvement" data-ja="平均パイプライン改善">Average pipeline improvement</div>
         </div>
         <div class="metric-card">
           <div class="metric-number">100%+</div>
-          <div class="metric-label">Increase in qualified opportunities</div>
+          <div class="metric-label" data-en="Increase in qualified opportunities" data-ja="有望案件の増加">Increase in qualified opportunities</div>
         </div>
         <div class="metric-card">
           <div class="metric-number">25%</div>
-          <div class="metric-label">Reduction in sales cycle length</div>
+          <div class="metric-label" data-en="Reduction in sales cycle length" data-ja="セールスサイクル期間の短縮">Reduction in sales cycle length</div>
         </div>
         <div class="metric-card">
           <div class="metric-number">70%</div>
-          <div class="metric-label">Improvement in forecast accuracy</div>
+          <div class="metric-label" data-en="Improvement in forecast accuracy" data-ja="予測精度の向上">Improvement in forecast accuracy</div>
         </div>
       </div>
     </div>
@@ -248,12 +269,12 @@
   <div class="container">
     <div class="case-studies-header">
       <div>
-        <div class="section-eyebrow">Case Studies</div>
-        <h2 class="section-title">The Real Problem Is Rarely the Stated One.</h2>
+        <div class="section-eyebrow" data-en="Case Studies" data-ja="事例紹介">Case Studies</div>
+        <h2 class="section-title" data-en="The Real Problem Is Rarely the Stated One." data-ja="本当の課題は、表面上の課題とは異なることがほとんどです。">The Real Problem Is Rarely the Stated One.</h2>
       </div>
-      <a href="#contact" class="btn btn-outline-dark" style="flex-shrink:0;">Discuss Your Situation</a>
+      <a href="#contact" class="btn btn-outline-dark" style="flex-shrink:0;" data-en="Discuss Your Situation" data-ja="貴社の状況をご相談ください">Discuss Your Situation</a>
     </div>
-    <p class="case-studies-intro">
+    <p class="case-studies-intro" data-en="Each engagement below began with a buyer who had a clear request and a budget to match. Through deeper discovery, the request revealed itself as a partial solution to a larger problem. The intervention was not to sell harder against the original ask. It was to surface the economic consequence of solving it incompletely. These case studies document that shift." data-ja="以下の各エンゲージメントは、明確な要望とそれに見合う予算を持つバイヤーから始まりました。より深い発見を通じて、その要望は、より大きな問題に対する部分的な解決策にすぎないことが明らかになりました。介入の目的は、当初の要望に対してより強く売り込むことではありませんでした。不完全な解決がもたらす経済的影響を浮き彫りにすることでした。これらの事例はその転換を記録しています。">
       Each engagement below began with a buyer who had a clear request and a budget to match.
       Through deeper discovery, the request revealed itself as a partial solution to a larger problem.
       The intervention was not to sell harder against the original ask. It was to surface the economic
@@ -266,29 +287,29 @@
       <div class="cs-item">
         <div class="cs-sidebar">
           <div class="cs-number">01</div>
-          <div class="cs-category">Healthcare Payer / Digital Engagement</div>
-          <div class="cs-title">From Commodity Transaction to Enterprise Contract</div>
+          <div class="cs-category" data-en="Healthcare Payer / Digital Engagement" data-ja="医療保険者 / デジタルエンゲージメント">Healthcare Payer / Digital Engagement</div>
+          <div class="cs-title" data-en="From Commodity Transaction to Enterprise Contract" data-ja="コモディティ取引からエンタープライズ契約へ">From Commodity Transaction to Enterprise Contract</div>
           <div class="cs-outcome-metrics">
             <div class="cs-metric">
               <div class="val">7×</div>
-              <div class="lbl">Increase in annual contract value</div>
+              <div class="lbl" data-en="Increase in annual contract value" data-ja="年間契約額の増加">Increase in annual contract value</div>
             </div>
             <div class="cs-metric">
               <div class="val">$1.4M</div>
-              <div class="lbl">ARR on a 3-year term</div>
+              <div class="lbl" data-en="ARR on a 3-year term" data-ja="3年契約のARR">ARR on a 3-year term</div>
             </div>
             <div class="cs-metric">
               <div class="val">$4.2M</div>
-              <div class="lbl">Total contract value</div>
+              <div class="lbl" data-en="Total contract value" data-ja="総契約額">Total contract value</div>
             </div>
           </div>
         </div>
         <div class="cs-body">
-          <p class="cs-text">A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle — enough to cover a single communication use case. The deal as scoped was worth approximately $200K.</p>
-          <p class="cs-text">The problem was what that model left exposed. Under a transaction-based purchase, every new campaign — disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications — required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages.</p>
-          <p class="cs-text">I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not "how many messages do you need this quarter" but "what happens to your members when you need to communicate urgently and you don't have capacity pre-authorized?" I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness — the ability to act immediately at scale, without rationing a capability their members depended on.</p>
-          <p class="cs-text">The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift — from commodity transaction to enterprise commitment — was worth 7× the original ask and resulted in better care outcomes for members.</p>
-          <p class="cs-text cs-lesson-text">Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows.</p>
+          <p class="cs-text" data-en="A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle - enough to cover a single communication use case. The deal as scoped was worth approximately $200K." data-ja="ある地域の医療保険プランが、コモディティ価格を手に持ってプラットフォームに相談に来ました。ベンダー間でメッセージ単価を比較し、単一のコミュニケーションユースケースをカバーするのに十分な小規模トランザクションバンドルを購入したいとのことでした。当初の案件規模は約$200Kでした。">A regional health plan approached the platform with commodity pricing in hand. They had benchmarked per-message rates across vendors and wanted to purchase a small transaction bundle - enough to cover a single communication use case. The deal as scoped was worth approximately $200K.</p>
+          <p class="cs-text" data-en="The problem was what that model left exposed. Under a transaction-based purchase, every new campaign - disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications - required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages." data-ja="問題は、そのモデルが残すリスクでした。トランザクションベースの購入では、新しいキャンペーンの度に - 災害避難通知、緊急の処方箋リフィル案内、季節的な加入通知、規制関連の通知 - 別途の調達サイクルが必要でした。そのサイクルには数週間かかりました。数十万人の加入者を抱える医療保険プランでは、この遅延は、山火事シーズンに避難した加入者が、購買チームが次のメッセージバッチの予算承認を待つ間、緊急のリフィル案内や時間的制約のある医療ガイダンスを受けられないことを意味していました。">The problem was what that model left exposed. Under a transaction-based purchase, every new campaign - disaster displacement notifications, urgent medication refill instructions, seasonal enrollment notices, regulatory communications - required a separate procurement cycle. That cycle took weeks. In a health plan serving hundreds of thousands of members, that delay meant displaced members during wildfire season could go without urgent refill instructions or time-sensitive care guidance while the buying team waited for budget approval on another batch of messages.</p>
+          <p class="cs-text" data-en="I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not &quot;how many messages do you need this quarter&quot; but &quot;what happens to your members when you need to communicate urgently and you don't have capacity pre-authorized?&quot; I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness - the ability to act immediately at scale, without rationing a capability their members depended on." data-ja="私は会話を単価設定から完全に離しました。購買チームに投げかけた質問は「今四半期に何通のメッセージが必要ですか」ではなく、「緊急に連絡する必要がある時に、事前承認された容量がなければ、加入者はどうなりますか?」でした。調達のボトルネックを完全に排除する無制限トランザクションモデルを提案しました。バイヤーは完全な運用態勢 - 加入者が依存する能力を制限することなく、大規模かつ即座に行動できる能力 - を手にしました。">I moved the conversation away from per-unit pricing entirely. The question I put to the buying team was not "how many messages do you need this quarter" but "what happens to your members when you need to communicate urgently and you don't have capacity pre-authorized?" I introduced an unlimited transaction model that eliminated the procurement bottleneck completely. The buyer gained full operational readiness - the ability to act immediately at scale, without rationing a capability their members depended on.</p>
+          <p class="cs-text" data-en="The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift - from commodity transaction to enterprise commitment - was worth 7× the original ask and resulted in better care outcomes for members." data-ja="契約は$200Kから3年契約で年間$1.4Mに拡大しました。バイヤーはメッセージ単価の比較をやめ、運用能力への投資を始めました。コモディティ取引からエンタープライズコミットメントへのこの転換は、当初の要望の7倍の価値があり、加入者のケア成果の向上にもつながりました。">The contract moved from $200K to $1.4M annually on a three-year term. The buyer stopped comparing per-message rates and started investing in operational capability. That shift - from commodity transaction to enterprise commitment - was worth 7× the original ask and resulted in better care outcomes for members.</p>
+          <p class="cs-text cs-lesson-text" data-en="Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows." data-ja="トランザクション価格設定は、準備不足の真のコストを隠すことで、バイヤーに過少購入を促します。能力を制限することの運用上および人的影響を浮き彫りにすると、購買のロジックが変わり、契約がそれに続きます。">Transaction pricing trains buyers to under-buy by hiding the true cost of being under-prepared. When you surface the operational and human consequence of rationing capability, the buying logic changes and the contract follows.</p>
         </div>
       </div>
 
@@ -296,29 +317,29 @@
       <div class="cs-item">
         <div class="cs-sidebar">
           <div class="cs-number">02</div>
-          <div class="cs-category">Healthcare Services / Revenue Operations</div>
-          <div class="cs-title">Beyond OCR: Reframing a Process Problem as a Revenue Problem</div>
+          <div class="cs-category" data-en="Healthcare Services / Revenue Operations" data-ja="ヘルスケアサービス / レベニューオペレーション">Healthcare Services / Revenue Operations</div>
+          <div class="cs-title" data-en="Beyond OCR: Reframing a Process Problem as a Revenue Problem" data-ja="OCRを超えて：プロセスの問題を収益の問題として再定義">Beyond OCR: Reframing a Process Problem as a Revenue Problem</div>
           <div class="cs-outcome-metrics">
             <div class="cs-metric">
               <div class="val">~$7M</div>
-              <div class="lbl">Total contract value</div>
+              <div class="lbl" data-en="Total contract value" data-ja="総契約額">Total contract value</div>
             </div>
             <div class="cs-metric">
               <div class="val">35×</div>
-              <div class="lbl">Expansion vs. original ask</div>
+              <div class="lbl" data-en="Expansion vs. original ask" data-ja="当初の要望からの拡大">Expansion vs. original ask</div>
             </div>
             <div class="cs-metric">
               <div class="val">3</div>
-              <div class="lbl">Systems integrated into one program</div>
+              <div class="lbl" data-en="Systems integrated into one program" data-ja="1つのプログラムに統合されたシステム">Systems integrated into one program</div>
             </div>
           </div>
         </div>
         <div class="cs-body">
-          <p class="cs-text">A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing — a back-office efficiency purchase worth roughly $200K.</p>
-          <p class="cs-text">But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage — intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
-          <p class="cs-text">The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
-          <p class="cs-text">The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source — not at the point where they first noticed the pain.</p>
-          <p class="cs-text cs-lesson-text">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
+          <p class="cs-text" data-en="A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing - a back-office efficiency purchase worth roughly $200K." data-ja="あるヘルスケアサービス組織は紙に埋もれていました。年間約550万ページのFAX紹介状が届き、それぞれ患者の予約スケジュールを組む前に手動での情報抽出が必要でした。彼らの表明されたニーズは、文書処理を自動化するOCRソフトウェア - 約$200K相当のバックオフィス効率化のための購入でした。">A healthcare services organization was drowning in paper. Approximately 5.5 million pages of inbound faxed referrals per year, each requiring manual extraction before a patient could be scheduled. Their stated need was OCR software to automate document processing - a back-office efficiency purchase worth roughly $200K.</p>
+          <p class="cs-text" data-en="But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage - intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss." data-ja="しかし、文書処理は壊れたチェーンの最初のリンクにすぎませんでした。拡張されたディスカバリーを通じて、紹介状が届いた後に何が起こるかをマッピングしました - 患者へのアウトリーチまでの期間、予定された予約のうち実際に来院した割合、ノーショーの間に高価な診断機器がどれだけ遊休していたか、患者が治療コースを完了する前に離脱した場合にどれだけの収益が失われたか。浮かび上がった全体像は、各段階で損失が複利的に拡大するシステムでした - 受付の遅延がアウトリーチのタイミングを悪化させ、ノーショーを増やし、機器の稼働率を下げ、収益損失を招いていました。">But document processing was only the first link in a broken chain. Through extended discovery, I mapped what happened after a referral arrived: how long before a patient received outreach, how many scheduled appointments were actually kept, how much expensive diagnostic equipment sat idle between no-shows, and what revenue was lost when patients disengaged before completing their course of care. The picture that emerged was a system with compounding leakage at every stage - intake delay drove poor outreach timing, which drove no-shows, which drove equipment underutilization, which drove revenue loss.</p>
+          <p class="cs-text" data-en="The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization." data-ja="当初のOCR要件は本物でしたが不完全でした。情報抽出は解決しても、下流のすべての障害はそのままでした。私はスコープを拡大し、統合レベニューオペレーションプラットフォームとして購入を位置づけました - 受付自動化、患者エンゲージメントワークフロー、スケジューリング最適化を単一システムとして機能させるものです。バイヤーは文書処理速度の検討をやめ、患者スループットと資産稼働率について考え始めました。">The original OCR requirement was real but incomplete. It solved extraction while leaving every downstream failure intact. I expanded the scope to frame the purchase as an integrated revenue operations platform: intake automation, patient engagement workflows, and scheduling optimization working as a single system. The buyer stopped thinking about document processing speed and started thinking about patient throughput and asset utilization.</p>
+          <p class="cs-text" data-en="The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source - not at the point where they first noticed the pain." data-ja="エンゲージメントは、限定的なソフトウェア購入から、以前は切り離されていた3つのシステムをカバーする$7Mのプラットフォーム投資へと成長しました。バイヤーは、最初に痛みに気づいた地点ではなく、収益損失の源泉に対処する統合的な能力を獲得しました。">The engagement grew from a narrow software purchase to a $7M platform investment covering three previously disconnected systems. The buyer gained a unified capability that addressed revenue leakage at its source - not at the point where they first noticed the pain.</p>
+          <p class="cs-text cs-lesson-text" data-en="Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it." data-ja="バイヤーは問題を直接的な痛みのある地点で定義し、最大の経済的影響のある地点では定義しません。問題を下流に追跡し、収益に到達するまで辿れば、ソリューションもそれとともに拡大します。">Buyers define their problem at the point of immediate pain, not at the point of maximum economic consequence. Follow the problem downstream until it reaches revenue, and the solution expands with it.</p>
         </div>
       </div>
 
@@ -326,29 +347,29 @@
       <div class="cs-item">
         <div class="cs-sidebar">
           <div class="cs-number">03</div>
-          <div class="cs-category">Enterprise Technology / Sales System Design</div>
-          <div class="cs-title">Building an Enterprise Motion Where None Existed</div>
+          <div class="cs-category" data-en="Enterprise Technology / Sales System Design" data-ja="エンタープライズテクノロジー / セールスシステム設計">Enterprise Technology / Sales System Design</div>
+          <div class="cs-title" data-en="Building an Enterprise Motion Where None Existed" data-ja="ゼロからエンタープライズ営業モーションを構築">Building an Enterprise Motion Where None Existed</div>
           <div class="cs-outcome-metrics">
             <div class="cs-metric">
               <div class="val">$8M</div>
-              <div class="lbl">Annual recurring revenue</div>
+              <div class="lbl" data-en="Annual recurring revenue" data-ja="年間経常収益">Annual recurring revenue</div>
             </div>
             <div class="cs-metric">
               <div class="val">$24M</div>
-              <div class="lbl">Total contract value</div>
+              <div class="lbl" data-en="Total contract value" data-ja="総契約額">Total contract value</div>
             </div>
             <div class="cs-metric">
               <div class="val">26×</div>
-              <div class="lbl">Return on $300K investment</div>
+              <div class="lbl" data-en="Return on $300K investment" data-ja="$300K投資に対するリターン">Return on $300K investment</div>
             </div>
           </div>
         </div>
         <div class="cs-body">
-          <p class="cs-text">The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range — not because the product couldn't support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction.</p>
-          <p class="cs-text">I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer's inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer's economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides.</p>
-          <p class="cs-text">The company's total investment — including my compensation and the time required to embed these processes — was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization's previous results.</p>
-          <p class="cs-text">The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26× return on a $300K investment was not a single deal — it was the output of a permanent system that continued producing after the engagement ended.</p>
-          <p class="cs-text cs-lesson-text">Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms.</p>
+          <p class="cs-text" data-en="The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range - not because the product couldn't support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction." data-ja="製品はエンタープライズグレードでした。営業モーションはそうではありませんでした。私が組織に入った時、ほとんどの営業担当者は$75K規模の案件をクロージングしていました - 製品がそれ以上をサポートできなかったからではなく、営業プロセスの中に、より大きな会話を促すものがなかったからです。営業担当者は機能デモで始めていました。ディスカバリーは浅いか、完全にスキップされていました。ミーティングは次のステップの定義なしに終わっていました。ステークホルダーマッピングは非公式でした。案件は最も摩擦の少ないサイズでクロージングされていました。">The product was enterprise-grade. The sales motion was not. When I entered the organization, most reps were closing deals in the $75K range - not because the product couldn't support more, but because nothing in the sales process forced a larger conversation. Reps led with feature demos. Discovery was shallow or skipped entirely. Meetings ended without defined next steps. Stakeholder mapping was informal. Deals closed at whatever size required the least friction.</p>
+          <p class="cs-text" data-en="I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer's inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer's economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides." data-ja="ゼロから完全なエンタープライズ営業システムを構築・導入しました。すべての要素は、バイヤーの慣性に従うのではなく、モメンタムをコントロールするように設計されました - すべての会話がコミットされた次のステップで終わる明確なミーティング目標、大きな飛躍を必要とせずに案件を前進させる段階的な低リスクコミットメント、バイヤーの経済的問題が完全に理解されるまで製品を見せない必須のディスカバリー、フル機能ウォークスルーではなく表明された優先事項に合わせたデモ構成、経済的意思決定者を早期に巻き込む正式なステークホルダーマッピング、両者の文書化されたコミットメントの下で案件を前進させる構造化された相互アクションプラン。">I built and installed a complete enterprise sales system from the ground up. Every element was designed to control momentum rather than follow the buyer's inertia: clear meeting objectives so every conversation ended with a committed next step, sequential low-risk commitments that moved deals forward without requiring large leaps, mandatory discovery before any demonstration so no product was shown until the buyer's economic problem was fully understood, controlled demo structures tailored to stated priorities rather than a full feature walkthrough, formal stakeholder mapping to engage economic buyers early, and structured mutual action plans that kept deals moving under documented commitment from both sides.</p>
+          <p class="cs-text" data-en="The company's total investment - including my compensation and the time required to embed these processes - was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization's previous results." data-ja="企業の総投資額は - 私の報酬とプロセスの組み込みに必要な時間を含めて - 約$300Kでした。このシステムは、組織の従来の成果を決定づけていた非公式でトランザクション的なパターンに取って代わりました。">The company's total investment - including my compensation and the time required to embed these processes - was approximately $300K. The system replaced the informal, transactional pattern that had defined the organization's previous results.</p>
+          <p class="cs-text" data-en="The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26× return on a $300K investment was not a single deal - it was the output of a permanent system that continued producing after the engagement ended." data-ja="この規律あるモーションは、年間経常収益$8Mと、複数年のエンゲージメント全体で最大$24Mの総契約額を生み出しました。契約は深度と更新確率を重視して構成されました。$300Kの投資に対する26倍のリターンは、単一の案件ではなく、エンゲージメント終了後も生産し続ける永続的なシステムの成果でした。">The disciplined motion produced $8M in annual recurring revenue and up to $24M in total contract value across multi-year engagements. Contracts were structured for depth and renewal probability. The 26× return on a $300K investment was not a single deal - it was the output of a permanent system that continued producing after the engagement ended.</p>
+          <p class="cs-text cs-lesson-text" data-en="Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms." data-ja="案件規模は営業プロセスの関数であり、製品の関数ではありません。弱いモーションで販売される優秀な製品は、常にポテンシャルの下限でクロージングされます。すべての段階に規律を導入すれば、より大きな予算、上位の意思決定者、複数年契約へのアクセスを獲得できます。">Deal size is a function of the sales process, not the product. A capable product sold through a weak motion will always close at the low end of its potential. Install discipline at every stage and you earn access to larger budgets, senior decision makers, and multi-year terms.</p>
         </div>
       </div>
 
@@ -362,38 +383,38 @@
 <section class="testimonials wm-dark">
   <div class="container">
     <div class="testimonials-header">
-      <div class="section-eyebrow" style="justify-content:center;">Client Voices</div>
-      <h2 class="section-title light" style="max-width:100%; text-align:center;">What Leaders Say.</h2>
+      <div class="section-eyebrow" style="justify-content:center;" data-en="Client Voices" data-ja="クライアントの声">Client Voices</div>
+      <h2 class="section-title light" style="max-width:100%; text-align:center;" data-en="What Leaders Say." data-ja="リーダーたちの評価。">What Leaders Say.</h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-stars">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
-        <p class="testi-quote">"Jeff's approach to sales process implementation transformed how our entire team operates. The results were measurable within the first quarter — not the first year."</p>
+        <p class="testi-quote" data-en="&quot;Jeff's approach to sales process implementation transformed how our entire team operates. The results were measurable within the first quarter - not the first year.&quot;" data-ja="&quot;Jeffのセールスプロセス実装へのアプローチは、チーム全体の運営方法を変革しました。成果は最初の四半期で測定可能でした - 最初の年ではなく。&quot;">"Jeff's approach to sales process implementation transformed how our entire team operates. The results were measurable within the first quarter - not the first year."</p>
         <div class="testi-author">
-          <div class="testi-name">Head of Strategy</div>
-          <div class="testi-title">Enterprise Healthcare Technology Company</div>
+          <div class="testi-name" data-en="Head of Strategy" data-ja="戦略責任者">Head of Strategy</div>
+          <div class="testi-title" data-en="Enterprise Healthcare Technology Company" data-ja="エンタープライズ・ヘルスケアテクノロジー企業">Enterprise Healthcare Technology Company</div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
-        <p class="testi-quote">"Unlike other consultants who deliver a playbook and disappear, Jeff embedded the process into our daily workflows. It actually stuck. Eighteen months later, it's still running."</p>
+        <p class="testi-quote" data-en="&quot;Unlike other consultants who deliver a playbook and disappear, Jeff embedded the process into our daily workflows. It actually stuck. Eighteen months later, it's still running.&quot;" data-ja="&quot;プレイブックを渡して消えてしまう他のコンサルタントとは異なり、Jeffはプロセスを私たちの日常のワークフローに組み込みました。実際に定着しました。18か月後も、まだ機能し続けています。&quot;">"Unlike other consultants who deliver a playbook and disappear, Jeff embedded the process into our daily workflows. It actually stuck. Eighteen months later, it's still running."</p>
         <div class="testi-author">
-          <div class="testi-name">Chief Revenue Officer</div>
-          <div class="testi-title">Growth-Stage SaaS Company</div>
+          <div class="testi-name" data-en="Chief Revenue Officer" data-ja="最高収益責任者">Chief Revenue Officer</div>
+          <div class="testi-title" data-en="Growth-Stage SaaS Company" data-ja="成長ステージSaaS企業">Growth-Stage SaaS Company</div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
-        <p class="testi-quote">"The Pipeline Analysis alone uncovered millions in missed opportunities. The ROI was evident before we even started implementation — and it only got better from there."</p>
+        <p class="testi-quote" data-en="&quot;The Pipeline Analysis alone uncovered millions in missed opportunities. The ROI was evident before we even started implementation - and it only got better from there.&quot;" data-ja="&quot;Pipeline Analysisだけで、数百万ドルの逸失機会が明らかになりました。実装を開始する前からROIは明白でした - そしてそこからさらに改善し続けました。&quot;">"The Pipeline Analysis alone uncovered millions in missed opportunities. The ROI was evident before we even started implementation - and it only got better from there."</p>
         <div class="testi-author">
-          <div class="testi-name">Director of Sales Operations</div>
-          <div class="testi-title">Fortune 500 Healthcare Organization</div>
+          <div class="testi-name" data-en="Director of Sales Operations" data-ja="セールスオペレーション・ディレクター">Director of Sales Operations</div>
+          <div class="testi-title" data-en="Fortune 500 Healthcare Organization" data-ja="Fortune 500ヘルスケア組織">Fortune 500 Healthcare Organization</div>
         </div>
       </div>
     </div>
@@ -408,37 +429,37 @@
     <div class="founder-grid">
       <div class="founder-image-wrap">
         <div class="founder-image-placeholder">
-          <img src="jeff-headshot.jpg" alt="Jeff Aragon — Founder, Jozu Consulting Group">
+          <img src="jeff-headshot.jpg" alt="Jeff Aragon - Founder, Jozu Consulting Group">
         </div>
         <div class="founder-badge">
           <span class="big">30+</span>
-          <span class="small">Years in Enterprise Sales</span>
+          <span class="small" data-en="Years in Enterprise Sales" data-ja="年のエンタープライズ営業経験">Years in Enterprise Sales</span>
         </div>
       </div>
       <div class="founder-content">
-        <div class="section-eyebrow">The Founder</div>
+        <div class="section-eyebrow" data-en="The Founder" data-ja="創業者">The Founder</div>
         <div class="founder-name">Jeff Aragon</div>
-        <div class="founder-role">Founder &amp; CEO</div>
-        <p class="founder-bio">
+        <div class="founder-role" data-en="Founder &amp; CEO" data-ja="創業者 &amp; CEO">Founder &amp; CEO</div>
+        <p class="founder-bio" data-en="Jeff has spent more than three decades in enterprise technology sales, building and leading revenue organizations at Fortune 50 companies and growth-stage technology firms. He has generated $150M+ in attributed revenue and earned 25+ President's Club and Sales Excellence Awards across his career." data-ja="Jeffは30年以上にわたりエンタープライズテクノロジー営業に従事し、Fortune 50企業や成長ステージのテクノロジー企業でレベニュー組織を構築・リードしてきました。キャリアを通じて$150M+の帰属収益を創出し、25以上のPresident's ClubおよびSales Excellence Awardを受賞しています。">
           Jeff has spent more than three decades in enterprise technology sales, building and leading
           revenue organizations at Fortune 50 companies and growth-stage technology firms. He has
           generated $150M+ in attributed revenue and earned 25+ President's Club and Sales Excellence
           Awards across his career.
         </p>
-        <p class="founder-bio">
+        <p class="founder-bio" data-en="His unique perspective bridges American enterprise sales rigor with deep cultural fluency in Japan - shaped by four years teaching The Harvard Negotiation Project to Japanese business leaders in Tokyo and extensive work with Japanese companies entering global markets." data-ja="彼のユニークな視点は、アメリカのエンタープライズ営業の厳密さと、日本への深い文化的理解を橋渡しします - 東京で4年間、日本のビジネスリーダーにハーバード交渉プロジェクトを教えた経験と、グローバル市場に参入する日本企業との幅広い仕事によって培われました。">
           His unique perspective bridges American enterprise sales rigor with deep cultural fluency in
-          Japan — shaped by four years teaching The Harvard Negotiation Project to Japanese business
+          Japan - shaped by four years teaching The Harvard Negotiation Project to Japanese business
           leaders in Tokyo and extensive work with Japanese companies entering global markets.
         </p>
         <div class="founder-signature-quote">
-          <p>"I don't believe in sales training. I believe in sales process. Training fades. Process compounds."</p>
+          <p data-en="&quot;I don't believe in sales training. I believe in sales process. Training fades. Process compounds.&quot;" data-ja="&quot;私は営業研修を信じていません。営業プロセスを信じています。研修は風化します。プロセスは複利的に成長します。&quot;">"I don't believe in sales training. I believe in sales process. Training fades. Process compounds."</p>
         </div>
         <div class="founder-credentials">
-          <div class="founder-credential">Harvard Negotiation Project — Tokyo (4 years)</div>
-          <div class="founder-credential">Designs and deploys enterprise revenue systems from the ground up</div>
-          <div class="founder-credential">25+ President's Club &amp; Sales Excellence Awards</div>
-          <div class="founder-credential">Enterprise sales across Fortune 50 to growth-stage companies</div>
-          <div class="founder-credential">Influenced by Corporate Visions, Sandler, Challenger, Customer-Centric Selling</div>
+          <div class="founder-credential" data-en="Harvard Negotiation Project - Tokyo (4 years)" data-ja="ハーバード交渉プロジェクト - 東京 (4年間)">Harvard Negotiation Project - Tokyo (4 years)</div>
+          <div class="founder-credential" data-en="Designs and deploys enterprise revenue systems from the ground up" data-ja="エンタープライズ・レベニューシステムをゼロから設計・導入">Designs and deploys enterprise revenue systems from the ground up</div>
+          <div class="founder-credential" data-en="25+ President's Club &amp; Sales Excellence Awards" data-ja="25以上のPresident's Club &amp; Sales Excellence Awards">25+ President's Club &amp; Sales Excellence Awards</div>
+          <div class="founder-credential" data-en="Enterprise sales across Fortune 50 to growth-stage companies" data-ja="Fortune 50から成長ステージ企業までのエンタープライズ営業">Enterprise sales across Fortune 50 to growth-stage companies</div>
+          <div class="founder-credential" data-en="Influenced by Corporate Visions, Sandler, Challenger, Customer-Centric Selling" data-ja="Corporate Visions、Sandler、Challenger、Customer-Centric Sellingの影響を受ける">Influenced by Corporate Visions, Sandler, Challenger, Customer-Centric Selling</div>
         </div>
       </div>
     </div>
@@ -452,35 +473,35 @@
   <div class="container">
     <div class="japan-grid">
       <div>
-        <div class="section-eyebrow">Japan &amp; Asia-Pacific</div>
-        <h2 class="section-title light">Helping Japanese Companies Win in the U.S. Market.</h2>
-        <p class="section-body light">
-          <em>Jozu</em> — 上手 — means "skilled" or "expert" in Japanese. It's not just a name.
+        <div class="section-eyebrow" data-en="Japan &amp; Asia-Pacific" data-ja="日本・アジア太平洋">Japan &amp; Asia-Pacific</div>
+        <h2 class="section-title light" data-en="Helping Japanese Companies Win in the U.S. Market." data-ja="日本企業の米国市場での成功を支援。">Helping Japanese Companies Win in the U.S. Market.</h2>
+        <p class="section-body light" data-en="&lt;em&gt;Jozu&lt;/em&gt; - 上手 - means &quot;skilled&quot; or &quot;expert&quot; in Japanese. It's not just a name. It reflects a commitment to mastery, precision, and long-term relationships that is central to Japanese business culture and to how we work." data-ja="&lt;em&gt;Jozu&lt;/em&gt; - 上手 - 日本語で「熟練した」「上手な」を意味します。単なる名前ではありません。日本のビジネス文化の中心であり、私たちの仕事の進め方の根幹にある、卓越性、精密さ、長期的な関係性へのコミットメントを反映しています。">
+          <em>Jozu</em> - 上手 - means "skilled" or "expert" in Japanese. It's not just a name.
           It reflects a commitment to mastery, precision, and long-term relationships that is
           central to Japanese business culture and to how we work.
         </p>
         <div style="margin-top:32px;">
-          <a href="#contact" class="btn btn-primary">Start the Conversation</a>
+          <a href="#contact" class="btn btn-primary" data-en="Start the Conversation" data-ja="まずはお話ししましょう">Start the Conversation</a>
         </div>
       </div>
       <div>
         <div class="japan-word">上手</div>
         <div class="japan-points">
           <div class="japan-point">
-            <h4>Cultural Bridge</h4>
-            <p>Deep understanding of Japanese business culture, relationship-building norms (nemawashi, ringi), and how they translate — or don't — into the American enterprise buying process.</p>
+            <h4 data-en="Cultural Bridge" data-ja="文化の架け橋">Cultural Bridge</h4>
+            <p data-en="Deep understanding of Japanese business culture, relationship-building norms (nemawashi, ringi), and how they translate - or don't - into the American enterprise buying process." data-ja="日本のビジネス文化、関係構築の規範(根回し、稟議)、そしてそれらがアメリカのエンタープライズ購買プロセスにどう反映されるか - あるいは反映されないか - への深い理解。">Deep understanding of Japanese business culture, relationship-building norms (nemawashi, ringi), and how they translate - or don't - into the American enterprise buying process.</p>
           </div>
           <div class="japan-point">
-            <h4>U.S. Market Entry</h4>
-            <p>A complete go-to-market foundation for Japanese companies entering the U.S. — messaging, pipeline generation, sales process, and team training adapted for American buyers.</p>
+            <h4 data-en="U.S. Market Entry" data-ja="米国市場参入">U.S. Market Entry</h4>
+            <p data-en="A complete go-to-market foundation for Japanese companies entering the U.S. - messaging, pipeline generation, sales process, and team training adapted for American buyers." data-ja="米国に参入する日本企業のための包括的なGo-to-Market基盤 - アメリカのバイヤーに適応したメッセージング、パイプライン創出、セールスプロセス、チームトレーニング。">A complete go-to-market foundation for Japanese companies entering the U.S. - messaging, pipeline generation, sales process, and team training adapted for American buyers.</p>
           </div>
           <div class="japan-point">
-            <h4>Harvard Negotiation in Tokyo</h4>
-            <p>Four years teaching the Harvard Negotiation Project to Japanese business leaders in Tokyo gave Jeff firsthand experience in cross-cultural deal-making at the highest enterprise levels.</p>
+            <h4 data-en="Harvard Negotiation in Tokyo" data-ja="東京でのハーバード交渉術">Harvard Negotiation in Tokyo</h4>
+            <p data-en="Four years teaching the Harvard Negotiation Project to Japanese business leaders in Tokyo gave Jeff firsthand experience in cross-cultural deal-making at the highest enterprise levels." data-ja="東京で4年間、日本のビジネスリーダーにハーバード交渉プロジェクトを教えた経験は、Jeffに最高レベルのエンタープライズにおける異文化間取引の第一線の経験を与えました。">Four years teaching the Harvard Negotiation Project to Japanese business leaders in Tokyo gave Jeff firsthand experience in cross-cultural deal-making at the highest enterprise levels.</p>
           </div>
           <div class="japan-point">
-            <h4>Also Serving the Americas &amp; EMEA</h4>
-            <p>While Japan and Asia-Pacific represent our primary international focus, we work with companies anywhere — including across the United States, Latin America, and Europe.</p>
+            <h4 data-en="Also Serving the Americas &amp; EMEA" data-ja="南北アメリカ &amp; EMEAもサポート">Also Serving the Americas &amp; EMEA</h4>
+            <p data-en="While Japan and Asia-Pacific represent our primary international focus, we work with companies anywhere - including across the United States, Latin America, and Europe." data-ja="日本とアジア太平洋が私たちの主要な国際的フォーカスですが、米国全土、ラテンアメリカ、ヨーロッパを含む、あらゆる地域の企業と連携しています。">While Japan and Asia-Pacific represent our primary international focus, we work with companies anywhere - including across the United States, Latin America, and Europe.</p>
           </div>
         </div>
       </div>
@@ -494,11 +515,11 @@
 <section style="background:var(--navy-mid);padding:64px 0;border-top:1px solid rgba(200,75,34,0.15);border-bottom:1px solid rgba(200,75,34,0.15);">
   <div class="container" style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:48px;">
     <div>
-      <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:inline-flex;align-items:center;gap:10px;"><span style="display:block;width:20px;height:2px;background:var(--gold);"></span>For Early-Stage Founders</div>
-      <h2 style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--white);margin-bottom:10px;">Building Your First Sales Motion?</h2>
-      <p style="font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.75;max-width:560px;">The GTM Foundation Sprint installs a proven, repeatable sales system into your startup in 90 days. Two tiers starting at $2,500/mo. Same methodology. Startup-ready scope.</p>
+      <div style="font-size:0.6875rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:inline-flex;align-items:center;gap:10px;" data-en="&lt;span style=&quot;display:block;width:20px;height:2px;background:var(--gold);&quot;&gt;&lt;/span&gt;For Early-Stage Founders" data-ja="&lt;span style=&quot;display:block;width:20px;height:2px;background:var(--gold);&quot;&gt;&lt;/span&gt;アーリーステージの創業者向け"><span style="display:block;width:20px;height:2px;background:var(--gold);"></span>For Early-Stage Founders</div>
+      <h2 style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--white);margin-bottom:10px;" data-en="Building Your First Sales Motion?" data-ja="初めての営業モーションを構築中ですか?">Building Your First Sales Motion?</h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.75;max-width:560px;" data-en="The GTM Foundation Sprint installs a proven, repeatable sales system into your startup in 90 days. Two tiers starting at $2,500/mo. Same methodology. Startup-ready scope." data-ja="GTM Foundation Sprintは、実証済みの再現可能な営業システムを90日でスタートアップに導入します。$2,500/月からの2つのティア。同じメソドロジー。スタートアップ対応のスコープ。">The GTM Foundation Sprint installs a proven, repeatable sales system into your startup in 90 days. Two tiers starting at $2,500/mo. Same methodology. Startup-ready scope.</p>
     </div>
-    <a href="founders.html" class="btn btn-primary" style="flex-shrink:0;">See Founder Packages &rarr;</a>
+    <a href="founders.html" class="btn btn-primary" style="flex-shrink:0;" data-en="See Founder Packages &rarr;" data-ja="創業者向けパッケージを見る &rarr;">See Founder Packages &rarr;</a>
   </div>
 </section>
 
@@ -508,8 +529,8 @@
 <section class="cta-band wm-dark">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Sales Infrastructure That Lasts?</h2>
-      <a href="contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Build Sales Infrastructure That Lasts?" data-ja="永続する営業インフラを構築する準備はできていますか?">Ready to Build Sales Infrastructure That Lasts?</h2>
+      <a href="contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談を申し込む &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -521,9 +542,9 @@
   <div class="container">
     <div class="contact-grid">
       <div>
-        <div class="section-eyebrow">Get in Touch</div>
-        <h2 class="section-title light">Request a Consultation.</h2>
-        <p class="section-body light" style="margin-bottom:40px;">
+        <div class="section-eyebrow" data-en="Get in Touch" data-ja="お問い合わせ">Get in Touch</div>
+        <h2 class="section-title light" data-en="Request a Consultation." data-ja="ご相談を申し込む。">Request a Consultation.</h2>
+        <p class="section-body light" style="margin-bottom:40px;" data-en="Tell us about your situation and we'll respond within one business day. All initial conversations are confidential and no-obligation." data-ja="貴社の状況をお聞かせください。1営業日以内にご返信いたします。初回のご相談はすべて機密扱いで、義務は一切ありません。">
           Tell us about your situation and we'll respond within one business day.
           All initial conversations are confidential and no-obligation.
         </p>
@@ -531,21 +552,21 @@
           <div class="contact-info-item">
             <div class="contact-info-icon">📍</div>
             <div class="contact-info-text">
-              <div class="label">Office</div>
+              <div class="label" data-en="Office" data-ja="オフィス">Office</div>
               <div class="value">1580 N. Logan St. Ste 660<br>Denver, CO 80203</div>
             </div>
           </div>
           <div class="contact-info-item">
             <div class="contact-info-icon">📞</div>
             <div class="contact-info-text">
-              <div class="label">Phone / WhatsApp</div>
+              <div class="label" data-en="Phone / WhatsApp" data-ja="電話 / WhatsApp">Phone / WhatsApp</div>
               <div class="value">+1 (303) 638-1390</div>
             </div>
           </div>
           <div class="contact-info-item">
             <div class="contact-info-icon">✉️</div>
             <div class="contact-info-text">
-              <div class="label">Email</div>
+              <div class="label" data-en="Email" data-ja="メール">Email</div>
               <div class="value">Info@jozuconsultinggroup.com</div>
             </div>
           </div>
@@ -558,48 +579,48 @@
         <input type="text" name="_honey" style="display:none">
         <div class="form-row">
           <div class="form-group">
-            <label>First Name</label>
+            <label data-en="First Name" data-ja="名">First Name</label>
             <input type="text" name="first_name" placeholder="Hiroshi" required>
           </div>
           <div class="form-group">
-            <label>Last Name</label>
+            <label data-en="Last Name" data-ja="姓">Last Name</label>
             <input type="text" name="last_name" placeholder="Tanaka" required>
           </div>
         </div>
         <div class="form-group">
-          <label>Company</label>
+          <label data-en="Company" data-ja="会社名">Company</label>
           <input type="text" name="company" placeholder="Your company name" required>
         </div>
         <div class="form-group">
-          <label>Email</label>
+          <label data-en="Email" data-ja="メールアドレス">Email</label>
           <input type="email" name="email" placeholder="you@company.com" required>
         </div>
         <div class="form-group">
-          <label>Phone / WhatsApp</label>
+          <label data-en="Phone / WhatsApp" data-ja="電話 / WhatsApp">Phone / WhatsApp</label>
           <input type="tel" name="phone" placeholder="+1 (555) 000-0000">
         </div>
         <div class="form-group">
-          <label>How can we help?</label>
+          <label data-en="How can we help?" data-ja="どのようにお手伝いできますか?">How can we help?</label>
           <select name="service">
-            <option value="">Select a reason...</option>
-            <option>U.S. Market Entry (Japan / Asia-Pacific)</option>
-            <option>Pipeline Analysis</option>
-            <option>Sales Process Implementation</option>
-            <option>Top-of-Funnel Activation</option>
-            <option>Ongoing Sales Maintenance</option>
-            <option>General Inquiry</option>
+            <option value="" data-en="Select a reason..." data-ja="お問い合わせ内容を選択...">Select a reason...</option>
+            <option data-en="U.S. Market Entry (Japan / Asia-Pacific)" data-ja="米国市場参入 (日本 / アジア太平洋)">U.S. Market Entry (Japan / Asia-Pacific)</option>
+            <option data-en="Pipeline Analysis" data-ja="パイプライン分析">Pipeline Analysis</option>
+            <option data-en="Sales Process Implementation" data-ja="セールスプロセス実装">Sales Process Implementation</option>
+            <option data-en="Top-of-Funnel Activation" data-ja="ファネル上部の活性化">Top-of-Funnel Activation</option>
+            <option data-en="Ongoing Sales Maintenance" data-ja="継続的セールスメンテナンス">Ongoing Sales Maintenance</option>
+            <option data-en="General Inquiry" data-ja="一般的なお問い合わせ">General Inquiry</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Tell us about your situation</label>
+          <label data-en="Tell us about your situation" data-ja="貴社の状況をお聞かせください">Tell us about your situation</label>
           <textarea name="message" placeholder="Brief description of your sales challenge or goal..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;">
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;" data-en="Send Message" data-ja="メッセージを送信">
           Send Message
         </button>
         <div style="text-align:center; margin-top:24px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1);">
-          <p style="font-size:0.875rem; color:rgba(255,255,255,0.5); margin-bottom:12px;">Prefer to schedule directly?</p>
-          <a href="https://calendly.com/jeff-jozuconsultinggroup/intro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px; background:transparent; border-color:var(--red); color:var(--white);">
+          <p style="font-size:0.875rem; color:rgba(255,255,255,0.5); margin-bottom:12px;" data-en="Prefer to schedule directly?" data-ja="直接スケジュールされたい場合は?">Prefer to schedule directly?</p>
+          <a href="https://calendly.com/jeff-jozuconsultinggroup/intro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px; background:transparent; border-color:var(--red); color:var(--white);" data-en="Book Your Free Consultation" data-ja="無料相談を予約する">
             Book Your Free Consultation
           </a>
         </div>
@@ -618,19 +639,24 @@
         <img src="jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="services/index.html">Services</a></li>
-        <li><a href="index.html#methodology">Methodology</a></li>
-        <li><a href="index.html#results">Results</a></li>
-        <li><a href="case-studies/index.html">Case Studies</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="insights/index.html">Insights</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services/index.html" data-en="Services" data-ja="サービス">Services</a></li>
+        <li><a href="index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="index.html#results" data-en="Results" data-ja="成果">Results</a></li>
+        <li><a href="case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">© 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
+
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
 
 <script>
   // Count-up animation for hero stats
@@ -698,6 +724,24 @@
   if (stepsSection) stepsObserver.observe(stepsSection);
 </script>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<script>
+// Nav toggle
+document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});
+document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+// Restore saved language preference
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

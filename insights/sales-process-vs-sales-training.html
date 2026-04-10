@@ -7,8 +7,23 @@
   <meta name="description" content="Sales training has a half-life of 90 days. Process compounds. Learn how to embed a sales process that keeps running after the consultant leaves.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; display: flex; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px; font-family: 'Sora', sans-serif; font-size: 0.85rem;
+      font-weight: 600; border: none; cursor: pointer; background: #032042;
+      color: rgba(255,255,255,0.5); transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active { background: #C84B22; color: #fff; }
+    .lang-toggle-float button:hover:not(.active) { color: #fff; }
+    body.lang-ja { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body>
 
@@ -21,16 +36,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,16 +58,16 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <a href="index.html">Insights</a>
+        <a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Revenue Architecture</span>
+        <span style="color: var(--gold);" data-en="Revenue Architecture" data-ja="レベニューアーキテクチャ">Revenue Architecture</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>How to Build a Sales Process That <em>Outlasts</em> Your Consultants</h1>
-    <p class="lead">Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow.</p>
+    <h1 data-en="How to Build a Sales Process That &lt;em&gt;Outlasts&lt;/em&gt; Your Consultants" data-ja="コンサルタントがいなくなっても&lt;em&gt;続く&lt;/em&gt;営業プロセスの構築方法">How to Build a Sales Process That <em>Outlasts</em> Your Consultants</h1>
+    <p class="lead" data-en="Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow." data-ja="営業トレーニングの半減期は約90日です。プロセスは複利で効きます。その違いは、システムがバインダーの中にあるか、日々のワークフローの中にあるかです。">Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow.</p>
   </div>
 </section>
 
@@ -63,82 +78,82 @@
 
 <section class="content-section wm">
   <div class="container" style="max-width: 780px;">
-    <a href="index.html" class="back-link">&larr; Back to All Insights</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Insights" data-ja="&larr; 全インサイトに戻る">&larr; Back to All Insights</a>
 
-    <h2>The Half-Life Problem</h2>
+    <h2 data-en="The Half-Life Problem" data-ja="半減期の問題">The Half-Life Problem</h2>
 
-    <p>Every year, companies spend billions on sales training. Workshops, offsites, certification programs, keynote speakers, role-play exercises. The energy in the room is high. Reps leave feeling motivated. Managers feel like they have invested in their team. And within 90 days, almost all of it is gone.</p>
+    <p data-en="Every year, companies spend billions on sales training. Workshops, offsites, certification programs, keynote speakers, role-play exercises. The energy in the room is high. Reps leave feeling motivated. Managers feel like they have invested in their team. And within 90 days, almost all of it is gone." data-ja="毎年、企業は営業トレーニングに数十億ドルを費やしています。ワークショップ、オフサイト、認定プログラム、基調講演者、ロールプレイ演習。会場のエネルギーは高いです。営業担当者はモチベーションが上がった状態で帰ります。マネージャーはチームに投資したと感じます。そして90日以内に、ほぼすべてが消えます。">Every year, companies spend billions on sales training. Workshops, offsites, certification programs, keynote speakers, role-play exercises. The energy in the room is high. Reps leave feeling motivated. Managers feel like they have invested in their team. And within 90 days, almost all of it is gone.</p>
 
-    <p>This is not a criticism of training. Good training introduces important concepts. The problem is that concepts, without infrastructure, decay. A rep who learns a new discovery methodology in a workshop will use it for two weeks, then gradually drift back to whatever habits they had before. Not because they lack discipline. Because the system around them &mdash; the CRM, the deal stages, the meeting cadence, the management review process &mdash; was never rebuilt to support the new behavior.</p>
+    <p data-en="This is not a criticism of training. Good training introduces important concepts. The problem is that concepts, without infrastructure, decay. A rep who learns a new discovery methodology in a workshop will use it for two weeks, then gradually drift back to whatever habits they had before. Not because they lack discipline. Because the system around them - the CRM, the deal stages, the meeting cadence, the management review process - was never rebuilt to support the new behavior." data-ja="これはトレーニングへの批判ではありません。良いトレーニングは重要な概念を紹介します。問題は、インフラなしの概念は劣化するということです。ワークショップで新しいディスカバリーメソドロジーを学んだ営業担当者は2週間それを使い、その後徐々に以前の習慣に戻ります。規律がないからではありません。彼らを取り巻くシステム - CRM、案件ステージ、会議のケイデンス、マネジメントレビュープロセス - が新しい行動を支えるために再構築されなかったからです。">This is not a criticism of training. Good training introduces important concepts. The problem is that concepts, without infrastructure, decay. A rep who learns a new discovery methodology in a workshop will use it for two weeks, then gradually drift back to whatever habits they had before. Not because they lack discipline. Because the system around them &mdash; the CRM, the deal stages, the meeting cadence, the management review process &mdash; was never rebuilt to support the new behavior.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;Training changes what people know. Process changes what people do. Only one of those compounds.&quot;" data-ja="「トレーニングは人が知っていることを変えます。プロセスは人がやることを変えます。複利で効くのはそのうちの1つだけです。」">
       "Training changes what people know. Process changes what people do. Only one of those compounds."
     </div>
 
-    <h2>The Difference Between Training and Process</h2>
+    <h2 data-en="The Difference Between Training and Process" data-ja="トレーニングとプロセスの違い">The Difference Between Training and Process</h2>
 
-    <p>Here is the simplest test: if the consultant leaves, does the system keep running? If the answer is yes, you have built a process. If the answer is no, you bought training.</p>
+    <p data-en="Here is the simplest test: if the consultant leaves, does the system keep running? If the answer is yes, you have built a process. If the answer is no, you bought training." data-ja="最もシンプルなテストはこれです:コンサルタントが去った後、システムは動き続けますか? 答えがはいなら、プロセスを構築しています。答えがいいえなら、トレーニングを購入しただけです。">Here is the simplest test: if the consultant leaves, does the system keep running? If the answer is yes, you have built a process. If the answer is no, you bought training.</p>
 
-    <p>Training lives in people's heads. Process lives in the workflow. Training depends on individual memory and motivation. Process depends on infrastructure and habit. Training is an event. Process is architecture.</p>
+    <p data-en="Training lives in people's heads. Process lives in the workflow. Training depends on individual memory and motivation. Process depends on infrastructure and habit. Training is an event. Process is architecture." data-ja="トレーニングは人の頭の中にあります。プロセスはワークフローの中にあります。トレーニングは個人の記憶とモチベーションに依存します。プロセスはインフラと習慣に依存します。トレーニングはイベントです。プロセスはアーキテクチャです。">Training lives in people's heads. Process lives in the workflow. Training depends on individual memory and motivation. Process depends on infrastructure and habit. Training is an event. Process is architecture.</p>
 
-    <p>The companies that build durable revenue engines are the ones that invest in process infrastructure, not just knowledge transfer. They build systems that make the right behavior the default behavior, so that reps do not have to remember what they learned in a workshop. They just follow the workflow that is in front of them every day.</p>
+    <p data-en="The companies that build durable revenue engines are the ones that invest in process infrastructure, not just knowledge transfer. They build systems that make the right behavior the default behavior, so that reps do not have to remember what they learned in a workshop. They just follow the workflow that is in front of them every day." data-ja="持続的な収益エンジンを構築する企業は、知識移転だけでなくプロセスインフラに投資する企業です。正しい行動をデフォルトの行動にするシステムを構築し、営業担当者がワークショップで学んだことを覚えていなくても良いようにします。毎日目の前にあるワークフローに従うだけです。">The companies that build durable revenue engines are the ones that invest in process infrastructure, not just knowledge transfer. They build systems that make the right behavior the default behavior, so that reps do not have to remember what they learned in a workshop. They just follow the workflow that is in front of them every day.</p>
 
-    <h2>What Embedded Process Looks Like</h2>
+    <h2 data-en="What Embedded Process Looks Like" data-ja="組み込まれたプロセスとは">What Embedded Process Looks Like</h2>
 
-    <p>This is not abstract. There are specific, concrete artifacts that distinguish a real sales process from a training program. Here is what they look like in practice:</p>
+    <p data-en="This is not abstract. There are specific, concrete artifacts that distinguish a real sales process from a training program. Here is what they look like in practice:" data-ja="これは抽象的なものではありません。本物の営業プロセスをトレーニングプログラムから区別する具体的なアーティファクトがあります。実際にはこのようになります:">This is not abstract. There are specific, concrete artifacts that distinguish a real sales process from a training program. Here is what they look like in practice:</p>
 
-    <h3>Meeting Objectives in Calendar Invites</h3>
+    <h3 data-en="Meeting Objectives in Calendar Invites" data-ja="カレンダー招待における会議の目的">Meeting Objectives in Calendar Invites</h3>
 
-    <p>Every meeting a rep books with a prospect should have a stated objective in the calendar invite. Not "intro call" or "follow-up discussion." Something like: "Confirm the three business priorities driving this initiative and identify the economic sponsor." This is a small change that has an outsized effect. It forces the rep to think about what they need to accomplish before the meeting starts. It sets the buyer's expectation. And it gives the manager a concrete artifact to review.</p>
+    <p data-en="Every meeting a rep books with a prospect should have a stated objective in the calendar invite. Not &quot;intro call&quot; or &quot;follow-up discussion.&quot; Something like: &quot;Confirm the three business priorities driving this initiative and identify the economic sponsor.&quot; This is a small change that has an outsized effect. It forces the rep to think about what they need to accomplish before the meeting starts. It sets the buyer's expectation. And it gives the manager a concrete artifact to review." data-ja="営業担当者が見込み客とブッキングするすべての会議は、カレンダー招待に明記された目的を持つべきです。「紹介の電話」や「フォローアップの議論」ではなく、「このイニシアチブを推進する3つのビジネス優先事項を確認し、経済的スポンサーを特定する」のようなものです。これは大きな効果を持つ小さな変更です。営業担当者に会議が始まる前に何を達成する必要があるかを考えさせます。バイヤーの期待値を設定します。そしてマネージャーにレビューするための具体的なアーティファクトを提供します。">Every meeting a rep books with a prospect should have a stated objective in the calendar invite. Not "intro call" or "follow-up discussion." Something like: "Confirm the three business priorities driving this initiative and identify the economic sponsor." This is a small change that has an outsized effect. It forces the rep to think about what they need to accomplish before the meeting starts. It sets the buyer's expectation. And it gives the manager a concrete artifact to review.</p>
 
-    <p>If your reps are booking meetings without objectives, they are improvising. And improvisation does not scale.</p>
+    <p data-en="If your reps are booking meetings without objectives, they are improvising. And improvisation does not scale." data-ja="営業担当者が目的なしに会議をブッキングしているなら、即興で対応しています。そして即興はスケールしません。">If your reps are booking meetings without objectives, they are improvising. And improvisation does not scale.</p>
 
-    <h3>Discovery Questions in CRM Fields</h3>
+    <h3 data-en="Discovery Questions in CRM Fields" data-ja="CRMフィールドにおけるディスカバリー質問">Discovery Questions in CRM Fields</h3>
 
-    <p>If discovery is important &mdash; and it is the most important part of the sales process &mdash; then it should be a required field in your CRM. Not a text box labeled "notes." Specific fields: "What is the business problem?" "What is the economic impact of not solving it?" "Who else in the organization is affected?" "What happens if they do nothing?"</p>
+    <p data-en="If discovery is important - and it is the most important part of the sales process - then it should be a required field in your CRM. Not a text box labeled &quot;notes.&quot; Specific fields: &quot;What is the business problem?&quot; &quot;What is the economic impact of not solving it?&quot; &quot;Who else in the organization is affected?&quot; &quot;What happens if they do nothing?&quot;" data-ja="ディスカバリーが重要なら - そしてそれは営業プロセスの最も重要な部分です - CRMの必須フィールドにすべきです。「メモ」とラベル付けされたテキストボックスではありません。具体的なフィールドです:「ビジネスの課題は何か?」「それを解決しない場合の経済的影響は何か?」「組織内で他に誰が影響を受けるか?」「何もしなければどうなるか?」">If discovery is important &mdash; and it is the most important part of the sales process &mdash; then it should be a required field in your CRM. Not a text box labeled "notes." Specific fields: "What is the business problem?" "What is the economic impact of not solving it?" "Who else in the organization is affected?" "What happens if they do nothing?"</p>
 
-    <p>When these fields are required before a deal can advance to the next stage, discovery stops being optional. It becomes structural. A rep cannot move a deal forward without completing it, which means every deal in your pipeline has been through a real discovery process.</p>
+    <p data-en="When these fields are required before a deal can advance to the next stage, discovery stops being optional. It becomes structural. A rep cannot move a deal forward without completing it, which means every deal in your pipeline has been through a real discovery process." data-ja="これらのフィールドが案件を次のステージに進めるために必須になると、ディスカバリーは任意ではなくなります。構造的になります。営業担当者はそれを完了しなければ案件を前に進められません。つまり、パイプラインのすべての案件が本物のディスカバリープロセスを経ていることを意味します。">When these fields are required before a deal can advance to the next stage, discovery stops being optional. It becomes structural. A rep cannot move a deal forward without completing it, which means every deal in your pipeline has been through a real discovery process.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;If the right behavior is not required by the system, it is optional. And optional behaviors have a 90-day half-life.&quot;" data-ja="「正しい行動がシステムによって要求されていなければ、それは任意です。そして任意の行動には90日の半減期があります。」">
       "If the right behavior is not required by the system, it is optional. And optional behaviors have a 90-day half-life."
     </div>
 
-    <h3>Plan Letters as Deal Artifacts</h3>
+    <h3 data-en="Plan Letters as Deal Artifacts" data-ja="案件のアーティファクトとしてのプランレター">Plan Letters as Deal Artifacts</h3>
 
-    <p>After discovery, the seller should produce a plan letter: a one-page document that summarizes the buyer's problem, the economic impact, the proposed solution, and the expected outcome. This is not a proposal. It is a mutual understanding document. The buyer reviews it and either confirms or corrects the seller's understanding before any proposal is drafted.</p>
+    <p data-en="After discovery, the seller should produce a plan letter: a one-page document that summarizes the buyer's problem, the economic impact, the proposed solution, and the expected outcome. This is not a proposal. It is a mutual understanding document. The buyer reviews it and either confirms or corrects the seller's understanding before any proposal is drafted." data-ja="ディスカバリーの後、売り手はプランレターを作成すべきです。買い手の課題、経済的影響、提案されたソリューション、期待される成果をまとめた1ページの文書です。これは提案書ではありません。相互理解の文書です。バイヤーがそれをレビューし、提案書が作成される前に売り手の理解を確認または修正します。">After discovery, the seller should produce a plan letter: a one-page document that summarizes the buyer's problem, the economic impact, the proposed solution, and the expected outcome. This is not a proposal. It is a mutual understanding document. The buyer reviews it and either confirms or corrects the seller's understanding before any proposal is drafted.</p>
 
-    <p>Plan letters serve two functions. First, they force the seller to articulate the buyer's problem in economic terms, which is the foundation of a large deal. Second, they create an artifact that lives in the deal file. When a manager reviews the pipeline, they can read the plan letter and immediately assess whether the deal is real and properly scoped.</p>
+    <p data-en="Plan letters serve two functions. First, they force the seller to articulate the buyer's problem in economic terms, which is the foundation of a large deal. Second, they create an artifact that lives in the deal file. When a manager reviews the pipeline, they can read the plan letter and immediately assess whether the deal is real and properly scoped." data-ja="プランレターは2つの機能を果たします。まず、売り手に買い手の課題を経済的な用語で表現させます。これは大きな案件の基盤です。次に、案件ファイルに残るアーティファクトを作成します。マネージャーがパイプラインをレビューする際、プランレターを読めば案件が本物で適切にスコープされているかどうかをすぐに評価できます。">Plan letters serve two functions. First, they force the seller to articulate the buyer's problem in economic terms, which is the foundation of a large deal. Second, they create an artifact that lives in the deal file. When a manager reviews the pipeline, they can read the plan letter and immediately assess whether the deal is real and properly scoped.</p>
 
-    <h3>Mutual Action Plans as Deal Governance</h3>
+    <h3 data-en="Mutual Action Plans as Deal Governance" data-ja="案件ガバナンスとしての共同アクションプラン">Mutual Action Plans as Deal Governance</h3>
 
-    <p>A mutual action plan is a shared document between the seller and buyer that outlines every step between "today" and "signed contract." It includes milestones, owners, dates, and dependencies. Both sides agree to it.</p>
+    <p data-en="A mutual action plan is a shared document between the seller and buyer that outlines every step between &quot;today&quot; and &quot;signed contract.&quot; It includes milestones, owners, dates, and dependencies. Both sides agree to it." data-ja="共同アクションプランは、「今日」から「契約締結」までのすべてのステップを概説する売り手と買い手の間の共有文書です。マイルストーン、担当者、日付、依存関係が含まれます。両者がそれに合意します。">A mutual action plan is a shared document between the seller and buyer that outlines every step between "today" and "signed contract." It includes milestones, owners, dates, and dependencies. Both sides agree to it.</p>
 
-    <p>The mutual action plan is the single most reliable predictor of whether a deal will close. Deals with mutual action plans close at dramatically higher rates than deals without them. The reason is simple: a buyer who agrees to a mutual action plan has committed to a process. A buyer who has not is still browsing.</p>
+    <p data-en="The mutual action plan is the single most reliable predictor of whether a deal will close. Deals with mutual action plans close at dramatically higher rates than deals without them. The reason is simple: a buyer who agrees to a mutual action plan has committed to a process. A buyer who has not is still browsing." data-ja="共同アクションプランは、案件がクローズするかどうかの最も信頼性の高い単一の予測因子です。共同アクションプランのある案件は、ない案件よりも劇的に高い率でクローズします。理由はシンプルです:共同アクションプランに同意したバイヤーはプロセスにコミットしています。そうでないバイヤーはまだ閲覧中です。">The mutual action plan is the single most reliable predictor of whether a deal will close. Deals with mutual action plans close at dramatically higher rates than deals without them. The reason is simple: a buyer who agrees to a mutual action plan has committed to a process. A buyer who has not is still browsing.</p>
 
-    <p>More importantly, mutual action plans survive personnel changes. If a rep leaves, the next rep picks up the MAP and knows exactly where the deal stands. If a champion changes roles internally, the MAP is the institutional memory of the deal. This is process that outlasts individuals.</p>
+    <p data-en="More importantly, mutual action plans survive personnel changes. If a rep leaves, the next rep picks up the MAP and knows exactly where the deal stands. If a champion changes roles internally, the MAP is the institutional memory of the deal. This is process that outlasts individuals." data-ja="さらに重要なのは、共同アクションプランは人事異動を乗り越えることです。営業担当者が去っても、次の担当者がMAPを引き継ぎ、案件がどこにあるかを正確に把握します。チャンピオンが社内で役割を変えても、MAPは案件の組織的記憶です。これが個人を超えて続くプロセスです。">More importantly, mutual action plans survive personnel changes. If a rep leaves, the next rep picks up the MAP and knows exactly where the deal stands. If a champion changes roles internally, the MAP is the institutional memory of the deal. This is process that outlasts individuals.</p>
 
-    <h2>The Consultant Test</h2>
+    <h2 data-en="The Consultant Test" data-ja="コンサルタントテスト">The Consultant Test</h2>
 
-    <p>When we work with a company at Jozu, we build all of this into the system before we leave. The CRM fields are configured. The deal stages are gated. The meeting templates are in place. The plan letter format is standardized. The MAP template is built.</p>
+    <p data-en="When we work with a company at Jozu, we build all of this into the system before we leave. The CRM fields are configured. The deal stages are gated. The meeting templates are in place. The plan letter format is standardized. The MAP template is built." data-ja="Jozuで企業と協業する際、去る前にこれらすべてをシステムに組み込みます。CRMフィールドは設定済みです。案件ステージはゲートされています。会議テンプレートは整備されています。プランレターのフォーマットは標準化されています。MAPテンプレートは構築されています。">When we work with a company at Jozu, we build all of this into the system before we leave. The CRM fields are configured. The deal stages are gated. The meeting templates are in place. The plan letter format is standardized. The MAP template is built.</p>
 
-    <p>Then we apply the test: if we walk away tomorrow, does the system keep running? If a new rep is hired next month, can they follow the process without anyone explaining it to them? If the answer is yes, we have done our job. If the answer is no, we have more work to do.</p>
+    <p data-en="Then we apply the test: if we walk away tomorrow, does the system keep running? If a new rep is hired next month, can they follow the process without anyone explaining it to them? If the answer is yes, we have done our job. If the answer is no, we have more work to do." data-ja="そしてテストを適用します:明日去った場合、システムは動き続けますか? 来月新しい営業担当者が雇われた場合、誰にも説明されずにプロセスに従えますか? 答えがはいなら、仕事を果たしています。答えがいいえなら、まだやるべきことがあります。">Then we apply the test: if we walk away tomorrow, does the system keep running? If a new rep is hired next month, can they follow the process without anyone explaining it to them? If the answer is yes, we have done our job. If the answer is no, we have more work to do.</p>
 
-    <p>This is what separates revenue architecture from sales training. Training gives your team new ideas. Architecture gives your team new infrastructure. Ideas fade. Infrastructure compounds.</p>
+    <p data-en="This is what separates revenue architecture from sales training. Training gives your team new ideas. Architecture gives your team new infrastructure. Ideas fade. Infrastructure compounds." data-ja="これがレベニューアーキテクチャを営業トレーニングから分けるものです。トレーニングはチームに新しいアイデアを提供します。アーキテクチャはチームに新しいインフラを提供します。アイデアは薄れます。インフラは複利で効きます。">This is what separates revenue architecture from sales training. Training gives your team new ideas. Architecture gives your team new infrastructure. Ideas fade. Infrastructure compounds.</p>
 
-    <h3>Where to Start</h3>
+    <h3 data-en="Where to Start" data-ja="どこから始めるか">Where to Start</h3>
 
-    <p>If you are evaluating your own sales organization, here is a quick diagnostic:</p>
+    <p data-en="If you are evaluating your own sales organization, here is a quick diagnostic:" data-ja="自社の営業組織を評価する場合、簡単な診断はこちらです:">If you are evaluating your own sales organization, here is a quick diagnostic:</p>
 
     <ul>
-      <li>Open your CRM. Are there required discovery fields that gate deal progression? If not, your process is optional.</li>
-      <li>Look at the last ten meeting invites your reps sent to prospects. Do they have stated objectives? If not, your meetings are unstructured.</li>
-      <li>Pull up a deal that closed last quarter. Is there a plan letter in the file? If not, you do not know why it closed at that size.</li>
-      <li>Find an active deal in late stage. Is there a mutual action plan? If not, you do not know if it will close on time.</li>
+      <li data-en="Open your CRM. Are there required discovery fields that gate deal progression? If not, your process is optional." data-ja="CRMを開いてください。案件の進行をゲートする必須のディスカバリーフィールドはありますか? なければ、プロセスは任意です。">Open your CRM. Are there required discovery fields that gate deal progression? If not, your process is optional.</li>
+      <li data-en="Look at the last ten meeting invites your reps sent to prospects. Do they have stated objectives? If not, your meetings are unstructured." data-ja="営業担当者が見込み客に送った直近10件の会議招待を見てください。明記された目的はありますか? なければ、会議は構造化されていません。">Look at the last ten meeting invites your reps sent to prospects. Do they have stated objectives? If not, your meetings are unstructured.</li>
+      <li data-en="Pull up a deal that closed last quarter. Is there a plan letter in the file? If not, you do not know why it closed at that size." data-ja="前四半期にクローズした案件を開いてください。ファイルにプランレターはありますか? なければ、なぜそのサイズでクローズしたのかわかりません。">Pull up a deal that closed last quarter. Is there a plan letter in the file? If not, you do not know why it closed at that size.</li>
+      <li data-en="Find an active deal in late stage. Is there a mutual action plan? If not, you do not know if it will close on time." data-ja="後期ステージのアクティブな案件を見つけてください。共同アクションプランはありますか? なければ、予定通りにクローズするかどうかわかりません。">Find an active deal in late stage. Is there a mutual action plan? If not, you do not know if it will close on time.</li>
     </ul>
 
-    <p>Every "no" on that list is a place where training is substituting for process. And every place where training substitutes for process is a place where revenue is leaking.</p>
+    <p data-en="Every &quot;no&quot; on that list is a place where training is substituting for process. And every place where training substitutes for process is a place where revenue is leaking." data-ja="そのリストの「いいえ」すべてが、トレーニングがプロセスの代わりになっている場所です。そしてトレーニングがプロセスの代わりになっているすべての場所が、収益が漏洩している場所です。">Every "no" on that list is a place where training is substituting for process. And every place where training substitutes for process is a place where revenue is leaking.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);">
+    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);" data-en="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;, Founder - Jozu Consulting Group" data-ja="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;、創業者 - Jozu Consulting Group">
       <strong style="color: var(--text-dark);">Jeff Aragon</strong>, Founder &mdash; Jozu Consulting Group
     </p>
 
@@ -153,8 +168,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build Process That Compounds?</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Build Process That Compounds?" data-ja="複利で効くプロセスを構築する準備はできていますか?">Ready to Build Process That Compounds?</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -169,18 +184,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

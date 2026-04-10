@@ -11,53 +11,7 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     /* ── Language Toggle ── */
-    .lang-toggle {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 999px;
-      padding: 3px;
-      gap: 2px;
-      margin-right: 12px;
-    }
-    .lang-toggle button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.45);
-      padding: 4px 12px;
-      border-radius: 999px;
-      transition: background 0.2s, color 0.2s;
-      line-height: 1;
-    }
-    .lang-toggle button.active {
-      background: var(--gold);
-      color: var(--navy);
-    }
-    .lang-toggle button:hover:not(.active) {
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* Japanese body font override */
-    body.lang-ja,
-    body.lang-ja p,
-    body.lang-ja li,
-    body.lang-ja span,
-    body.lang-ja div {
-      font-family: 'Noto Sans JP', 'Sora', sans-serif;
-    }
-    body.lang-ja h1,
-    body.lang-ja h2,
-    body.lang-ja h3,
-    body.lang-ja h4 {
-      font-family: 'Noto Sans JP', 'Sora', sans-serif;
-      letter-spacing: 0.02em;
-    }
+    /* Page-specific styles kept minimal - toggle and font overrides now in global styles.css */
   </style>
 </head>
 <body>
@@ -80,10 +34,6 @@
       <li><a href="../insights/index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
       <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-      <button id="btn-ja" onclick="setLang('ja')">日本語</button>
-    </div>
     <a href="../index.html#contact" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談を申し込む">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
@@ -249,8 +199,13 @@
   </div>
 </footer>
 
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
 <script>
-  // ── Mobile nav toggle ──
+  // Mobile nav toggle
   document.querySelector(".nav-toggle").addEventListener("click", function() {
     this.classList.toggle("active");
     document.querySelector(".nav-links").classList.toggle("open");
@@ -262,32 +217,19 @@
     });
   });
 
-  // ── Language toggle ──
-  var currentLang = 'en';
-
+  // Language toggle
   function setLang(lang) {
-    currentLang = lang;
-
-    // Update button states
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
-
-    // Update html lang attribute
     document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
-
-    // Toggle body class for font override
     document.body.classList.toggle('lang-ja', lang === 'ja');
-
-    // Swap all translatable elements
-    var elements = document.querySelectorAll('[data-en][data-ja]');
-    elements.forEach(function(el) {
-      var content = el.getAttribute('data-' + lang);
-      if (content !== null) {
-        // Use innerHTML to support bold/strong tags inside translations
-        el.innerHTML = content;
-      }
+    document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
     });
+    localStorage.setItem('jozu-lang', lang);
   }
+  // Restore saved language preference
+  (function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
 </script>
 </body>
 </html>

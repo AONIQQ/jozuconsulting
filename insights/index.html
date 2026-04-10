@@ -7,8 +7,42 @@
   <meta name="description" content="Perspectives on enterprise sales, revenue architecture, pricing strategy, and building systems that last. From Jeff Aragon and Jozu Consulting Group.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: #032042;
+      color: rgba(255,255,255,0.5);
+      transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active {
+      background: #C84B22;
+      color: #fff;
+    }
+    .lang-toggle-float button:hover:not(.active) {
+      color: #fff;
+    }
+    body.lang-ja {
+      font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,16 +55,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,14 +77,14 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Insights</span>
+        <span style="color: var(--gold);" data-en="Insights" data-ja="インサイト">Insights</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>Insights &mdash; Enterprise Revenue <em>Thinking</em></h1>
-    <p class="lead">Perspectives on enterprise sales, revenue architecture, and building systems that last.</p>
+    <h1 data-en="Insights - Enterprise Revenue &lt;em&gt;Thinking&lt;/em&gt;" data-ja="インサイト - エンタープライズ収益の&lt;em&gt;思考法&lt;/em&gt;">Insights &mdash; Enterprise Revenue <em>Thinking</em></h1>
+    <p class="lead" data-en="Perspectives on enterprise sales, revenue architecture, and building systems that last." data-ja="エンタープライズ営業、レベニューアーキテクチャ、そして永続するシステム構築に関する視点。">Perspectives on enterprise sales, revenue architecture, and building systems that last.</p>
   </div>
 </section>
 
@@ -63,42 +97,42 @@
 
       <!-- Article 1 -->
       <article class="insight-card">
-        <div class="tag">Pricing Strategy</div>
-        <h3><a href="why-transaction-pricing-kills-enterprise-deals.html">Why Transaction Pricing Kills Enterprise Deals</a></h3>
-        <p>Transaction-based pricing trains buyers to under-buy and never confront the full scope of their need. The seller's job is to surface that need before the buying decision locks in.</p>
-        <a href="why-transaction-pricing-kills-enterprise-deals.html" class="read-more">Read Article &rarr;</a>
+        <div class="tag" data-en="Pricing Strategy" data-ja="価格戦略">Pricing Strategy</div>
+        <h3><a href="why-transaction-pricing-kills-enterprise-deals.html" data-en="Why Transaction Pricing Kills Enterprise Deals" data-ja="トランザクション価格設定がエンタープライズ案件を潰す理由">Why Transaction Pricing Kills Enterprise Deals</a></h3>
+        <p data-en="Transaction-based pricing trains buyers to under-buy and never confront the full scope of their need. The seller's job is to surface that need before the buying decision locks in." data-ja="トランザクションベースの価格設定は、買い手に過少購入を促し、ニーズの全体像に向き合わせません。売り手の仕事は、購買意思決定が固まる前にそのニーズを明らかにすることです。">Transaction-based pricing trains buyers to under-buy and never confront the full scope of their need. The seller's job is to surface that need before the buying decision locks in.</p>
+        <a href="why-transaction-pricing-kills-enterprise-deals.html" class="read-more" data-en="Read Article &rarr;" data-ja="記事を読む &rarr;">Read Article &rarr;</a>
       </article>
 
       <!-- Article 2 -->
       <article class="insight-card">
-        <div class="tag">Sales Process</div>
-        <h3><a href="selling-without-discovery.html">The Real Cost of Selling Without Discovery</a></h3>
-        <p>When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals.</p>
-        <a href="selling-without-discovery.html" class="read-more">Read Article &rarr;</a>
+        <div class="tag" data-en="Sales Process" data-ja="営業プロセス">Sales Process</div>
+        <h3><a href="selling-without-discovery.html" data-en="The Real Cost of Selling Without Discovery" data-ja="ディスカバリーなしで売ることの本当のコスト">The Real Cost of Selling Without Discovery</a></h3>
+        <p data-en="When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals." data-ja="営業担当者がディスカバリーをスキップしてデモから入ると、買い手に最も狭いスコープで課題を定義させてしまいます。結果は一貫して小さすぎる案件です。">When reps skip discovery and lead with demos, they let the buyer define the problem at the narrowest possible scope. The result is consistently undersized deals.</p>
+        <a href="selling-without-discovery.html" class="read-more" data-en="Read Article &rarr;" data-ja="記事を読む &rarr;">Read Article &rarr;</a>
       </article>
 
       <!-- Article 3 -->
       <article class="insight-card">
-        <div class="tag">Japan &amp; Global Markets</div>
-        <h3><a href="japanese-companies-us-market.html">What Japanese Companies Get Wrong Entering the U.S. Market</a></h3>
-        <p>Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations. Bridging that gap requires more than translation.</p>
-        <a href="japanese-companies-us-market.html" class="read-more">Read Article &rarr;</a>
+        <div class="tag" data-en="Japan &amp; Global Markets" data-ja="日本・グローバル市場">Japan &amp; Global Markets</div>
+        <h3><a href="japanese-companies-us-market.html" data-en="What Japanese Companies Get Wrong Entering the U.S. Market" data-ja="日本企業が米国市場参入で間違えること">What Japanese Companies Get Wrong Entering the U.S. Market</a></h3>
+        <p data-en="Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations. Bridging that gap requires more than translation." data-ja="日本企業は国内の営業モデルを米国で再現しようとすることが多いですが、アメリカのエンタープライズバイヤーは根本的に異なる期待を持っています。そのギャップを埋めるには、翻訳以上のものが必要です。">Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations. Bridging that gap requires more than translation.</p>
+        <a href="japanese-companies-us-market.html" class="read-more" data-en="Read Article &rarr;" data-ja="記事を読む &rarr;">Read Article &rarr;</a>
       </article>
 
       <!-- Article 4 -->
       <article class="insight-card">
-        <div class="tag">Revenue Architecture</div>
-        <h3><a href="sales-process-vs-sales-training.html">How to Build a Sales Process That Outlasts Your Consultants</a></h3>
-        <p>Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow.</p>
-        <a href="sales-process-vs-sales-training.html" class="read-more">Read Article &rarr;</a>
+        <div class="tag" data-en="Revenue Architecture" data-ja="レベニューアーキテクチャ">Revenue Architecture</div>
+        <h3><a href="sales-process-vs-sales-training.html" data-en="How to Build a Sales Process That Outlasts Your Consultants" data-ja="コンサルタントがいなくなっても続く営業プロセスの構築方法">How to Build a Sales Process That Outlasts Your Consultants</a></h3>
+        <p data-en="Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow." data-ja="営業トレーニングの半減期は約90日です。プロセスは複利で効きます。その違いは、システムがバインダーの中にあるか、日々のワークフローの中にあるかです。">Sales training has a half-life of about 90 days. Process compounds. The difference is whether the system lives in a binder or in the daily workflow.</p>
+        <a href="sales-process-vs-sales-training.html" class="read-more" data-en="Read Article &rarr;" data-ja="記事を読む &rarr;">Read Article &rarr;</a>
       </article>
 
       <!-- Article 5 -->
       <article class="insight-card">
-        <div class="tag">Enterprise Selling</div>
-        <h3><a href="follow-the-problem-downstream.html">Follow the Problem Downstream Until It Reaches Revenue</a></h3>
-        <p>Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure.</p>
-        <a href="follow-the-problem-downstream.html" class="read-more">Read Article &rarr;</a>
+        <div class="tag" data-en="Enterprise Selling" data-ja="エンタープライズセリング">Enterprise Selling</div>
+        <h3><a href="follow-the-problem-downstream.html" data-en="Follow the Problem Downstream Until It Reaches Revenue" data-ja="課題を下流に追跡し、収益に到達するまで追い続ける">Follow the Problem Downstream Until It Reaches Revenue</a></h3>
+        <p data-en="Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure." data-ja="買い手は直接的な痛みのポイントで課題を定義します。そのフレーミングを受け入れる売り手は小さな案件をクローズします。仕事は、金額に到達するまで課題を下流に追跡することです。">Buyers define their problem at the point of immediate pain. Sellers who accept that framing close small deals. The job is to follow the problem downstream until you reach a dollar figure.</p>
+        <a href="follow-the-problem-downstream.html" class="read-more" data-en="Read Article &rarr;" data-ja="記事を読む &rarr;">Read Article &rarr;</a>
       </article>
 
     </div>
@@ -111,8 +145,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Ready to Build a Revenue System That Compounds?</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Ready to Build a Revenue System That Compounds?" data-ja="複利で効く収益システムを構築する準備はできていますか?">Ready to Build a Revenue System That Compounds?</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -127,18 +161,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>

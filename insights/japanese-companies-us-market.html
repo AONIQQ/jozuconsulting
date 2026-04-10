@@ -7,8 +7,23 @@
   <meta name="description" content="Japanese companies often replicate their domestic sales model in the U.S. but American enterprise buyers have different expectations. Learn how to bridge the gap.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-toggle-float {
+      position: fixed; bottom: 24px; right: 24px; display: flex; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .lang-toggle-float button {
+      padding: 10px 18px; font-family: 'Sora', sans-serif; font-size: 0.85rem;
+      font-weight: 600; border: none; cursor: pointer; background: #032042;
+      color: rgba(255,255,255,0.5); transition: all 0.25s ease;
+    }
+    .lang-toggle-float button.active { background: #C84B22; color: #fff; }
+    .lang-toggle-float button:hover:not(.active) { color: #fff; }
+    body.lang-ja { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body>
 
@@ -21,16 +36,16 @@
       <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
     </a>
     <ul class="nav-links">
-      <li><a href="../services/revenue-architecture.html">Services</a></li>
-      <li><a href="../founders.html" style="color:var(--gold);">For Founders</a></li>
-      <li><a href="../index.html#methodology">Methodology</a></li>
-      <li><a href="../case-studies/index.html">Case Studies</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-      <li><a href="index.html">Insights</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../services/revenue-architecture.html" data-en="Services" data-ja="サービス">Services</a></li>
+      <li><a href="../founders.html" style="color:var(--gold);" data-en="For Founders" data-ja="創業者向け">For Founders</a></li>
+      <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+      <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+      <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+      <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+      <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+      <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Request a Consultation</a>
+    <a href="../contact.html" class="btn btn-primary nav-cta" data-en="Request a Consultation" data-ja="ご相談はこちら">Request a Consultation</a>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -43,16 +58,16 @@
   <div class="container">
     <nav aria-label="Breadcrumb">
       <span class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" data-en="Home" data-ja="ホーム">Home</a>
         <span style="margin: 0 8px;">/</span>
-        <a href="index.html">Insights</a>
+        <a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a>
         <span style="margin: 0 8px;">/</span>
-        <span style="color: var(--gold);">Japan &amp; Global Markets</span>
+        <span style="color: var(--gold);" data-en="Japan &amp; Global Markets" data-ja="日本・グローバル市場">Japan &amp; Global Markets</span>
       </span>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-    <h1>What Japanese Companies Get Wrong Entering the <em>U.S. Market</em></h1>
-    <p class="lead">Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations.</p>
+    <h1 data-en="What Japanese Companies Get Wrong Entering the &lt;em&gt;U.S. Market&lt;/em&gt;" data-ja="日本企業が&lt;em&gt;米国市場&lt;/em&gt;参入で間違えること">What Japanese Companies Get Wrong Entering the <em>U.S. Market</em></h1>
+    <p class="lead" data-en="Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations." data-ja="日本企業は国内の営業モデルを米国で再現しようとすることが多いですが、アメリカのエンタープライズバイヤーは根本的に異なる期待を持っています。">Japanese companies often try to replicate their domestic sales model in the U.S., but American enterprise buyers have fundamentally different expectations.</p>
   </div>
 </section>
 
@@ -63,66 +78,66 @@
 
 <section class="content-section wm">
   <div class="container" style="max-width: 780px;">
-    <a href="index.html" class="back-link">&larr; Back to All Insights</a>
+    <a href="index.html" class="back-link" data-en="&larr; Back to All Insights" data-ja="&larr; 全インサイトに戻る">&larr; Back to All Insights</a>
 
-    <h2>The Market Is Not the Product</h2>
+    <h2 data-en="The Market Is Not the Product" data-ja="市場は製品ではない">The Market Is Not the Product</h2>
 
-    <p>Japanese technology companies build exceptional products. The engineering is disciplined, the quality control is rigorous, and the attention to detail is often unmatched. These are real advantages. But when these companies enter the American enterprise market, something breaks. The pipeline stalls. Deals take twice as long as projected. Win rates are half of what they were in Japan. And the instinct is usually to blame the product or the price, when the real problem is the conversation.</p>
+    <p data-en="Japanese technology companies build exceptional products. The engineering is disciplined, the quality control is rigorous, and the attention to detail is often unmatched. These are real advantages. But when these companies enter the American enterprise market, something breaks. The pipeline stalls. Deals take twice as long as projected. Win rates are half of what they were in Japan. And the instinct is usually to blame the product or the price, when the real problem is the conversation." data-ja="日本のテクノロジー企業は卓越した製品を構築します。エンジニアリングは規律正しく、品質管理は厳格で、細部への注意は比類のないものです。これらは実際の強みです。しかし、これらの企業がアメリカのエンタープライズ市場に参入すると、何かが壊れます。パイプラインが停滞します。案件は予測の2倍の時間がかかります。成約率は日本での半分です。そして通常、製品や価格のせいにする傾向がありますが、本当の問題は対話にあります。">Japanese technology companies build exceptional products. The engineering is disciplined, the quality control is rigorous, and the attention to detail is often unmatched. These are real advantages. But when these companies enter the American enterprise market, something breaks. The pipeline stalls. Deals take twice as long as projected. Win rates are half of what they were in Japan. And the instinct is usually to blame the product or the price, when the real problem is the conversation.</p>
 
-    <p>Having spent four years in Tokyo teaching The Harvard Negotiation Project to Japanese business leaders, I have seen this pattern from both sides. The gap is not about capability. It is about how trust is built, how urgency is communicated, and how value is framed in two fundamentally different business cultures.</p>
+    <p data-en="Having spent four years in Tokyo teaching The Harvard Negotiation Project to Japanese business leaders, I have seen this pattern from both sides. The gap is not about capability. It is about how trust is built, how urgency is communicated, and how value is framed in two fundamentally different business cultures." data-ja="東京で4年間、日本のビジネスリーダーにThe Harvard Negotiation Projectを教えてきた経験から、このパターンを両側から見てきました。ギャップは能力の問題ではありません。信頼がどのように構築され、緊急性がどのように伝えられ、価値がどのようにフレーミングされるかという、根本的に異なる2つのビジネス文化の問題です。">Having spent four years in Tokyo teaching The Harvard Negotiation Project to Japanese business leaders, I have seen this pattern from both sides. The gap is not about capability. It is about how trust is built, how urgency is communicated, and how value is framed in two fundamentally different business cultures.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;Japanese companies do not fail in the U.S. because of their product. They fail because they bring a relationship-first sales model into a market that demands value-first conversations.&quot;" data-ja="「日本企業が米国で失敗するのは製品のせいではありません。バリューファーストの対話を求める市場に、リレーションシップファーストの営業モデルを持ち込むから失敗するのです。」">
       "Japanese companies do not fail in the U.S. because of their product. They fail because they bring a relationship-first sales model into a market that demands value-first conversations."
     </div>
 
-    <h2>Three Gaps That Kill U.S. Market Entry</h2>
+    <h2 data-en="Three Gaps That Kill U.S. Market Entry" data-ja="米国市場参入を潰す3つのギャップ">Three Gaps That Kill U.S. Market Entry</h2>
 
-    <h3>1. Nemawashi vs. American Urgency</h3>
+    <h3 data-en="1. Nemawashi vs. American Urgency" data-ja="1. 根回し vs. アメリカのスピード感">1. Nemawashi vs. American Urgency</h3>
 
-    <p>In Japanese business culture, major decisions are built through nemawashi &mdash; the careful, deliberate process of building consensus across stakeholders before a formal decision is ever presented. This is a strength in Japan. It produces durable agreements and minimizes internal friction.</p>
+    <p data-en="In Japanese business culture, major decisions are built through nemawashi - the careful, deliberate process of building consensus across stakeholders before a formal decision is ever presented. This is a strength in Japan. It produces durable agreements and minimizes internal friction." data-ja="日本のビジネス文化では、重要な意思決定は根回しを通じて構築されます - 正式な決定が提示される前に、ステークホルダー間で合意を慎重かつ計画的に形成するプロセスです。これは日本における強みです。持続可能な合意を生み出し、内部の摩擦を最小化します。">In Japanese business culture, major decisions are built through nemawashi &mdash; the careful, deliberate process of building consensus across stakeholders before a formal decision is ever presented. This is a strength in Japan. It produces durable agreements and minimizes internal friction.</p>
 
-    <p>American enterprise buyers operate differently. They expect a clear value proposition early. They expect the seller to articulate the economic outcome within the first or second meeting. They move through decision cycles faster, and they expect the vendor to match that pace. A Japanese company that approaches a U.S. buyer with the same cadence they use domestically &mdash; multiple relationship-building meetings before discussing business specifics &mdash; will lose to a competitor who leads with the business case in meeting one.</p>
+    <p data-en="American enterprise buyers operate differently. They expect a clear value proposition early. They expect the seller to articulate the economic outcome within the first or second meeting. They move through decision cycles faster, and they expect the vendor to match that pace. A Japanese company that approaches a U.S. buyer with the same cadence they use domestically - multiple relationship-building meetings before discussing business specifics - will lose to a competitor who leads with the business case in meeting one." data-ja="アメリカのエンタープライズバイヤーは異なるやり方で動きます。早い段階で明確なバリュープロポジションを期待します。売り手が最初か2回目の会議で経済的成果を明確に説明することを期待します。意思決定サイクルをより速く進め、ベンダーにそのペースに合わせることを期待します。国内と同じケイデンスで米国バイヤーにアプローチする日本企業 - ビジネスの具体的な話をする前に複数の関係構築ミーティングを行う - は、最初の会議からビジネスケースをリードする競合に負けます。">American enterprise buyers operate differently. They expect a clear value proposition early. They expect the seller to articulate the economic outcome within the first or second meeting. They move through decision cycles faster, and they expect the vendor to match that pace. A Japanese company that approaches a U.S. buyer with the same cadence they use domestically &mdash; multiple relationship-building meetings before discussing business specifics &mdash; will lose to a competitor who leads with the business case in meeting one.</p>
 
-    <p>This does not mean American buyers are shallow. It means the sequence is inverted. In Japan, relationship leads to trust, which leads to business discussion. In the U.S., demonstrated value leads to trust, which leads to relationship. Both paths arrive at the same destination. But starting with the wrong one costs months.</p>
+    <p data-en="This does not mean American buyers are shallow. It means the sequence is inverted. In Japan, relationship leads to trust, which leads to business discussion. In the U.S., demonstrated value leads to trust, which leads to relationship. Both paths arrive at the same destination. But starting with the wrong one costs months." data-ja="これはアメリカのバイヤーが浅いという意味ではありません。順序が逆転しているということです。日本では、関係が信頼につながり、信頼がビジネスの議論につながります。米国では、実証された価値が信頼につながり、信頼が関係につながります。両方の道は同じ目的地に到達します。しかし、間違った方から始めると数ヶ月のコストがかかります。">This does not mean American buyers are shallow. It means the sequence is inverted. In Japan, relationship leads to trust, which leads to business discussion. In the U.S., demonstrated value leads to trust, which leads to relationship. Both paths arrive at the same destination. But starting with the wrong one costs months.</p>
 
-    <h3>2. Relationship-Building Across Cultures</h3>
+    <h3 data-en="2. Relationship-Building Across Cultures" data-ja="2. 異文化間の関係構築">2. Relationship-Building Across Cultures</h3>
 
-    <p>Japanese sellers are often among the most diligent relationship builders in the world. But the mechanisms differ. In Japan, trust is built through consistency, presence, and long-term commitment. A vendor who shows up reliably over years earns the right to deeper conversations. There is an implicit understanding that the relationship itself is the signal of quality.</p>
+    <p data-en="Japanese sellers are often among the most diligent relationship builders in the world. But the mechanisms differ. In Japan, trust is built through consistency, presence, and long-term commitment. A vendor who shows up reliably over years earns the right to deeper conversations. There is an implicit understanding that the relationship itself is the signal of quality." data-ja="日本の営業担当者は世界で最も勤勉な関係構築者の中に入ることが多いです。しかしメカニズムは異なります。日本では、信頼は一貫性、存在感、長期的なコミットメントを通じて構築されます。何年にもわたって確実に姿を現すベンダーが、より深い対話の権利を獲得します。関係そのものが品質のシグナルであるという暗黙の理解があります。">Japanese sellers are often among the most diligent relationship builders in the world. But the mechanisms differ. In Japan, trust is built through consistency, presence, and long-term commitment. A vendor who shows up reliably over years earns the right to deeper conversations. There is an implicit understanding that the relationship itself is the signal of quality.</p>
 
-    <p>In American enterprise sales, trust is built through competence demonstrated quickly. The buyer wants to know: Do you understand my problem? Can you articulate it better than I can? Do you have evidence that your solution works for companies like mine? If you can answer those three questions in the first meeting, you have earned the right to a second one. If you cannot, no amount of dinners or golf outings will compensate.</p>
+    <p data-en="In American enterprise sales, trust is built through competence demonstrated quickly. The buyer wants to know: Do you understand my problem? Can you articulate it better than I can? Do you have evidence that your solution works for companies like mine? If you can answer those three questions in the first meeting, you have earned the right to a second one. If you cannot, no amount of dinners or golf outings will compensate." data-ja="アメリカのエンタープライズ営業では、信頼は素早く実証された能力を通じて構築されます。バイヤーが知りたいのは:私の課題を理解していますか? 私より上手く表現できますか? 私のような企業でソリューションが機能するという証拠がありますか? 最初の会議でこの3つの質問に答えられれば、2回目の会議の権利を獲得します。答えられなければ、いくらディナーやゴルフ接待をしても補えません。">In American enterprise sales, trust is built through competence demonstrated quickly. The buyer wants to know: Do you understand my problem? Can you articulate it better than I can? Do you have evidence that your solution works for companies like mine? If you can answer those three questions in the first meeting, you have earned the right to a second one. If you cannot, no amount of dinners or golf outings will compensate.</p>
 
-    <p>Japanese companies entering the U.S. often invest heavily in relationship infrastructure &mdash; entertainment budgets, executive visits, cultural events &mdash; before they have earned the buyer's interest through value demonstration. The investment is not wrong, but the timing is. Lead with the business case. Build the relationship on a foundation of demonstrated competence.</p>
+    <p data-en="Japanese companies entering the U.S. often invest heavily in relationship infrastructure - entertainment budgets, executive visits, cultural events - before they have earned the buyer's interest through value demonstration. The investment is not wrong, but the timing is. Lead with the business case. Build the relationship on a foundation of demonstrated competence." data-ja="米国に参入する日本企業は、バリューの実証を通じてバイヤーの関心を獲得する前に、関係インフラ - 接待予算、役員訪問、文化イベント - に多額の投資をすることがよくあります。投資は間違っていませんが、タイミングが間違っています。ビジネスケースからリードしてください。実証された能力の基盤の上に関係を構築してください。">Japanese companies entering the U.S. often invest heavily in relationship infrastructure &mdash; entertainment budgets, executive visits, cultural events &mdash; before they have earned the buyer's interest through value demonstration. The investment is not wrong, but the timing is. Lead with the business case. Build the relationship on a foundation of demonstrated competence.</p>
 
-    <div class="assertion-block">
+    <div class="assertion-block" data-en="&quot;In Japan, the relationship earns the conversation. In the U.S., the conversation earns the relationship.&quot;" data-ja="「日本では、関係が対話を獲得します。米国では、対話が関係を獲得します。」">
       "In Japan, the relationship earns the conversation. In the U.S., the conversation earns the relationship."
     </div>
 
-    <h3>3. Technical Capability vs. Economic Outcome</h3>
+    <h3 data-en="3. Technical Capability vs. Economic Outcome" data-ja="3. 技術力 vs. 経済的成果">3. Technical Capability vs. Economic Outcome</h3>
 
-    <p>This is perhaps the most common and most costly mistake. Japanese companies tend to lead with technical specifications: precision, reliability, engineering excellence, feature depth. These are genuine strengths, and they matter. But they are not the opening frame for an American enterprise buyer.</p>
+    <p data-en="This is perhaps the most common and most costly mistake. Japanese companies tend to lead with technical specifications: precision, reliability, engineering excellence, feature depth. These are genuine strengths, and they matter. But they are not the opening frame for an American enterprise buyer." data-ja="これはおそらく最も一般的で最もコストのかかる間違いです。日本企業は技術仕様からリードする傾向があります:精度、信頼性、エンジニアリングの卓越性、機能の深さ。これらは本物の強みであり、重要です。しかし、アメリカのエンタープライズバイヤーへの最初のフレームではありません。">This is perhaps the most common and most costly mistake. Japanese companies tend to lead with technical specifications: precision, reliability, engineering excellence, feature depth. These are genuine strengths, and they matter. But they are not the opening frame for an American enterprise buyer.</p>
 
-    <p>American enterprise buyers, especially at the executive level, think in terms of economic outcomes. Not "what does this product do?" but "what does this product do for my revenue, my cost structure, or my risk profile?" A Japanese company that leads a pitch with technical architecture diagrams and feature comparisons is speaking a language the American buyer respects but does not prioritize in a buying decision.</p>
+    <p data-en="American enterprise buyers, especially at the executive level, think in terms of economic outcomes. Not &quot;what does this product do?&quot; but &quot;what does this product do for my revenue, my cost structure, or my risk profile?&quot; A Japanese company that leads a pitch with technical architecture diagrams and feature comparisons is speaking a language the American buyer respects but does not prioritize in a buying decision." data-ja="アメリカのエンタープライズバイヤー、特にエグゼクティブレベルは、経済的成果の観点で考えます。「この製品は何をするのか?」ではなく「この製品は私の収益、コスト構造、リスクプロファイルに何をしてくれるのか?」です。技術アーキテクチャ図と機能比較でピッチをリードする日本企業は、アメリカのバイヤーが尊重するが購買決定で優先しない言語を話しています。">American enterprise buyers, especially at the executive level, think in terms of economic outcomes. Not "what does this product do?" but "what does this product do for my revenue, my cost structure, or my risk profile?" A Japanese company that leads a pitch with technical architecture diagrams and feature comparisons is speaking a language the American buyer respects but does not prioritize in a buying decision.</p>
 
-    <p>The fix is not to abandon technical depth. It is to resequence the conversation. Open with the economic outcome: "Companies in your industry are losing $X million per year because of [problem]. Our platform eliminates that cost." Then, when the buyer is engaged on the economics, bring in the technical depth as the proof that you can deliver on the promise.</p>
+    <p data-en="The fix is not to abandon technical depth. It is to resequence the conversation. Open with the economic outcome: &quot;Companies in your industry are losing $X million per year because of [problem]. Our platform eliminates that cost.&quot; Then, when the buyer is engaged on the economics, bring in the technical depth as the proof that you can deliver on the promise." data-ja="解決策は技術的な深さを捨てることではありません。対話の順序を変えることです。経済的成果から始めてください:「貴社の業界の企業は[問題]のために年間$X Mを失っています。当社のプラットフォームはそのコストを排除します。」そして、バイヤーが経済性に関与した後、約束を実現できる証拠として技術的な深さを持ち込んでください。">The fix is not to abandon technical depth. It is to resequence the conversation. Open with the economic outcome: "Companies in your industry are losing $X million per year because of [problem]. Our platform eliminates that cost." Then, when the buyer is engaged on the economics, bring in the technical depth as the proof that you can deliver on the promise.</p>
 
-    <h2>What Successful Market Entry Looks Like</h2>
+    <h2 data-en="What Successful Market Entry Looks Like" data-ja="成功する市場参入とは">What Successful Market Entry Looks Like</h2>
 
-    <p>The Japanese companies that succeed in the U.S. market are the ones that treat market entry as a translation problem, not just a logistics problem. They do not just open an office and hire a sales team. They rebuild the conversation.</p>
+    <p data-en="The Japanese companies that succeed in the U.S. market are the ones that treat market entry as a translation problem, not just a logistics problem. They do not just open an office and hire a sales team. They rebuild the conversation." data-ja="米国市場で成功する日本企業は、市場参入をロジスティクスの問題ではなく、翻訳の問題として扱う企業です。オフィスを開設して営業チームを雇うだけではありません。対話を再構築します。">The Japanese companies that succeed in the U.S. market are the ones that treat market entry as a translation problem, not just a logistics problem. They do not just open an office and hire a sales team. They rebuild the conversation.</p>
 
     <ul>
-      <li><strong>Messaging leads with economic outcome.</strong> The first slide in every presentation answers: "What is the dollar impact of the problem we solve?"</li>
-      <li><strong>Sales process matches American buying cadence.</strong> Discovery, value demonstration, and proposal happen within weeks, not months.</li>
-      <li><strong>Relationship investment follows value demonstration.</strong> Hospitality and relationship-building reinforce a deal that has already been validated on business terms.</li>
-      <li><strong>Technical depth is proof, not pitch.</strong> Engineering excellence becomes the reason the buyer believes the economic promise, not the opening argument for why they should care.</li>
+      <li data-en="&lt;strong&gt;Messaging leads with economic outcome.&lt;/strong&gt; The first slide in every presentation answers: &quot;What is the dollar impact of the problem we solve?&quot;" data-ja="&lt;strong&gt;メッセージングは経済的成果からリードする。&lt;/strong&gt; すべてのプレゼンテーションの最初のスライドは「私たちが解決する課題のドルインパクトは何か?」に答えます。"><strong>Messaging leads with economic outcome.</strong> The first slide in every presentation answers: "What is the dollar impact of the problem we solve?"</li>
+      <li data-en="&lt;strong&gt;Sales process matches American buying cadence.&lt;/strong&gt; Discovery, value demonstration, and proposal happen within weeks, not months." data-ja="&lt;strong&gt;営業プロセスはアメリカの購買ケイデンスに合わせる。&lt;/strong&gt; ディスカバリー、バリューの実証、提案は数ヶ月ではなく数週間以内に行われます。"><strong>Sales process matches American buying cadence.</strong> Discovery, value demonstration, and proposal happen within weeks, not months.</li>
+      <li data-en="&lt;strong&gt;Relationship investment follows value demonstration.&lt;/strong&gt; Hospitality and relationship-building reinforce a deal that has already been validated on business terms." data-ja="&lt;strong&gt;関係への投資はバリューの実証に続く。&lt;/strong&gt; おもてなしと関係構築は、すでにビジネス条件で検証された案件を強化します。"><strong>Relationship investment follows value demonstration.</strong> Hospitality and relationship-building reinforce a deal that has already been validated on business terms.</li>
+      <li data-en="&lt;strong&gt;Technical depth is proof, not pitch.&lt;/strong&gt; Engineering excellence becomes the reason the buyer believes the economic promise, not the opening argument for why they should care." data-ja="&lt;strong&gt;技術的な深さはピッチではなく証拠。&lt;/strong&gt; エンジニアリングの卓越性は、なぜ関心を持つべきかという最初の議論ではなく、バイヤーが経済的約束を信じる理由になります。"><strong>Technical depth is proof, not pitch.</strong> Engineering excellence becomes the reason the buyer believes the economic promise, not the opening argument for why they should care.</li>
     </ul>
 
-    <h2>Bridging the Gap</h2>
+    <h2 data-en="Bridging the Gap" data-ja="ギャップを埋める">Bridging the Gap</h2>
 
-    <p>At Jozu Consulting Group, this is a problem we understand deeply. Jeff Aragon spent four years in Tokyo teaching negotiation and sales methodology to Japanese business leaders, and has spent decades building enterprise revenue systems in the American market. The gap between these two worlds is real, but it is bridgeable. It requires understanding both cultures well enough to build a sales process that honors the strengths of each.</p>
+    <p data-en="At Jozu Consulting Group, this is a problem we understand deeply. Jeff Aragon spent four years in Tokyo teaching negotiation and sales methodology to Japanese business leaders, and has spent decades building enterprise revenue systems in the American market. The gap between these two worlds is real, but it is bridgeable. It requires understanding both cultures well enough to build a sales process that honors the strengths of each." data-ja="Jozu Consulting Groupでは、これは私たちが深く理解している課題です。Jeff Aragonは東京で4年間、日本のビジネスリーダーに交渉と営業メソドロジーを教え、アメリカ市場で数十年にわたりエンタープライズ収益システムを構築してきました。この2つの世界のギャップは現実ですが、橋渡し可能です。両方の文化を十分に理解し、それぞれの強みを尊重する営業プロセスを構築する必要があります。">At Jozu Consulting Group, this is a problem we understand deeply. Jeff Aragon spent four years in Tokyo teaching negotiation and sales methodology to Japanese business leaders, and has spent decades building enterprise revenue systems in the American market. The gap between these two worlds is real, but it is bridgeable. It requires understanding both cultures well enough to build a sales process that honors the strengths of each.</p>
 
-    <p>If your company is entering the U.S. market from Japan, the question is not whether your product is good enough. It almost certainly is. The question is whether your sales conversation is built for the buyer you are trying to reach.</p>
+    <p data-en="If your company is entering the U.S. market from Japan, the question is not whether your product is good enough. It almost certainly is. The question is whether your sales conversation is built for the buyer you are trying to reach." data-ja="日本から米国市場に参入する場合、問題は製品が十分かどうかではありません。ほぼ確実に十分です。問題は、到達しようとしているバイヤーのために営業の対話が構築されているかどうかです。">If your company is entering the U.S. market from Japan, the question is not whether your product is good enough. It almost certainly is. The question is whether your sales conversation is built for the buyer you are trying to reach.</p>
 
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);">
+    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gray-100); font-size: 0.9375rem; color: var(--gray-600);" data-en="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;, Founder - Jozu Consulting Group" data-ja="&lt;strong style='color: var(--text-dark);'&gt;Jeff Aragon&lt;/strong&gt;、創業者 - Jozu Consulting Group">
       <strong style="color: var(--text-dark);">Jeff Aragon</strong>, Founder &mdash; Jozu Consulting Group
     </p>
 
@@ -137,8 +152,8 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-band-inner">
-      <h2>Entering the U.S. Market? Let's Build the Right Conversation.</h2>
-      <a href="../contact.html" class="btn btn-white">Request a Consultation &rarr;</a>
+      <h2 data-en="Entering the U.S. Market? Let's Build the Right Conversation." data-ja="米国市場に参入しますか? 適切な対話を構築しましょう。">Entering the U.S. Market? Let's Build the Right Conversation.</h2>
+      <a href="../contact.html" class="btn btn-white" data-en="Request a Consultation &rarr;" data-ja="ご相談はこちら &rarr;">Request a Consultation &rarr;</a>
     </div>
   </div>
 </section>
@@ -153,18 +168,37 @@
         <img src="../jozu-logo2.png" alt="Jozu Consulting Group">
       </div>
       <ul class="footer-links">
-        <li><a href="../index.html#methodology">Methodology</a></li>
-        <li><a href="../case-studies/index.html">Case Studies</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#japan">Japan &amp; Asia</a></li>
-        <li><a href="index.html">Insights</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html#methodology" data-en="Methodology" data-ja="メソドロジー">Methodology</a></li>
+        <li><a href="../case-studies/index.html" data-en="Case Studies" data-ja="事例紹介">Case Studies</a></li>
+        <li><a href="../about.html" data-en="About" data-ja="会社概要">About</a></li>
+        <li><a href="../index.html#japan" data-en="Japan &amp; Asia" data-ja="日本・アジア">Japan &amp; Asia</a></li>
+        <li><a href="index.html" data-en="Insights" data-ja="インサイト">Insights</a></li>
+        <li><a href="../contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
       </ul>
-      <div class="footer-copy">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
+      <div class="footer-copy" data-en="&copy; 2026 Jozu Consulting Group. All rights reserved." data-ja="&copy; 2026 Jozu Consulting Group. All rights reserved.">&copy; 2026 Jozu Consulting Group. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});</script>
+<div class="lang-toggle-float" role="group" aria-label="Language selector">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+</div>
+
+<script>document.querySelector(".nav-toggle").addEventListener("click",function(){this.classList.toggle("active");document.querySelector(".nav-links").classList.toggle("open")});document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.querySelector(".nav-toggle").classList.remove("active");document.querySelector(".nav-links").classList.remove("open")})});
+
+// Language toggle
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  document.body.classList.toggle('lang-ja', lang === 'ja');
+  document.querySelectorAll('[data-en][data-ja]').forEach(function(el) {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  localStorage.setItem('jozu-lang', lang);
+}
+(function(){ var saved = localStorage.getItem('jozu-lang'); if (saved === 'ja') setLang('ja'); })();
+</script>
 </body>
 </html>
