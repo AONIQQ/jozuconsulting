@@ -299,12 +299,14 @@ nav {
   border-top: 1px solid rgba(200,75,34,0.2);
   border-bottom: 1px solid rgba(200,75,34,0.2);
   padding: 24px 0;
+  overflow: hidden;
 }
 
 .logos-inner {
   display: flex;
   align-items: center;
   gap: 0;
+  overflow: hidden;
 }
 
 .logos-label {
@@ -314,20 +316,35 @@ nav {
   text-transform: uppercase;
   color: var(--gray-400);
   white-space: nowrap;
-  padding-right: 32px;
+  padding: 0 32px 0 24px;
   border-right: 1px solid rgba(255,255,255,0.1);
-  margin-right: 32px;
+  margin-right: 0;
   flex-shrink: 0;
 }
 
-.logos-list {
+.logos-track {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
   flex: 1;
+  mask-image: linear-gradient(to right, transparent, black 60px, black calc(100% - 60px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 60px, black calc(100% - 60px), transparent);
 }
 
-.logos-list img {
+.logos-slide {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 24px;
+  animation: logo-scroll 25s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes logo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.logos-slide img {
   height: 56px;
   width: 56px;
   object-fit: cover;
@@ -335,8 +352,9 @@ nav {
   opacity: 0.75;
   transition: all var(--transition);
   filter: grayscale(0.3) brightness(1.1);
+  flex-shrink: 0;
 }
-.logos-list img.logo-wide {
+.logos-slide img.logo-wide {
   width: auto;
   max-width: 120px;
   height: 44px;
@@ -347,7 +365,7 @@ nav {
   filter: none;
   opacity: 0.85;
 }
-.logos-list img:hover {
+.logos-slide img:hover {
   opacity: 1;
   filter: grayscale(0) brightness(1);
   transform: scale(1.08);
